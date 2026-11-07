@@ -1,5 +1,7 @@
 # Deployment
 
+For AWS, follow the dedicated [EC2 deployment guide](aws-deployment.md) and combine `infra/compose.yml` with `infra/compose.aws.yml` on the AWS host. The default local deployment below continues to bind Caddy only to localhost.
+
 ## Local production build
 
 ```bash

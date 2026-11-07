@@ -1,0 +1,8 @@
+# Apply on the AWS host, together with compose.yml. Caddy owns public ports.
+# Set SITE_ADDRESS to a hostname whose DNS points to that host.
+services:
+  web:
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"

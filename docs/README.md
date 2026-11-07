@@ -40,6 +40,7 @@ For the entire implemented app, start with the [complete application handbook](c
 ## Deployment and maintenance
 
 - [Deployment](deployment.md): localhost production build and public-server adaptation.
+- [AWS deployment](aws-deployment.md): EC2, Docker, PostgreSQL/worker persistence, HTTPS, costs and optional Vercel routing.
 - [Operations](operations.md): monitoring, refreshes, backups and rollback.
 - [Security and privacy](security-and-privacy.md): device data, coordinates, providers, secrets, public results and retention.
 - [Troubleshooting](troubleshooting.md): missing data, workers, browser storage and setup failures.

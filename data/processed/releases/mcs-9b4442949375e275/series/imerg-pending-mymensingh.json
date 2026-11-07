@@ -1,0 +1,33 @@
+{
+  "series_id": "imerg-pending-mymensingh",
+  "publication_state": "unavailable",
+  "source": {
+    "id": "nasa-imerg",
+    "name": "NASA GPM IMERG Final",
+    "version": "V07B",
+    "unit": "mm/year",
+    "source_url": "https://www.earthdata.nasa.gov/data/catalog/ges-disc-gpm-3imergm-07",
+    "citation": "NASA GPM IMERG Final monthly V07, DOI:10.5067/GPM/IMERG/3B-MONTH/07.",
+    "spatial_resolution": "0.1° × 0.1° (approximately 10 km)",
+    "start": "1998",
+    "end": "2024",
+    "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+    "license": "NASA open data",
+    "notes": {
+      "bn": "প্রিসিপিটেশনে বৃষ্টি আর তুষার থাকে। পুরো বছরের জন্য ১২ মাসের বৈধ তথ্য দরকার।",
+      "en": "Precipitation includes rain and snow. Full years require all 12 valid months."
+    }
+  },
+  "annual": [],
+  "monthly": [],
+  "comparison": null,
+  "warning": {
+    "bn": "যাচাই করা NASA IMERG বৃষ্টির তথ্য এখনো সংগ্রহ করা হয়নি। ধারাবাহিকতার সমস্যা থাকা POWER বৃষ্টির তথ্য দিয়ে পরিবর্তনের দাবি করা হয় না।",
+    "en": "Verified NASA IMERG rainfall measurements have not been downloaded yet. We do not use the discontinuous POWER rainfall record for change claims."
+  },
+  "quality_flags": [
+    "earthdata_acquisition_pending"
+  ],
+  "shared_series_with": [],
+  "represented_coordinates": null
+}

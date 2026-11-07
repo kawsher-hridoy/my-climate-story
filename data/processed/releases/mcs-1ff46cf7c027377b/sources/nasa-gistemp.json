@@ -1,0 +1,17 @@
+{
+  "id": "nasa-gistemp",
+  "name": "NASA GISS GISTEMP",
+  "version": "v4",
+  "unit": "°C anomaly",
+  "source_url": "https://data.giss.nasa.gov/gistemp/",
+  "citation": "GISTEMP Team, GISS Surface Temperature Analysis v4, NASA GISS (2026). Lenssen et al. (2024), doi:10.1029/2023JD040179.",
+  "spatial_resolution": "Global land–ocean mean",
+  "start": "1880",
+  "end": "2025",
+  "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+  "license": "NASA open data",
+  "notes": {
+    "bn": "১৯৫১–১৯৮০ সালের গড় থেকে বৈশ্বিক তাপমাত্রার পার্থক্য; বাংলাদেশের স্থানীয় তাপমাত্রা নয়।",
+    "en": "Global temperature differences from the 1951–1980 average, not local Bangladesh temperatures."
+  }
+}

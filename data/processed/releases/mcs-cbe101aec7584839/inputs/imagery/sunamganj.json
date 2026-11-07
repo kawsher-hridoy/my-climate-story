@@ -1,0 +1,63 @@
+{
+  "id": "sunamganj",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/sunamganj/before-21ef2657f578.webp",
+    "thumbnail_url": "/media/imagery/sunamganj/before-21ef2657f578-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+    "width": 667,
+    "height": 667,
+    "bytes": 60232,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 3.0,
+    "alt": {
+      "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/sunamganj/after-2c1c0a607c12.webp",
+    "thumbnail_url": "/media/imagery/sunamganj/after-2c1c0a607c12-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+    "width": 667,
+    "height": 667,
+    "bytes": 58052,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 2025-02-08."
+    }
+  },
+  "bounds": [
+    91.29460939191594,
+    24.974564263572972,
+    91.4952878671392,
+    25.157347667431477
+  ],
+  "crs": "EPSG:32646",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.163477+00:00",
+    "evidence": "River and surrounding land/field patterns are visible on both crops. Seasonal water and atmospheric differences are disclosed; no causal land-change claim.",
+    "before_sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+    "after_sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

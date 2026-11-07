@@ -1,0 +1,158 @@
+{
+  "dhaka": {
+    "id": "temperature-dhaka-0d444a984012",
+    "data_hash": "0d444a984012edfbd4e259f87ac5615e70447c248971bfc8efff1556c9d45320",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.195856+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "chattogram": {
+    "id": "temperature-chattogram-5372a11ec7b8",
+    "data_hash": "5372a11ec7b88e292b6db73382e68d930b7af554382caf2e6debc3786ea6d2ad",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.227113+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "khulna": {
+    "id": "temperature-khulna-182d9d73b539",
+    "data_hash": "182d9d73b53922c56215d485ea2bdf34e6b4cbbdfb2ee536f919c9ead542eae4",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.243349+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "rajshahi": {
+    "id": "temperature-rajshahi-0ae2deba60d3",
+    "data_hash": "0ae2deba60d3d2ad4a998dc70420909caaaa6ace5994bb2d9c2aebdc169a6125",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.259749+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "sylhet": {
+    "id": "temperature-sylhet-656afe9150da",
+    "data_hash": "656afe9150daac920129f23b62ad218173ebc6265dce3fd4c42a7b8587909fbd",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.271531+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "barishal": {
+    "id": "temperature-barishal-f764a70215e1",
+    "data_hash": "f764a70215e10c7e2d9abae4f114b78c27b2c8dfb2529e11bf09366f0323d063",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.284114+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "rangpur": {
+    "id": "temperature-rangpur-f0f239e8d39a",
+    "data_hash": "f0f239e8d39a6b8fe3f40ff5f320445558fdf2c8790d0d2faa5c72fb9e48d2c4",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.302347+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "mymensingh": {
+    "id": "temperature-mymensingh-a0ee64dc45da",
+    "data_hash": "a0ee64dc45daec75177aaf99a7f540a2ee93b227da55400c03b40b9d27dd497f",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.316193+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "coxs_bazar": {
+    "id": "temperature-coxs_bazar-9843f0a0b404",
+    "data_hash": "9843f0a0b4047d39f5d5994a085fab376688d295a1dff116b4198f08f8571ee6",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.341039+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "satkhira": {
+    "id": "temperature-satkhira-d5376cb4ca0c",
+    "data_hash": "d5376cb4ca0c47a4cab9741a4aeb13de1d0c5157caeda6ec7d122515227c684e",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.362892+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "bhola": {
+    "id": "temperature-bhola-f764a70215e1",
+    "data_hash": "f764a70215e10c7e2d9abae4f114b78c27b2c8dfb2529e11bf09366f0323d063",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.388325+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  },
+  "sunamganj": {
+    "id": "temperature-sunamganj-f906272d293c",
+    "data_hash": "f906272d293cf33da03bf38fdf4d07ee642aba835e3bc29fe2b8f76b9c8cd15d",
+    "status": "comparison_approved",
+    "windows": [
+      "2001–2010",
+      "2016–2025"
+    ],
+    "reviewer": "Codex data audit",
+    "reviewed_at": "2026-11-07T15:10:03.411823+00:00",
+    "evidence": "All 35,100 supplied values agree with raw JSON; calendar-day annual aggregation agrees with NASA month-13 precision; 2001–2010 and 2016–2025 windows are complete. The flagged pre-2001 interval is excluded. Review approves descriptive dataset averages only, not significance, homogeneity proof, causal climate attribution, or hot-day counts.",
+    "scope": "Descriptive arithmetic comparison only; no trend significance, causal attribution, or hot-day inference."
+  }
+}

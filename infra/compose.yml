@@ -1,0 +1,92 @@
+name: nasa-climate
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-climate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-climate_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-climate}
+    volumes: ["database:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    image: my-climate-story-api:0.1.0
+    restart: unless-stopped
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-climate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-climate_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-climate}
+      FORWARDED_ALLOW_IPS: 127.0.0.1,::1,${PROXY_IP:-172.30.249.2}
+      APP_ENV: production
+      APP_CONTACT_URL: ${APP_CONTACT_URL:-http://localhost:8088/about}
+      EARTHDATA_USERNAME: ${EARTHDATA_USERNAME:-}
+      EARTHDATA_PASSWORD: ${EARTHDATA_PASSWORD:-}
+      EARTHDATA_TOKEN: ${EARTHDATA_TOKEN:-}
+      S3_ENDPOINT_URL: ${S3_ENDPOINT_URL:-}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID:-}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY:-}
+      S3_BUCKET: ${S3_BUCKET:-}
+    volumes: ["../data:/app/data"]
+    networks:
+      default: {}
+      proxy:
+        ipv4_address: ${PROXY_API_IP:-172.30.249.3}
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready',timeout=5)"]
+      interval: 10s
+      timeout: 8s
+      start_period: 120s
+      retries: 30
+  worker:
+    image: my-climate-story-api:0.1.0
+    restart: unless-stopped
+    command: ["climate","worker"]
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-climate}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-climate_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-climate}
+      APP_ENV: production
+      EARTHDATA_USERNAME: ${EARTHDATA_USERNAME:-}
+      EARTHDATA_PASSWORD: ${EARTHDATA_PASSWORD:-}
+      EARTHDATA_TOKEN: ${EARTHDATA_TOKEN:-}
+    volumes: ["../data:/app/data"]
+    depends_on:
+      api: {condition: service_healthy}
+  web:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.web
+      network: ${BUILD_NETWORK:-host}
+    restart: unless-stopped
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
+    ports: ["127.0.0.1:8088:80"]
+    volumes: ["caddy-data:/data","caddy-config:/config"]
+    networks:
+      proxy:
+        ipv4_address: ${PROXY_IP:-172.30.249.2}
+    depends_on:
+      api: {condition: service_healthy}
+volumes:
+  database:
+  caddy-data:
+  caddy-config:
+networks:
+  default: {}
+  proxy:
+    ipam:
+      config:
+        - subnet: ${PROXY_SUBNET:-172.30.249.0/29}

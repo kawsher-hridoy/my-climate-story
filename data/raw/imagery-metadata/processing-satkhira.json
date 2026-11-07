@@ -1,0 +1,61 @@
+{
+  "place_id": "satkhira",
+  "retrieved_at": "2026-11-07T14:36:02.903256+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    702630,
+    2503860,
+    722640,
+    2523870
+  ],
+  "crs": "EPSG:32645",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/satkhira/before-e627bee47395.webp",
+    "thumbnail_url": "/media/imagery/satkhira/before-e627bee47395-thumb.webp",
+    "date": "1990-01-30",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+    "sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+    "width": 667,
+    "height": 667,
+    "bytes": 45808,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-30।",
+      "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 1990-01-30."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/satkhira/after-2a0807809853.webp",
+    "thumbnail_url": "/media/imagery/satkhira/after-2a0807809853-thumb.webp",
+    "date": "2025-02-15",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+    "sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+    "width": 667,
+    "height": 667,
+    "bytes": 47932,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.01,
+    "alt": {
+      "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-15।",
+      "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 2025-02-15."
+    }
+  }
+}

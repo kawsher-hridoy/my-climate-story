@@ -1,0 +1,14 @@
+{
+  "release_id": "mcs-cbe101aec7584839",
+  "passed": true,
+  "ready": true,
+  "places": 12,
+  "power_numeric_values": 35100,
+  "reviewed_images": 24,
+  "temperature_comparisons": 12,
+  "activities": 12,
+  "question_bank": 30,
+  "rainfall_pending": true,
+  "accepted_amendment": "User authorized rainfall pending.",
+  "failures": []
+}

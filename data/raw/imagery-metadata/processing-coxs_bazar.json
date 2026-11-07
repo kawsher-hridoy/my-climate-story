@@ -1,0 +1,61 @@
+{
+  "place_id": "coxs_bazar",
+  "retrieved_at": "2026-11-07T14:56:59.048776+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    386940,
+    2359770,
+    406950,
+    2379780
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/coxs_bazar/before-256f7c3328f5.webp",
+    "thumbnail_url": "/media/imagery/coxs_bazar/before-256f7c3328f5-thumb.webp",
+    "date": "1990-01-16",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+    "width": 667,
+    "height": 667,
+    "bytes": 36490,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 5.0,
+    "alt": {
+      "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 1990-01-16."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/coxs_bazar/after-35db107eeccd.webp",
+    "thumbnail_url": "/media/imagery/coxs_bazar/after-35db107eeccd-thumb.webp",
+    "date": "2025-01-16",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+    "width": 667,
+    "height": 667,
+    "bytes": 53656,
+    "valid_pixel_fraction": 0.9970014992503748,
+    "scene_cloud_percent": 0.09,
+    "alt": {
+      "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 2025-01-16."
+    }
+  }
+}

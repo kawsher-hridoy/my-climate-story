@@ -1,0 +1,345 @@
+[
+  {
+    "id": "dhaka",
+    "name": {
+      "bn": "ঢাকা",
+      "en": "Dhaka"
+    },
+    "division": "Dhaka Division",
+    "coordinates": {
+      "latitude": 23.8103,
+      "longitude": 90.4125
+    },
+    "aliases": [
+      "Dacca",
+      "ঢাকা"
+    ],
+    "tags": [
+      "urban",
+      "heat",
+      "river"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "বাংলাদেশের রাজধানীর আশপাশের নদী, ছাদ আর সবুজ দেখো। একই জায়গার দুটি ছবিতে কী কী লক্ষ্য করতে পারো?",
+      "en": "Follow the river, rooftops, and green spaces around Bangladesh’s capital. What can you notice in two views of the same place?"
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "chattogram",
+    "name": {
+      "bn": "চট্টগ্রাম",
+      "en": "Chattogram"
+    },
+    "division": "Chattogram Division",
+    "coordinates": {
+      "latitude": 22.3569,
+      "longitude": 91.7832
+    },
+    "aliases": [
+      "Chittagong",
+      "চট্টগ্রাম"
+    ],
+    "tags": [
+      "urban",
+      "coastal",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "উপকূলের এই শহরের পাহাড়, জলপথ আর পাড়াগুলো দেখো। উপগ্রহের ছবি তার ভূদৃশ্য বোঝার একটি জানালা।",
+      "en": "Explore the shapes of a coastal city, its hills, waterways, and neighborhoods. Satellite images open a window into its landscape."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "khulna",
+    "name": {
+      "bn": "খুলনা",
+      "en": "Khulna"
+    },
+    "division": "Khulna Division",
+    "coordinates": {
+      "latitude": 22.8456,
+      "longitude": 89.5403
+    },
+    "aliases": [
+      "খুলনা"
+    ],
+    "tags": [
+      "urban",
+      "river",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "খুলনার শহর আর জলপথগুলো মন দিয়ে দেখো। অর্থ খোঁজার আগে ছবির দৃশ্যমান ধরনগুলো তুলনা করো।",
+      "en": "Look closely at the city and waterways around Khulna. Compare visible patterns before deciding what they might mean."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "rajshahi",
+    "name": {
+      "bn": "রাজশাহী",
+      "en": "Rajshahi"
+    },
+    "division": "Rajshahi Division",
+    "coordinates": {
+      "latitude": 24.3745,
+      "longitude": 88.6042
+    },
+    "aliases": [
+      "রাজশাহী"
+    ],
+    "tags": [
+      "river",
+      "agriculture",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "রাজশাহীর আশপাশে পদ্মার তীরের ভূদৃশ্য আবিষ্কার করো। নদী, মাঠ আর বসতি—প্রতিটিরই অনুসন্ধানের গল্প আছে।",
+      "en": "Discover the Padma-side landscape around Rajshahi. Rivers, fields, and settlements each have stories to investigate."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "sylhet",
+    "name": {
+      "bn": "সিলেট",
+      "en": "Sylhet"
+    },
+    "division": "Sylhet Division",
+    "coordinates": {
+      "latitude": 24.8949,
+      "longitude": 91.8687
+    },
+    "aliases": [
+      "সিলেট"
+    ],
+    "tags": [
+      "wetland",
+      "river",
+      "urban"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "সিলেটের নদী আর শহরের ভূদৃশ্য দেখো। উপগ্রহের ছবিতে পানি, গাছপালা আর নির্মিত এলাকা কীভাবে দেখা যায় লক্ষ্য করো।",
+      "en": "Explore the river-and-city landscape around Sylhet. Notice how water, vegetation, and built areas appear in satellite views."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "barishal",
+    "name": {
+      "bn": "বরিশাল",
+      "en": "Barishal"
+    },
+    "division": "Barishal Division",
+    "coordinates": {
+      "latitude": 22.701,
+      "longitude": 90.3535
+    },
+    "aliases": [
+      "Barisal",
+      "বরিশাল"
+    ],
+    "tags": [
+      "river",
+      "wetland",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "জলপথ বরিশালের আশপাশের ভূদৃশ্যকে যুক্ত করেছে। ছবি আর জলবায়ুর তথ্য মিলিয়ে নিজের এলাকা নিয়ে প্রশ্ন করো।",
+      "en": "Waterways connect the landscape around Barishal. Use images and climate records together to ask better questions about your area."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "rangpur",
+    "name": {
+      "bn": "রংপুর",
+      "en": "Rangpur"
+    },
+    "division": "Rangpur Division",
+    "coordinates": {
+      "latitude": 25.7439,
+      "longitude": 89.2752
+    },
+    "aliases": [
+      "রংপুর"
+    ],
+    "tags": [
+      "agriculture",
+      "urban",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "রংপুরের মাঠ, বসতি আর সবুজ অংশগুলো খুঁজে দেখো। এখানকার পুরোনো ছবিটি ১৯৯৫ সালের, ১৯৯০ সালের নয়।",
+      "en": "Look for fields, settlements, and green patches around Rangpur. The historical image here is from 1995, not 1990."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "mymensingh",
+    "name": {
+      "bn": "ময়মনসিংহ",
+      "en": "Mymensingh"
+    },
+    "division": "Mymensingh Division",
+    "coordinates": {
+      "latitude": 24.7471,
+      "longitude": 90.4203
+    },
+    "aliases": [
+      "ময়মনসিংহ",
+      "ময়মনসিংহ"
+    ],
+    "tags": [
+      "river",
+      "agriculture",
+      "urban"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "ময়মনসিংহের শহর আর নদীর অবস্থান দেখো। সময়ের ব্যবধানে একই এলাকা তুলনা করে পর্যবেক্ষণ আর ব্যাখ্যার পার্থক্য শেখো।",
+      "en": "Explore Mymensingh’s city-and-river setting. Compare the same area across time and distinguish observation from explanation."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "coxs_bazar",
+    "name": {
+      "bn": "কক্সবাজার",
+      "en": "Cox’s Bazar"
+    },
+    "division": "Chattogram Division",
+    "coordinates": {
+      "latitude": 21.4272,
+      "longitude": 92.0058
+    },
+    "aliases": [
+      "Cox's Bazar",
+      "Coxs Bazar",
+      "কক্সবাজার"
+    ],
+    "tags": [
+      "coastal",
+      "urban",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "উপকূলের ভূদৃশ্যে পানি, পাহাড় আর বসতি একসঙ্গে আছে। একই ঋতুর ছবি এই এলাকা তুলনা করতে সাহায্য করে।",
+      "en": "A coastal landscape brings water, hills, and settlements together. Similar-season images help you compare this area more fairly."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "satkhira",
+    "name": {
+      "bn": "সাতক্ষীরা",
+      "en": "Satkhira"
+    },
+    "division": "Khulna Division",
+    "coordinates": {
+      "latitude": 22.7185,
+      "longitude": 89.0705
+    },
+    "aliases": [
+      "সাতক্ষীরা"
+    ],
+    "tags": [
+      "agriculture",
+      "urban",
+      "heat"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "এই দৃশ্যটি সাতক্ষীরা শহরকে কেন্দ্র করে। বসতি আর আশপাশের জমি দেখো; ছবিতে উপকূল বা সুন্দরবন আছে ধরে নিও না।",
+      "en": "This view is centered on Satkhira town. Look at its settlements and surrounding land; do not assume the crop shows the coastline or Sundarbans."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "bhola",
+    "name": {
+      "bn": "ভোলা",
+      "en": "Bhola"
+    },
+    "division": "Barishal Division",
+    "coordinates": {
+      "latitude": 22.6859,
+      "longitude": 90.6482
+    },
+    "aliases": [
+      "ভোলা"
+    ],
+    "tags": [
+      "river",
+      "coastal",
+      "agriculture"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "ভোলার দ্বীপের ভূদৃশ্য অনুসন্ধান করো। মোটা গ্রিডের জলবায়ুর তথ্য বরিশালের মতো হলেও এর উপগ্রহের গল্প আলাদা।",
+      "en": "Investigate the island landscape around Bhola. Its satellite story is distinct even when a coarse climate dataset returns the same values as Barishal."
+    },
+    "preview_image_url": null
+  },
+  {
+    "id": "sunamganj",
+    "name": {
+      "bn": "সুনামগঞ্জ",
+      "en": "Sunamganj"
+    },
+    "division": "Sylhet Division",
+    "coordinates": {
+      "latitude": 25.0658,
+      "longitude": 91.395
+    },
+    "aliases": [
+      "Sunamgonj",
+      "সুনামগঞ্জ"
+    ],
+    "tags": [
+      "wetland",
+      "river",
+      "agriculture"
+    ],
+    "featured": true,
+    "feature_type": "city",
+    "country": "BD",
+    "description": {
+      "bn": "সুনামগঞ্জের পানি আর জমির ধরন দেখো। ঋতু বদলালে পানির বিস্তারও বদলাতে পারে, তাই ছবির সঙ্গে তারিখগুলো দেখো।",
+      "en": "Explore Sunamganj’s water-and-land patterns. Water coverage can vary with the season, so inspect the dates alongside the images."
+    },
+    "preview_image_url": null
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "place_id": "rangpur",
+  "retrieved_at": "2026-11-07T14:55:51.114329+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    718200,
+    2839290,
+    738210,
+    2859300
+  ],
+  "crs": "EPSG:32645",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/rangpur/before-7ba33ddaaed4.webp",
+    "thumbnail_url": "/media/imagery/rangpur/before-7ba33ddaaed4-thumb.webp",
+    "date": "1995-01-28",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+    "sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+    "width": 667,
+    "height": 667,
+    "bytes": 52712,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1995-01-28।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 1995-01-28."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/rangpur/after-c995b7ae9a75.webp",
+    "thumbnail_url": "/media/imagery/rangpur/after-c995b7ae9a75-thumb.webp",
+    "date": "2025-01-14",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+    "sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+    "width": 667,
+    "height": 667,
+    "bytes": 58346,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.72,
+    "alt": {
+      "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-14।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 2025-01-14."
+    }
+  }
+}

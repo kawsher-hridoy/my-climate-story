@@ -1,0 +1,63 @@
+{
+  "id": "dhaka",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/dhaka/before-06f95d647e5a.webp",
+    "thumbnail_url": "/media/imagery/dhaka/before-06f95d647e5a-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "sha256": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+    "width": 667,
+    "height": 667,
+    "bytes": 67938,
+    "valid_pixel_fraction": 0.9954752758553257,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "ঢাকা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Dhaka, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/dhaka/after-8facb46b72b9.webp",
+    "thumbnail_url": "/media/imagery/dhaka/after-8facb46b72b9-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "sha256": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+    "width": 667,
+    "height": 667,
+    "bytes": 79088,
+    "valid_pixel_fraction": 0.9969812694851974,
+    "scene_cloud_percent": 0.04,
+    "alt": {
+      "bn": "ঢাকা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Dhaka, acquired 2025-02-08."
+    }
+  },
+  "bounds": [
+    90.3122978416416,
+    23.718404410374713,
+    90.51212438366133,
+    23.902253903081853
+  ],
+  "crs": "EPSG:32646",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:02.959184+00:00",
+    "evidence": "Airport/runway and waterway geometry align; historical haze and small masked patches do not prevent shape comparison. Do not interpret greenness or density quantitatively.",
+    "before_sha256": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+    "after_sha256": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

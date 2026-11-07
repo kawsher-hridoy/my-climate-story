@@ -1,0 +1,81 @@
+{
+  "archive_sha256": "467221d541546b1c4d9b535a4feafad0d711607bd35889c67e88a3d7079e94d5",
+  "archive_files": 45,
+  "archive_uncompressed_bytes": 1985209,
+  "imported_at": "2026-11-07T14:31:39.175402+00:00",
+  "locations": [
+    {
+      "id": "dhaka",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6"
+    },
+    {
+      "id": "chattogram",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59"
+    },
+    {
+      "id": "khulna",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152"
+    },
+    {
+      "id": "rajshahi",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1"
+    },
+    {
+      "id": "sylhet",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb"
+    },
+    {
+      "id": "barishal",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856"
+    },
+    {
+      "id": "rangpur",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0"
+    },
+    {
+      "id": "mymensingh",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02"
+    },
+    {
+      "id": "coxs_bazar",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da"
+    },
+    {
+      "id": "satkhira",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6"
+    },
+    {
+      "id": "bhola",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff"
+    },
+    {
+      "id": "sunamganj",
+      "monthly_records": 540,
+      "annual_records": 45,
+      "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae"
+    }
+  ],
+  "numeric_values": 35100
+}

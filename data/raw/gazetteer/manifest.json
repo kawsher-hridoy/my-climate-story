@@ -1,0 +1,21 @@
+{
+  "retrieved_at": "2026-11-07T15:32:59.105612+00:00",
+  "source": "GeoNames CC BY 4.0",
+  "places": 291014,
+  "aliases": 1095645,
+  "files": [
+    {
+      "filename": "BD.zip",
+      "source_url": "https://download.geonames.org/export/dump/BD.zip",
+      "sha256": "f51aee18165117afbaf998c2e689d349b5b5ad7844918916557bfddbb2594173",
+      "imported_places": 54328
+    },
+    {
+      "filename": "cities500.zip",
+      "source_url": "https://download.geonames.org/export/dump/cities500.zip",
+      "sha256": "bf2516f404ceefd24e099e48c8cd91730c9b1ab85158dd77eb9d943275d6b072",
+      "imported_places": 236686
+    }
+  ],
+  "note": "Global cities500 does not contain every village; available aliases are not guaranteed translated."
+}

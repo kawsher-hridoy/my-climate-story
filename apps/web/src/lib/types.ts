@@ -1,0 +1,12 @@
+import type { components } from "./api.generated";
+export type Place = components["schemas"]["Place"];
+export type Story = components["schemas"]["StoryManifest"];
+export type Source = components["schemas"]["SourceMetadata"];
+export type ClimateComponent = components["schemas"]["ClimateComponent"];
+export type ImageryPair = components["schemas"]["ImageryPair"];
+export type QuizQuestion = components["schemas"]["QuizQuestion"];
+export type ActionCard = components["schemas"]["ActionCard"];
+export type Job = components["schemas"]["JobStatus"];
+export type Locale = "bn" | "en";
+export type Localized = { bn: string; en: string };
+export type Exploration = components["schemas"]["ExplorationResponse"];

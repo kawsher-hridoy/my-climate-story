@@ -1,0 +1,270 @@
+{
+  "id": "mcs-1ff46cf7c027377b",
+  "created_at": "2026-11-07T15:56:38.022224+00:00",
+  "processing_version": "calendar-aware-v2",
+  "content_version": "2767589fe7f7",
+  "rainfall_pending": true,
+  "source_requests": [
+    {
+      "id": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+      "dataset": "nasa-power",
+      "place_id": "dhaka",
+      "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+      "requested_coordinates": {
+        "latitude": 23.8103,
+        "longitude": 90.4125
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4125&latitude=23.8103&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+      "dataset": "nasa-power",
+      "place_id": "chattogram",
+      "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+      "requested_coordinates": {
+        "latitude": 22.3569,
+        "longitude": 91.7832
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.7832&latitude=22.3569&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+      "dataset": "nasa-power",
+      "place_id": "khulna",
+      "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+      "requested_coordinates": {
+        "latitude": 22.8456,
+        "longitude": 89.5403
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.5403&latitude=22.8456&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+      "dataset": "nasa-power",
+      "place_id": "rajshahi",
+      "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+      "requested_coordinates": {
+        "latitude": 24.3745,
+        "longitude": 88.6042
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=88.6042&latitude=24.3745&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+      "dataset": "nasa-power",
+      "place_id": "sylhet",
+      "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+      "requested_coordinates": {
+        "latitude": 24.8949,
+        "longitude": 91.8687
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.8687&latitude=24.8949&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+      "dataset": "nasa-power",
+      "place_id": "barishal",
+      "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+      "requested_coordinates": {
+        "latitude": 22.701,
+        "longitude": 90.3535
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.3535&latitude=22.701&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+      "dataset": "nasa-power",
+      "place_id": "rangpur",
+      "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+      "requested_coordinates": {
+        "latitude": 25.7439,
+        "longitude": 89.2752
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.2752&latitude=25.7439&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+      "dataset": "nasa-power",
+      "place_id": "mymensingh",
+      "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+      "requested_coordinates": {
+        "latitude": 24.7471,
+        "longitude": 90.4203
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4203&latitude=24.7471&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+      "dataset": "nasa-power",
+      "place_id": "coxs_bazar",
+      "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+      "requested_coordinates": {
+        "latitude": 21.4272,
+        "longitude": 92.0058
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=92.0058&latitude=21.4272&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+      "dataset": "nasa-power",
+      "place_id": "satkhira",
+      "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+      "requested_coordinates": {
+        "latitude": 22.7185,
+        "longitude": 89.0705
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.0705&latitude=22.7185&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+      "dataset": "nasa-power",
+      "place_id": "bhola",
+      "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+      "requested_coordinates": {
+        "latitude": 22.6859,
+        "longitude": 90.6482
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.6482&latitude=22.6859&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+      "dataset": "nasa-power",
+      "place_id": "sunamganj",
+      "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+      "requested_coordinates": {
+        "latitude": 25.0658,
+        "longitude": 91.395
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.395&latitude=25.0658&start=1981&end=2025&format=JSON"
+    }
+  ],
+  "archive_inventory": {
+    "archive_sha256": "467221d541546b1c4d9b535a4feafad0d711607bd35889c67e88a3d7079e94d5",
+    "archive_files": 45,
+    "archive_uncompressed_bytes": 1985209,
+    "imported_at": "2026-11-07T14:31:39.175402+00:00",
+    "locations": [
+      {
+        "id": "dhaka",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6"
+      },
+      {
+        "id": "chattogram",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59"
+      },
+      {
+        "id": "khulna",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152"
+      },
+      {
+        "id": "rajshahi",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1"
+      },
+      {
+        "id": "sylhet",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb"
+      },
+      {
+        "id": "barishal",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856"
+      },
+      {
+        "id": "rangpur",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0"
+      },
+      {
+        "id": "mymensingh",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02"
+      },
+      {
+        "id": "coxs_bazar",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da"
+      },
+      {
+        "id": "satkhira",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6"
+      },
+      {
+        "id": "bhola",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff"
+      },
+      {
+        "id": "sunamganj",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae"
+      }
+    ],
+    "numeric_values": 35100
+  },
+  "place_ids": [
+    "dhaka",
+    "chattogram",
+    "khulna",
+    "rajshahi",
+    "sylhet",
+    "barishal",
+    "rangpur",
+    "mymensingh",
+    "coxs_bazar",
+    "satkhira",
+    "bhola",
+    "sunamganj"
+  ],
+  "approved_imagery_count": 12,
+  "approved_temperature_count": 12,
+  "code_sha256": "b800bb744d0d73d6a5d0ccc93de5fcc199a356ae5fa4044bb8aa816b57c5a333",
+  "source_periods": {
+    "temperature": "1981–2025",
+    "global": "1880–2025",
+    "rainfall": "pending"
+  },
+  "content_questions": 30,
+  "execution_amendment": "User accepted rainfall pending until Earthdata credentials are configured."
+}

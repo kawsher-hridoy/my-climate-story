@@ -1,0 +1,63 @@
+{
+  "id": "satkhira",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/satkhira/before-e627bee47395.webp",
+    "thumbnail_url": "/media/imagery/satkhira/before-e627bee47395-thumb.webp",
+    "date": "1990-01-30",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+    "sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+    "width": 667,
+    "height": 667,
+    "bytes": 45808,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-30।",
+      "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 1990-01-30."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/satkhira/after-2a0807809853.webp",
+    "thumbnail_url": "/media/imagery/satkhira/after-2a0807809853-thumb.webp",
+    "date": "2025-02-15",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+    "sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+    "width": 667,
+    "height": 667,
+    "bytes": 47932,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.01,
+    "alt": {
+      "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-15।",
+      "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 2025-02-15."
+    }
+  },
+  "bounds": [
+    88.97161942444858,
+    22.627094804493694,
+    89.16906367357048,
+    22.810263665138574
+  ],
+  "crs": "EPSG:32645",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.131231+00:00",
+    "evidence": "Town, fields and water bodies are visible. This city-center crop is not labeled mangroves or coastline. Avoid interpreting greener appearance as vegetation gain.",
+    "before_sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+    "after_sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

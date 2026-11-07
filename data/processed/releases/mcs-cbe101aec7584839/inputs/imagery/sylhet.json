@@ -1,0 +1,63 @@
+{
+  "id": "sylhet",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/sylhet/before-a6aded736cde.webp",
+    "thumbnail_url": "/media/imagery/sylhet/before-a6aded736cde-thumb.webp",
+    "date": "1990-01-16",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_136043_19900116_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136043_19900116_20200916_02_T1_SR",
+    "sha256": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a",
+    "width": 667,
+    "height": 667,
+    "bytes": 58404,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 1.0,
+    "alt": {
+      "bn": "সিলেট-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sylhet, acquired 1990-01-16."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/sylhet/after-8c9e726c02e7.webp",
+    "thumbnail_url": "/media/imagery/sylhet/after-8c9e726c02e7-thumb.webp",
+    "date": "2025-01-16",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_136043_20250116_20250127_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136043_20250116_20250127_02_T1_SR",
+    "sha256": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+    "width": 667,
+    "height": 667,
+    "bytes": 86014,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.71,
+    "alt": {
+      "bn": "সিলেট-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sylhet, acquired 2025-01-16."
+    }
+  },
+  "bounds": [
+    91.76861850803134,
+    24.803957254910806,
+    91.96835498171943,
+    24.986138442378863
+  ],
+  "crs": "EPSG:32646",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.032275+00:00",
+    "evidence": "City/river landmarks and surrounding field shapes align. Different vegetation colors are not treated as land-cover or climate conclusions.",
+    "before_sha256": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a",
+    "after_sha256": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

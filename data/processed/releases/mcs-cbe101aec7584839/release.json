@@ -1,0 +1,447 @@
+{
+  "id": "mcs-cbe101aec7584839",
+  "created_at": "2026-11-07T15:10:03.411823+00:00",
+  "processing_version": "calendar-aware-v3",
+  "content_version": "2767589fe7f7",
+  "rainfall_pending": true,
+  "release_format": 2,
+  "identity": {
+    "release_format": 2,
+    "processing_version": "calendar-aware-v3",
+    "code_sha256": "94cea1ee6be8c2b35f2003806025ed69bfdc725d54ffbcddd7ec5fd3151d854d",
+    "input_sha256": {
+      "archive-inventory.json": "471c266fd8157169587c6928eae52b244f2ddaa1905192f303819ed7cb62f4dd",
+      "content/actions.json": "b015430901207b56dbc74abcebd1da8c499df4a35a6a5ae07a2e0a6e7b12b059",
+      "content/imagery-candidates.json": "c4383dfccf95bf5821c55f982c1975c51bea358963af9e9600ca909033ad7818",
+      "content/imagery-reviews.json": "4a71959e597e00123f8df7ad254b409d7eca66ab9b30fca259d0dc0f600deb59",
+      "content/places.json": "42d540a381ebb358853f13912ebdcba4feae1d60967e0d59d1bb6595d5bfcfe0",
+      "content/question-bank.json": "3bce205a87188b19b51e39c441113c0890ae53854b4d25e38aabebe547669585",
+      "content/temperature-reviews.json": "e6525e818c2e558258361c3f13995e4a7b510fe2a15d44161f92cbd3a4f79e1f",
+      "gistemp/Global_Temperature_Annual_Clean.csv": "48bf2047c636459e4770e0125263d04b7a67ee50b18680af47662d45befc597a",
+      "gistemp/Global_Temperature_Data_GISTEMP.csv": "4c64eda288bce32b8d76926278f346ecea1e53506df8ee72a3d5accb0657c416",
+      "gistemp/Global_Temperature_Monthly_Clean.csv": "dc4625fff02e2107072eff2012e5506251aa79128a4db325630a63fcee1688e1",
+      "imagery-metadata/LC08_L2SP_136043_20250116_20250127_02_T1_SR.json": "04679ddf16e1afaa67cb60a436d25ba9dc1d1b25e6962467e4b1734715c1ae21",
+      "imagery-metadata/LC08_L2SP_136045_20250116_20250127_02_T1_SR.json": "92d5b775ec556a6485f1bcb72443386b697b5cd6208fb4f78dd2de590510ae80",
+      "imagery-metadata/LC08_L2SP_137043_20250208_20250214_02_T1_SR.json": "afd9de6f3df5656da1d3891eb097216fedf11fcebc1fcfe20492085eb3ded798",
+      "imagery-metadata/LC08_L2SP_137044_20250208_20250214_02_T1_SR.json": "2aef6d223139e40240d9c5119edc17bef6f2f7f946efe3c5cd028cd4b8c14274",
+      "imagery-metadata/LC08_L2SP_138042_20250114_20250122_02_T1_SR.json": "9b2ef320d8676012ad290d9a12cdec61262bea6045c4d52041c853c70a0349b3",
+      "imagery-metadata/LC08_L2SP_138043_20250114_20250122_02_T1_SR.json": "39cb0daed9711eb50bcaf55a2ea089d881fc9d8101026f626f3433b28b4c0315",
+      "imagery-metadata/LC08_L2SP_138044_20250215_20250226_02_T1_SR.json": "61d4a6d8cba85bd823df4d9e9fb5a67ea8cd90dccc27a6cc233176670c70e278",
+      "imagery-metadata/LT05_L2SP_136043_19900116_20200916_02_T1_SR.json": "67a489a0447fb5db30438ba825d58ad9a672848c9aa0316686cb67172cbfb8ac",
+      "imagery-metadata/LT05_L2SP_136045_19900116_20200916_02_T1_SR.json": "dfb9f00a20afd642c0fda90ba225401c492f4a19059794616b4fb85cbd669c02",
+      "imagery-metadata/LT05_L2SP_137043_19900107_20200916_02_T1_SR.json": "2f7a4b138f6fe9b5be9d60efb4b531d0602b4ac1528bd424ce94eff522139eed",
+      "imagery-metadata/LT05_L2SP_137044_19900107_20200916_02_T1_SR.json": "8bd54685d8221f556c89b75f6d7df6ea3bbd543678f9d58ebfc351ab22d72154",
+      "imagery-metadata/LT05_L2SP_138042_19950128_20200912_02_T1_SR.json": "381efad8bb0c11087fec340f7e214bfef2bb933718d941a71a50285f0e6dccd0",
+      "imagery-metadata/LT05_L2SP_138043_19900130_20200916_02_T1_SR.json": "84589efd7265dba963337036f77625b0f3a955056db651ace91b6c4603f5f4d1",
+      "imagery-metadata/LT05_L2SP_138044_19900130_20200916_02_T1_SR.json": "3f2a97ad493d19876ed4ff00ff9f0343858e83f761307c70a2a157701e935601",
+      "imagery-metadata/processing-barishal.json": "aa380eb228d7334fb3e3f7a513eb4e4b84e255dce39c4df14bf25e87b4823ad9",
+      "imagery-metadata/processing-bhola.json": "2b913c10c3733de1989e332f6c958d8a20bc79df4244fc0a99402c1908cb7fba",
+      "imagery-metadata/processing-chattogram.json": "96a10a40ff7f0f1153c8bab8f009cb19baed7219342d133db040b4f273ad4751",
+      "imagery-metadata/processing-coxs_bazar.json": "8ac4ed71791fc005d0e9275e27d3963f97d42d768d475488b8dfe49a5aacfbf3",
+      "imagery-metadata/processing-dhaka.json": "1e7e8383d8496636850fde60d8cbd4bffbde960f9c264ae4362bc1c8b41d2ef1",
+      "imagery-metadata/processing-khulna.json": "cb58161be6ff715dcde676ec9b8d11f038a2dc4d8a2bba4e57a0b5a573cf36d0",
+      "imagery-metadata/processing-mymensingh.json": "bd6a89273b34062a95bf611ba716e965ceef9211e96aeccbffc3f0573ba39748",
+      "imagery-metadata/processing-rajshahi.json": "2efd7dc9d1f3c1da9c893968f98f2c85c7f3db74e7201e740630f7b153dca9c0",
+      "imagery-metadata/processing-rangpur.json": "13ff94d3118b9befe26199adbbc3f10602cec6b396e477cb84992f4e9adc8214",
+      "imagery-metadata/processing-satkhira.json": "3d920d67acd0b0508102749f1e8e5a60f0124882282cc8cf2f0a2beb7884c642",
+      "imagery-metadata/processing-sunamganj.json": "5f54b0c3d388068330b2f34786ea8d54d3d079b44c4c45dcdca43e4017874d18",
+      "imagery-metadata/processing-sylhet.json": "3f2644cd0b57c91bd55c84d36087325d88a2652c3de86dbaefa2414d232421a2",
+      "imagery/barishal.json": "bacff67adc0b28ae1f9b1a7e5be3e5f01f26205e424a488b998260efbabea34d",
+      "imagery/bhola.json": "782fae3f6efd712a50af13c953cc852149dc3ad128aefc73269d2519f420c860",
+      "imagery/chattogram.json": "5664637f7f9aa573935dd4b0b20e616549e1c66ac912803f5a2695f6b66ccd66",
+      "imagery/coxs_bazar.json": "d8ad486d7badd7644640caa6c9ef96a3d02429e012c4cc696a59da751457c9c4",
+      "imagery/dhaka.json": "40a44fe8a8486d1bfb62ce036080e615fcc48a6b488628e2aa52162d52bd1046",
+      "imagery/khulna.json": "bf9f391d5f59e77bc76e17cf33d3c8688c93681fe4b6b6bd9570285cf83e933d",
+      "imagery/mymensingh.json": "592bb857d4c3bcf57f9951549b2a7cacf9279453070d057bb2415fcf68412408",
+      "imagery/rajshahi.json": "31b59e483f22793861cbac4246f437ad3bce8f124929641dec0722e1423141d9",
+      "imagery/rangpur.json": "263e55d86f89c285bc89c49574a2eaad42ec4cad1c1213a78bd86036d6f6a000",
+      "imagery/satkhira.json": "020e6c500e3beae49a36241733f668278e217f75de74ba585daabb9750d51ae4",
+      "imagery/sunamganj.json": "5b9e9d6ea45416553801969d10fff983d66d03f38fce379117fc51d0277b6193",
+      "imagery/sylhet.json": "ebd2fc93629c62cf27d5b7651d1ccd81fb8b3c515dd6302551fe11bce3a77c46",
+      "power/barishal.json": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+      "power/bhola.json": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+      "power/chattogram.json": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+      "power/coxs_bazar.json": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+      "power/dhaka.json": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+      "power/khulna.json": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+      "power/mymensingh.json": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+      "power/rajshahi.json": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+      "power/rangpur.json": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+      "power/satkhira.json": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+      "power/sunamganj.json": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+      "power/sylhet.json": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb"
+    },
+    "asset_sha256": {
+      "imagery/barishal/after-76d59112e5c7-thumb.webp": "3ed49ce15c38e5943f5201fd11dbd86f9f5f212b888023fa4cf3bd6cb0a885bc",
+      "imagery/barishal/after-76d59112e5c7.webp": "76d59112e5c7b82ff1531b7b70f714657e97db19a552f5729aa7ce3467f021d1",
+      "imagery/barishal/before-10dcbfdbe2fb-thumb.webp": "3f002ade311d754dc13e29f289c94be1a4537d8a3fd3021ba665228531544b78",
+      "imagery/barishal/before-10dcbfdbe2fb.webp": "10dcbfdbe2fb7a842a3c4daf9986013846dab5c8ca3e6b8cd532b65b8971bca0",
+      "imagery/bhola/after-7819fe0cba0c-thumb.webp": "f83e3c65145f93efd0d9e0b20b2fc541c76bab029aca107928eca551a52cc4a0",
+      "imagery/bhola/after-7819fe0cba0c.webp": "7819fe0cba0cb11ef0126f11cdbd878c8865fa17c99406f1e19442eefc32af05",
+      "imagery/bhola/before-4c44036a04a5-thumb.webp": "15cfad3d3a31352002860c42bfbccc0e0db8973fd7873e0b25d7f27c7fe478a4",
+      "imagery/bhola/before-4c44036a04a5.webp": "4c44036a04a5145efa17cf7b7aed0d475f3fc341dfd0a819685bbfc91a719775",
+      "imagery/chattogram/after-9490846ba7a8-thumb.webp": "f4723a910e53cfbc4c11bf34baa698e3a2b18dee138363b1d139443f789c749b",
+      "imagery/chattogram/after-9490846ba7a8.webp": "9490846ba7a82475d62df163db1d3bb4011805548921f534ae3496c2cc18eb92",
+      "imagery/chattogram/before-add49a3b30c1-thumb.webp": "5532f21edc31a73d27d7c981824fe413ca6245ce9cf7d71ed0f34fdada7dd0bd",
+      "imagery/chattogram/before-add49a3b30c1.webp": "add49a3b30c19f473509d67fa33398c6698aeb70fe9d1f62b246b597343f036d",
+      "imagery/coxs_bazar/after-35db107eeccd-thumb.webp": "93b2f23e03430f4e2fb3fcf2bea961fb7c078afe85c39155ae496213f6aa5892",
+      "imagery/coxs_bazar/after-35db107eeccd.webp": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+      "imagery/coxs_bazar/before-256f7c3328f5-thumb.webp": "fda6f65775e6b7e1c509e70c369a8dd403ff85fe9c2a7ae3fafe952ac042dbda",
+      "imagery/coxs_bazar/before-256f7c3328f5.webp": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+      "imagery/dhaka/after-8facb46b72b9-thumb.webp": "24c97734f731622507fdd88ae0d780a41ad03ebeaae94c27c2edd682bfc06188",
+      "imagery/dhaka/after-8facb46b72b9.webp": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+      "imagery/dhaka/before-06f95d647e5a-thumb.webp": "d5637b81c8a482fbc5e2c88dc62b54361b09b45446f1fe7b1dc3f1e107e13532",
+      "imagery/dhaka/before-06f95d647e5a.webp": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+      "imagery/khulna/after-e3b3375edf97-thumb.webp": "b69044e832dbeed3c3de094d7d47f1ce8a715145a464807eb992e69452f711cf",
+      "imagery/khulna/after-e3b3375edf97.webp": "e3b3375edf97f2709f6c50c675c1b1002c6d81cf37589e75d447564a3e1cd91b",
+      "imagery/khulna/before-560c347e39f0-thumb.webp": "cef22690e0d01f0acd2befb4208100306c72ed41cb77275c5e6e10a0323f1363",
+      "imagery/khulna/before-560c347e39f0.webp": "560c347e39f0220e3a0f17f2f20704c03e1b5f1d27f23026b502f66b9804889d",
+      "imagery/mymensingh/after-47ed2cd5005a-thumb.webp": "422618429db22c69710720bfebce162aa522fe1d0352990df5db6db1908047c7",
+      "imagery/mymensingh/after-47ed2cd5005a.webp": "47ed2cd5005a076f1a3b2fdfe66285acbb5b7f6334d44047168c54554332c1ca",
+      "imagery/mymensingh/before-071754f76a8a-thumb.webp": "32de73fbee71a43f25a27e4094b8cb47c43ec967ecd03a2b0f80ac2108945789",
+      "imagery/mymensingh/before-071754f76a8a.webp": "071754f76a8aaca98a9ee815a699fb5717e165a89d210978d6b3c5e357ba92f6",
+      "imagery/rajshahi/after-a00a27684c8a-thumb.webp": "c33af6571e21fb046659d0dd9ad0afba732d70cd9e1b27dbdef60b1edee77bcd",
+      "imagery/rajshahi/after-a00a27684c8a.webp": "a00a27684c8a56b68bd2afc3ea6026331e7dba2aab55498bcda5776c7caf6669",
+      "imagery/rajshahi/before-099ff577fbd5-thumb.webp": "432c09a31f3e83135cb77b275693608c8ea7b1f5cfad9f5888e098ca20f4a11a",
+      "imagery/rajshahi/before-099ff577fbd5.webp": "099ff577fbd52c7e148befd5841685abb1d3b5b8faf4b5111d49fb51a6b478eb",
+      "imagery/rangpur/after-c995b7ae9a75-thumb.webp": "5814eec77d2a749b9b41390f581e7c44296abe4c10039536a62d4fb5812b591a",
+      "imagery/rangpur/after-c995b7ae9a75.webp": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+      "imagery/rangpur/before-7ba33ddaaed4-thumb.webp": "a09e149683ebd4f557b7cd11088ef1f5ba7f0234948641b24d4a4183bf3837db",
+      "imagery/rangpur/before-7ba33ddaaed4.webp": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+      "imagery/satkhira/after-2a0807809853-thumb.webp": "96b0c4abe006a1f16dfb7bc04ab60dad00f7b10049366d0f33a1661126744d34",
+      "imagery/satkhira/after-2a0807809853.webp": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+      "imagery/satkhira/before-e627bee47395-thumb.webp": "77ad0902e7fe36fc12a02e479def3ace02aea6f03a5fc90da20e1e1db2bf0b39",
+      "imagery/satkhira/before-e627bee47395.webp": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+      "imagery/sunamganj/after-2c1c0a607c12-thumb.webp": "74223130addc85b4cb67970cd45f44e72b1bcf3282c1ba08198377ee76ca4ac9",
+      "imagery/sunamganj/after-2c1c0a607c12.webp": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+      "imagery/sunamganj/before-21ef2657f578-thumb.webp": "d0c00bbd2123776e5c61d023e9533dd67f9a5fb21308e93cf5cb5a03357ee067",
+      "imagery/sunamganj/before-21ef2657f578.webp": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+      "imagery/sylhet/after-8c9e726c02e7-thumb.webp": "6fdddcbe46d82057611d3c074e23683fa4eb0d277cef5c6887c2916fe7d5a588",
+      "imagery/sylhet/after-8c9e726c02e7.webp": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+      "imagery/sylhet/before-a6aded736cde-thumb.webp": "055096048da7802b3f33659bcc8b32f43ac08281b97a0bc0ae58ac1648a8c637",
+      "imagery/sylhet/before-a6aded736cde.webp": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a"
+    },
+    "asset_base": "/media",
+    "imagery_policy": {
+      "version": "landsat-rgb-v1",
+      "display_transform": {
+        "reflectance_scale": 2.75e-05,
+        "reflectance_offset": -0.2,
+        "display_min": 0.0,
+        "display_max": 0.3,
+        "gamma": 1.5,
+        "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+      },
+      "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+      "pixel_size_m": 30,
+      "aoi_side_m": 20000,
+      "minimum_valid_fraction": 0.95
+    }
+  },
+  "publication_state": "ready",
+  "source_requests": [
+    {
+      "id": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+      "dataset": "nasa-power",
+      "place_id": "dhaka",
+      "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+      "requested_coordinates": {
+        "latitude": 23.8103,
+        "longitude": 90.4125
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4125&latitude=23.8103&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+      "dataset": "nasa-power",
+      "place_id": "chattogram",
+      "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+      "requested_coordinates": {
+        "latitude": 22.3569,
+        "longitude": 91.7832
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.7832&latitude=22.3569&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+      "dataset": "nasa-power",
+      "place_id": "khulna",
+      "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+      "requested_coordinates": {
+        "latitude": 22.8456,
+        "longitude": 89.5403
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.5403&latitude=22.8456&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+      "dataset": "nasa-power",
+      "place_id": "rajshahi",
+      "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+      "requested_coordinates": {
+        "latitude": 24.3745,
+        "longitude": 88.6042
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=88.6042&latitude=24.3745&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+      "dataset": "nasa-power",
+      "place_id": "sylhet",
+      "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+      "requested_coordinates": {
+        "latitude": 24.8949,
+        "longitude": 91.8687
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.8687&latitude=24.8949&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+      "dataset": "nasa-power",
+      "place_id": "barishal",
+      "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+      "requested_coordinates": {
+        "latitude": 22.701,
+        "longitude": 90.3535
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.3535&latitude=22.701&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+      "dataset": "nasa-power",
+      "place_id": "rangpur",
+      "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+      "requested_coordinates": {
+        "latitude": 25.7439,
+        "longitude": 89.2752
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.2752&latitude=25.7439&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+      "dataset": "nasa-power",
+      "place_id": "mymensingh",
+      "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+      "requested_coordinates": {
+        "latitude": 24.7471,
+        "longitude": 90.4203
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4203&latitude=24.7471&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+      "dataset": "nasa-power",
+      "place_id": "coxs_bazar",
+      "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+      "requested_coordinates": {
+        "latitude": 21.4272,
+        "longitude": 92.0058
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=92.0058&latitude=21.4272&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+      "dataset": "nasa-power",
+      "place_id": "satkhira",
+      "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+      "requested_coordinates": {
+        "latitude": 22.7185,
+        "longitude": 89.0705
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.0705&latitude=22.7185&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+      "dataset": "nasa-power",
+      "place_id": "bhola",
+      "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+      "requested_coordinates": {
+        "latitude": 22.6859,
+        "longitude": 90.6482
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.6482&latitude=22.6859&start=1981&end=2025&format=JSON"
+    },
+    {
+      "id": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+      "dataset": "nasa-power",
+      "place_id": "sunamganj",
+      "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+      "requested_coordinates": {
+        "latitude": 25.0658,
+        "longitude": 91.395
+      },
+      "version": "v2.10.0",
+      "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+      "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.395&latitude=25.0658&start=1981&end=2025&format=JSON"
+    }
+  ],
+  "archive_inventory": {
+    "archive_sha256": "467221d541546b1c4d9b535a4feafad0d711607bd35889c67e88a3d7079e94d5",
+    "archive_files": 45,
+    "archive_uncompressed_bytes": 1985209,
+    "imported_at": "2026-11-07T14:31:39.175402+00:00",
+    "locations": [
+      {
+        "id": "dhaka",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6"
+      },
+      {
+        "id": "chattogram",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59"
+      },
+      {
+        "id": "khulna",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152"
+      },
+      {
+        "id": "rajshahi",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1"
+      },
+      {
+        "id": "sylhet",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb"
+      },
+      {
+        "id": "barishal",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856"
+      },
+      {
+        "id": "rangpur",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0"
+      },
+      {
+        "id": "mymensingh",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02"
+      },
+      {
+        "id": "coxs_bazar",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da"
+      },
+      {
+        "id": "satkhira",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6"
+      },
+      {
+        "id": "bhola",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff"
+      },
+      {
+        "id": "sunamganj",
+        "monthly_records": 540,
+        "annual_records": 45,
+        "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae"
+      }
+    ],
+    "numeric_values": 35100
+  },
+  "place_ids": [
+    "dhaka",
+    "chattogram",
+    "khulna",
+    "rajshahi",
+    "sylhet",
+    "barishal",
+    "rangpur",
+    "mymensingh",
+    "coxs_bazar",
+    "satkhira",
+    "bhola",
+    "sunamganj"
+  ],
+  "approved_imagery_count": 12,
+  "approved_temperature_count": 12,
+  "code_sha256": "94cea1ee6be8c2b35f2003806025ed69bfdc725d54ffbcddd7ec5fd3151d854d",
+  "source_periods": {
+    "temperature": "1981–2025",
+    "global": "1880–2025",
+    "rainfall": "pending"
+  },
+  "content_questions": 30,
+  "execution_amendment": "User accepted rainfall pending until Earthdata credentials are configured.",
+  "output_sha256": {
+    "places.json": "b5ad9713937b3a1e1761c9ac4fdb0e4a5eedfb2b14c4cdc509e31406056f4d15",
+    "series/imerg-pending-barishal-cbe101ae.json": "3821f5c5f6c33266d6a63134358846e6d5ae3adcedb3c077c5a3072de717466a",
+    "series/imerg-pending-bhola-cbe101ae.json": "fcf666ccab59c1e5557ee9876ded3658d310c0260d89fb8b7c123192a98b283e",
+    "series/imerg-pending-chattogram-cbe101ae.json": "d2b543771996149212518d7b60d22a80b1983496e4806e76b7c1f8a019885d0c",
+    "series/imerg-pending-coxs_bazar-cbe101ae.json": "4938f25bae69d7afa2bcfbc302ebccb99f7a8c0f83c7d8fc5c9180eef7ebfada",
+    "series/imerg-pending-dhaka-cbe101ae.json": "1bd90f80c72d0aba0d5d114087146cf87edef4266cf85828476157e3594d021b",
+    "series/imerg-pending-khulna-cbe101ae.json": "7925df59fd648a32980432b39c4ac1c3ab62ec10b85d0a668575d675fdf906d7",
+    "series/imerg-pending-mymensingh-cbe101ae.json": "8bf62e77c875f34f7e9adff2a6b7f94e5d467078ac6543ff890cb3070692d2b6",
+    "series/imerg-pending-rajshahi-cbe101ae.json": "fed81591b1b9d1e47670b927076d12b358c8b1a5ca60f859bb11ac3ac1c21db9",
+    "series/imerg-pending-rangpur-cbe101ae.json": "4a7854cf35b56c3dba50af4b2a9fe7e059055850be4b1dc8aaae4cae92079c5c",
+    "series/imerg-pending-satkhira-cbe101ae.json": "3bc0065b27f1f716ce7e4eefd49e6bd48196b4a12527d87e4c87a53a04478fd7",
+    "series/imerg-pending-sunamganj-cbe101ae.json": "4c2613fc4f993772ab52fdb5ac4d2c6409137796af0aab9990c0075751df3c2e",
+    "series/imerg-pending-sylhet-cbe101ae.json": "e3d8852f493a06e042396c01ac2e7ed263ebdaa6a9dbeb98f206e84a7615a0a4",
+    "series/power-t2m-barishal-e14c160c170912c5-cbe101ae.json": "6f78daca0b45af3c7d406913422541bf57f330b867f5df266ce5225d97c9cb34",
+    "series/power-t2m-bhola-e14c160c170912c5-cbe101ae.json": "8fc0a6163eda728be97fb3f09e5ab62d705bc68add6189111b04894c228ace8a",
+    "series/power-t2m-chattogram-07478e089dea083a-cbe101ae.json": "619d6647d6ac6ca2e4f13e7aaaf83440b928e993f05370c44650198197446538",
+    "series/power-t2m-coxs_bazar-392941e5ca7c54c1-cbe101ae.json": "f97f263e58fd92cae34aa1d9034da102c0cf1a3f35e1a6de5863963017fe97d1",
+    "series/power-t2m-dhaka-a9370283a369e2bd-cbe101ae.json": "f3aacb33991aff5800091c3f5f15a669f24a5ce13b5f01fcb58310b4a7f323b8",
+    "series/power-t2m-khulna-da268a914cb2fd77-cbe101ae.json": "6ad49ae26c2b5e78fd6b8f0d05039cad6ddb71c7d56c84ce32e52db9cb4e275e",
+    "series/power-t2m-mymensingh-41cb53f8ba872d25-cbe101ae.json": "f81ebdcff118f2c6f21791d5bdd2d9d0b60cb06958eb8d92deffb9f332b1fad3",
+    "series/power-t2m-rajshahi-af9b970ee32b01c4-cbe101ae.json": "3504bb4481b39eedeafcf65ef88cb932f5a4220aff6c7ca2da4c7238d3cacec9",
+    "series/power-t2m-rangpur-200485e9f40d1858-cbe101ae.json": "4fe176335259bbe962a9d5e522cb9eede33d4d185163e54323fbe651c068efc9",
+    "series/power-t2m-satkhira-9671072aa2e28323-cbe101ae.json": "16807aa760d6334f7a2a5d2ff40b685d34afe72c43af137983c6db10a433ff50",
+    "series/power-t2m-sunamganj-fe4ed3964be1d2a4-cbe101ae.json": "9c3e5d8fbc540c0c997f99c7086de94b03add7186a93d83a2eeb725e78da3b44",
+    "series/power-t2m-sylhet-eb2b38b4f432b3fb-cbe101ae.json": "3a3972c5274a5f68539b8a5ba59a23c2c3041098cce8e3c13a1120d079924816",
+    "sources/nasa-gistemp.json": "ebd4c4fa0661d77831e35c35cb08f8ebde3ac52a561f5796a7965b2395aef596",
+    "sources/nasa-imerg.json": "5f9e387036b1852dd4162fc9fd85107b22696ecb0d804a2bd224972d40d68767",
+    "sources/nasa-power.json": "92ab55c02a127c0ce4db42a7dd23a1d17f786f8979df7386199584bfc101a53e",
+    "stories/barishal.json": "7a6c153961b52778cfa4932c575e54e864818eab2e1f048cc695ed17487db50e",
+    "stories/bhola.json": "23e4225c9a80ab5f7ff47c908ad21b4dc71c4dcb743b5bb99477403016b56bad",
+    "stories/chattogram.json": "0e6a68c2234a154f80b710ea2266b8f9df87162254bf49ee7e9ad1025db592c8",
+    "stories/coxs_bazar.json": "047aa2e00a81d8b165e33ce2b8906ab40cab0b86bb9f820d8c0b73cc5bb956b0",
+    "stories/dhaka.json": "ac486fe47c11352842a38f7ab17596e0e7ca60a0858a4d8d1bfbe48289921ed8",
+    "stories/khulna.json": "960dcd1076f6997956791a1792736fadd93e378990ac2d6c2282b64f829a565c",
+    "stories/mymensingh.json": "20f076ef009f9b0ea473152c0c9420e7c4fbbdd6982c7d8be5e455d0735d4303",
+    "stories/rajshahi.json": "f7ed84877ca508bec4c7ac0301ae313dca8559900c374738bb5d03c13148c98c",
+    "stories/rangpur.json": "cf058a42f87bcd5d6e67519791cc26afdc84c2844cfa27a4a9608bf69ae7d1ad",
+    "stories/satkhira.json": "99d7aee22b70570f97117f35862ea3174edbc956b5b496eeccc655e720510d94",
+    "stories/sunamganj.json": "7a446c5936edce1b7274155870aa0dcb3176526953596b517302b3cb899dc593",
+    "stories/sylhet.json": "d09a44e0666a9bcc57ea141a6426b8f3546106ef03ff4bba0f6015b1e8888543"
+  }
+}

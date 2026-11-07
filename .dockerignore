@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+!.env.example
+.venv
+node_modules
+apps/web/node_modules
+apps/web/dist
+data/raw
+data/processed
+data/staging
+output
+.playwright-cli
+__pycache__
+.pytest_cache
+.ruff_cache

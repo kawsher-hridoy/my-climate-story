@@ -1,0 +1,61 @@
+{
+  "place_id": "bhola",
+  "retrieved_at": "2026-11-07T14:38:15.281197+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    248370,
+    2500680,
+    268380,
+    2520690
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/bhola/before-4c44036a04a5.webp",
+    "thumbnail_url": "/media/imagery/bhola/before-4c44036a04a5-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "sha256": "4c44036a04a5145efa17cf7b7aed0d475f3fc341dfd0a819685bbfc91a719775",
+    "width": 667,
+    "height": 667,
+    "bytes": 47700,
+    "valid_pixel_fraction": 0.9950459552832279,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "ভোলা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Bhola, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/bhola/after-7819fe0cba0c.webp",
+    "thumbnail_url": "/media/imagery/bhola/after-7819fe0cba0c-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "sha256": "7819fe0cba0cb11ef0126f11cdbd878c8865fa17c99406f1e19442eefc32af05",
+    "width": 667,
+    "height": 667,
+    "bytes": 51996,
+    "valid_pixel_fraction": 0.9964350658254081,
+    "scene_cloud_percent": 0.04,
+    "alt": {
+      "bn": "ভোলা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Bhola, acquired 2025-02-08."
+    }
+  }
+}

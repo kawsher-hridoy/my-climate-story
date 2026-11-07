@@ -1,0 +1,63 @@
+{
+  "id": "rangpur",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/rangpur/before-7ba33ddaaed4.webp",
+    "thumbnail_url": "/media/imagery/rangpur/before-7ba33ddaaed4-thumb.webp",
+    "date": "1995-01-28",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+    "sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+    "width": 667,
+    "height": 667,
+    "bytes": 52712,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1995-01-28।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 1995-01-28."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/rangpur/after-c995b7ae9a75.webp",
+    "thumbnail_url": "/media/imagery/rangpur/after-c995b7ae9a75-thumb.webp",
+    "date": "2025-01-14",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+    "sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+    "width": 667,
+    "height": 667,
+    "bytes": 58346,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.72,
+    "alt": {
+      "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-14।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 2025-01-14."
+    }
+  },
+  "bounds": [
+    89.17367078800565,
+    25.652070840160892,
+    89.37646721243205,
+    25.83573691067032
+  ],
+  "crs": "EPSG:32645",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.066151+00:00",
+    "evidence": "The historical date is correctly 1995, not 1990. Settlements and field patterns are visible with no major occluding cloud; colors cannot establish vegetation change.",
+    "before_sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+    "after_sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

@@ -1,0 +1,9 @@
+{
+  "A":{"path_row":"137/044","before":"LT05_L2SP_137044_19900107_20200916_02_T1_SR","after":"LC08_L2SP_137044_20250208_20250214_02_T1_SR","places":["dhaka","khulna","barishal","bhola"]},
+  "B":{"path_row":"136/045","before":"LT05_L2SP_136045_19900116_20200916_02_T1_SR","after":"LC08_L2SP_136045_20250116_20250127_02_T1_SR","places":["chattogram","coxs_bazar"]},
+  "C":{"path_row":"138/043","before":"LT05_L2SP_138043_19900130_20200916_02_T1_SR","after":"LC08_L2SP_138043_20250114_20250122_02_T1_SR","places":["rajshahi"]},
+  "D":{"path_row":"136/043","before":"LT05_L2SP_136043_19900116_20200916_02_T1_SR","after":"LC08_L2SP_136043_20250116_20250127_02_T1_SR","places":["sylhet"]},
+  "E":{"path_row":"138/042","before":"LT05_L2SP_138042_19950128_20200912_02_T1_SR","after":"LC08_L2SP_138042_20250114_20250122_02_T1_SR","places":["rangpur"]},
+  "F":{"path_row":"137/043","before":"LT05_L2SP_137043_19900107_20200916_02_T1_SR","after":"LC08_L2SP_137043_20250208_20250214_02_T1_SR","places":["mymensingh","sunamganj"]},
+  "G":{"path_row":"138/044","before":"LT05_L2SP_138044_19900130_20200916_02_T1_SR","after":"LC08_L2SP_138044_20250215_20250226_02_T1_SR","places":["satkhira"]}
+}

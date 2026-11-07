@@ -1,0 +1,61 @@
+{
+  "place_id": "barishal",
+  "retrieved_at": "2026-11-07T14:35:00.014634+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    218100,
+    2502840,
+    238110,
+    2522850
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/barishal/before-10dcbfdbe2fb.webp",
+    "thumbnail_url": "/media/imagery/barishal/before-10dcbfdbe2fb-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "sha256": "10dcbfdbe2fb7a842a3c4daf9986013846dab5c8ca3e6b8cd532b65b8971bca0",
+    "width": 667,
+    "height": 667,
+    "bytes": 73070,
+    "valid_pixel_fraction": 0.9963541467646986,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "বরিশাল-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Barishal, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/barishal/after-76d59112e5c7.webp",
+    "thumbnail_url": "/media/imagery/barishal/after-76d59112e5c7-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "sha256": "76d59112e5c7b82ff1531b7b70f714657e97db19a552f5729aa7ce3467f021d1",
+    "width": 667,
+    "height": 667,
+    "bytes": 64656,
+    "valid_pixel_fraction": 0.99644630458384,
+    "scene_cloud_percent": 0.04,
+    "alt": {
+      "bn": "বরিশাল-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Barishal, acquired 2025-02-08."
+    }
+  }
+}

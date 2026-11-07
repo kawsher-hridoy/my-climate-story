@@ -1,0 +1,17 @@
+{
+  "id": "nasa-power",
+  "name": "NASA POWER / MERRA-2",
+  "version": "v2.10.0",
+  "unit": "°C",
+  "source_url": "https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/",
+  "citation": "NASA POWER Project, NASA Langley Research Center. MERRA-2 meteorology; monthly point API.",
+  "spatial_resolution": "0.5° latitude × 0.625° longitude; ground width varies with latitude",
+  "start": "1981",
+  "end": "2025",
+  "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+  "license": "NASA open data",
+  "notes": {
+    "bn": "তোমার নির্বাচিত এলাকার আশপাশের আঞ্চলিক গ্রিডের অনুমান; বাড়ির থার্মোমিটারের মাপ নয়।",
+    "en": "Regional gridded estimates around your selected place, not a thermometer at your home."
+  }
+}

@@ -1,0 +1,798 @@
+{
+  "$defs": {
+    "ActionCard": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "audience": {
+          "enum": [
+            "student",
+            "family",
+            "school"
+          ],
+          "title": "Audience",
+          "type": "string"
+        },
+        "title": {
+          "$ref": "#/$defs/Localized"
+        },
+        "description": {
+          "$ref": "#/$defs/Localized"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "tags",
+        "audience",
+        "title",
+        "description",
+        "source_url"
+      ],
+      "title": "ActionCard",
+      "type": "object"
+    },
+    "AnnualObservation": {
+      "properties": {
+        "year": {
+          "title": "Year",
+          "type": "integer"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "complete": {
+          "default": true,
+          "title": "Complete",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "year",
+        "value"
+      ],
+      "title": "AnnualObservation",
+      "type": "object"
+    },
+    "ClimateComponent": {
+      "properties": {
+        "series_id": {
+          "title": "Series Id",
+          "type": "string"
+        },
+        "publication_state": {
+          "$ref": "#/$defs/PublicationState"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceMetadata"
+        },
+        "annual": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/AnnualObservation"
+          },
+          "title": "Annual",
+          "type": "array"
+        },
+        "monthly": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/MonthlyObservation"
+          },
+          "title": "Monthly",
+          "type": "array"
+        },
+        "comparison": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Comparison"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "warning": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Localized"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "quality_flags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Quality Flags",
+          "type": "array"
+        },
+        "shared_series_with": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Shared Series With",
+          "type": "array"
+        },
+        "requested_coordinates": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Coordinates"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "native_cell_center": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Coordinates"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "native_cell_bounds": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Native Cell Bounds"
+        }
+      },
+      "required": [
+        "series_id",
+        "publication_state",
+        "source"
+      ],
+      "title": "ClimateComponent",
+      "type": "object"
+    },
+    "Comparison": {
+      "properties": {
+        "baseline_period": {
+          "title": "Baseline Period",
+          "type": "string"
+        },
+        "recent_period": {
+          "title": "Recent Period",
+          "type": "string"
+        },
+        "baseline_value": {
+          "title": "Baseline Value",
+          "type": "number"
+        },
+        "recent_value": {
+          "title": "Recent Value",
+          "type": "number"
+        },
+        "difference": {
+          "title": "Difference",
+          "type": "number"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "publication_state": {
+          "$ref": "#/$defs/PublicationState"
+        },
+        "method": {
+          "const": "complete-decade-means",
+          "default": "complete-decade-means",
+          "title": "Method",
+          "type": "string"
+        },
+        "review_id": {
+          "title": "Review Id",
+          "type": "string"
+        },
+        "explanation": {
+          "$ref": "#/$defs/Localized"
+        }
+      },
+      "required": [
+        "baseline_period",
+        "recent_period",
+        "baseline_value",
+        "recent_value",
+        "difference",
+        "unit",
+        "publication_state",
+        "review_id",
+        "explanation"
+      ],
+      "title": "Comparison",
+      "type": "object"
+    },
+    "Coordinates": {
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude"
+      ],
+      "title": "Coordinates",
+      "type": "object"
+    },
+    "GlobalContext": {
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/SourceMetadata"
+        },
+        "baseline": {
+          "title": "Baseline",
+          "type": "string"
+        },
+        "annual": {
+          "items": {
+            "$ref": "#/$defs/AnnualObservation"
+          },
+          "title": "Annual",
+          "type": "array"
+        }
+      },
+      "required": [
+        "source",
+        "baseline",
+        "annual"
+      ],
+      "title": "GlobalContext",
+      "type": "object"
+    },
+    "ImageryAsset": {
+      "properties": {
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "thumbnail_url": {
+          "title": "Thumbnail Url",
+          "type": "string"
+        },
+        "date": {
+          "title": "Date",
+          "type": "string"
+        },
+        "sensor": {
+          "title": "Sensor",
+          "type": "string"
+        },
+        "product_id": {
+          "title": "Product Id",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "width": {
+          "title": "Width",
+          "type": "integer"
+        },
+        "height": {
+          "title": "Height",
+          "type": "integer"
+        },
+        "bytes": {
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "valid_pixel_fraction": {
+          "title": "Valid Pixel Fraction",
+          "type": "number"
+        },
+        "scene_cloud_percent": {
+          "title": "Scene Cloud Percent",
+          "type": "number"
+        },
+        "alt": {
+          "$ref": "#/$defs/Localized"
+        }
+      },
+      "required": [
+        "url",
+        "thumbnail_url",
+        "date",
+        "sensor",
+        "product_id",
+        "source_url",
+        "sha256",
+        "width",
+        "height",
+        "bytes",
+        "valid_pixel_fraction",
+        "scene_cloud_percent",
+        "alt"
+      ],
+      "title": "ImageryAsset",
+      "type": "object"
+    },
+    "ImageryPair": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "needs_review",
+            "approved",
+            "unavailable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "before": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImageryAsset"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "after": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImageryAsset"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "bounds": {
+          "default": [],
+          "items": {
+            "type": "number"
+          },
+          "title": "Bounds",
+          "type": "array"
+        },
+        "crs": {
+          "default": "",
+          "title": "Crs",
+          "type": "string"
+        },
+        "resolution_m": {
+          "default": 30,
+          "title": "Resolution M",
+          "type": "integer"
+        },
+        "attribution": {
+          "default": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+          "title": "Attribution",
+          "type": "string"
+        },
+        "processing_version": {
+          "default": "landsat-rgb-v1",
+          "title": "Processing Version",
+          "type": "string"
+        },
+        "caption": {
+          "$ref": "#/$defs/Localized"
+        },
+        "review": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Review"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "caption"
+      ],
+      "title": "ImageryPair",
+      "type": "object"
+    },
+    "Localized": {
+      "properties": {
+        "bn": {
+          "title": "Bn",
+          "type": "string"
+        },
+        "en": {
+          "title": "En",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bn",
+        "en"
+      ],
+      "title": "Localized",
+      "type": "object"
+    },
+    "MonthlyObservation": {
+      "properties": {
+        "date": {
+          "title": "Date",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "date",
+        "value"
+      ],
+      "title": "MonthlyObservation",
+      "type": "object"
+    },
+    "Place": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "$ref": "#/$defs/Localized"
+        },
+        "division": {
+          "title": "Division",
+          "type": "string"
+        },
+        "coordinates": {
+          "$ref": "#/$defs/Coordinates"
+        },
+        "aliases": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "tags": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "featured": {
+          "default": true,
+          "title": "Featured",
+          "type": "boolean"
+        },
+        "feature_type": {
+          "default": "city",
+          "title": "Feature Type",
+          "type": "string"
+        },
+        "country": {
+          "default": "BD",
+          "title": "Country",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/Localized"
+        },
+        "preview_image_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Preview Image Url"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "division",
+        "coordinates",
+        "description"
+      ],
+      "title": "Place",
+      "type": "object"
+    },
+    "PublicationState": {
+      "enum": [
+        "unavailable",
+        "provisional",
+        "descriptive_only",
+        "comparison_approved"
+      ],
+      "title": "PublicationState",
+      "type": "string"
+    },
+    "QuizQuestion": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "question": {
+          "$ref": "#/$defs/Localized"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/Localized"
+          },
+          "title": "Options",
+          "type": "array"
+        },
+        "correct_index": {
+          "title": "Correct Index",
+          "type": "integer"
+        },
+        "explanation": {
+          "$ref": "#/$defs/Localized"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "image_question": {
+          "default": false,
+          "title": "Image Question",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "category",
+        "question",
+        "options",
+        "correct_index",
+        "explanation",
+        "source_url"
+      ],
+      "title": "QuizQuestion",
+      "type": "object"
+    },
+    "ReleaseRef": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "processing_version": {
+          "title": "Processing Version",
+          "type": "string"
+        },
+        "content_version": {
+          "title": "Content Version",
+          "type": "string"
+        },
+        "rainfall_pending": {
+          "title": "Rainfall Pending",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "created_at",
+        "processing_version",
+        "content_version",
+        "rainfall_pending"
+      ],
+      "title": "ReleaseRef",
+      "type": "object"
+    },
+    "SourceMetadata": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "citation": {
+          "title": "Citation",
+          "type": "string"
+        },
+        "spatial_resolution": {
+          "title": "Spatial Resolution",
+          "type": "string"
+        },
+        "start": {
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "title": "End",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "license": {
+          "title": "License",
+          "type": "string"
+        },
+        "notes": {
+          "$ref": "#/$defs/Localized"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "version",
+        "unit",
+        "source_url",
+        "citation",
+        "spatial_resolution",
+        "start",
+        "end",
+        "retrieved_at",
+        "license",
+        "notes"
+      ],
+      "title": "SourceMetadata",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "place": {
+      "$ref": "#/$defs/Place"
+    },
+    "release": {
+      "$ref": "#/$defs/ReleaseRef"
+    },
+    "temperature": {
+      "$ref": "#/$defs/ClimateComponent"
+    },
+    "rainfall": {
+      "$ref": "#/$defs/ClimateComponent"
+    },
+    "global_context": {
+      "$ref": "#/$defs/GlobalContext"
+    },
+    "imagery": {
+      "$ref": "#/$defs/ImageryPair"
+    },
+    "quiz": {
+      "items": {
+        "$ref": "#/$defs/QuizQuestion"
+      },
+      "title": "Quiz",
+      "type": "array"
+    },
+    "actions": {
+      "items": {
+        "$ref": "#/$defs/ActionCard"
+      },
+      "title": "Actions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "place",
+    "release",
+    "temperature",
+    "rainfall",
+    "global_context",
+    "imagery",
+    "quiz",
+    "actions"
+  ],
+  "title": "StoryManifest",
+  "type": "object"
+}

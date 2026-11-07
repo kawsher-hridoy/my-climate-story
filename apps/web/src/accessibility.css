@@ -1,0 +1,139 @@
+/* Preserve the soft paper palette while keeping informative text readable. */
+@media screen {
+  :root {
+    --muted: #5d6d56;
+  }
+  .small-label,
+  .eyebrow,
+  .brand small,
+  .main-nav,
+  .language-switch a,
+  .hero-description,
+  .nasa-attribution,
+  .art-note,
+  .floating-note span:not(.note-icon),
+  .stat-decoration,
+  .stats-strip > div > span:last-child,
+  .section-heading p,
+  .place-card-coordinate,
+  .place-card-copy p,
+  .step-index,
+  .step-card p,
+  .page-intro,
+  .search-results small,
+  .coordinates-label,
+  .location-button,
+  .coordinate-details,
+  .coordinate-details label,
+  .date-input,
+  .date-input input,
+  .segmented button,
+  .map-caption,
+  .offline-map p,
+  .back-link,
+  .story-location,
+  .story-location span,
+  .story-actions > small,
+  .story-introduction,
+  .chapter-nav a,
+  .chapter-nav a span,
+  .chapter-number,
+  .story-section-heading p,
+  .comparison-toolbar,
+  .comparison-toolbar button,
+  .image-observation,
+  .source-details,
+  .source-details p,
+  .source-details dt,
+  .source-details dd,
+  .image-sources-grid code,
+  .data-source-badge,
+  .chart-history,
+  .chart-controls select,
+  .chart-bottom,
+  .chart-bottom button,
+  .regional-note,
+  .quality-note,
+  .pending-pill,
+  .rain-pending p,
+  .rain-pending details,
+  .thought-note strong,
+  .thought-note p,
+  .quiz-progress,
+  .quiz-option,
+  .option-letter,
+  .quiz-bottom > span,
+  .quiz-finish p,
+  .action-audience,
+  .action-card p,
+  .action-card label,
+  .action-card > a,
+  .story-end p,
+  .release-label,
+  .saved-card p,
+  .saved-card .quiet-link,
+  .saved-card .small-label,
+  .saved-limit,
+  .glossary-card > span,
+  .glossary-card p,
+  .teacher-objectives p,
+  .lesson-table tbody th,
+  .lesson-table td,
+  .worksheet strong,
+  .source-card p,
+  .source-card .quiet-link,
+  .additional-sources ul,
+  .about-story p {
+    color: #5d6d56;
+  }
+  .brand small {
+    font-size: 8px;
+  }
+  .nasa-attribution {
+    font-size: 10px;
+  }
+  .floating-note span:not(.note-icon),
+  .stat-decoration.small,
+  .stats-strip > div > span:last-child {
+    font-size: 10px;
+  }
+  .image-date {
+    background: #fffdf1f5;
+    color: #5a6a50;
+  }
+  .image-date strong {
+    color: #294b35;
+  }
+  .quiz-feedback {
+    color: #6c5b38;
+  }
+  .quiz-feedback.is-correct {
+    color: #486333;
+  }
+  .quiz-option.selected {
+    color: #3f5b32;
+  }
+  .quiz-option.right-answer {
+    color: #3f5b32;
+  }
+  .action-card label {
+    min-height: 44px;
+  }
+  .footer-top p,
+  .footer-links a,
+  .footer-bottom,
+  .footer-planet {
+    color: #bacdad;
+  }
+  .footer-bottom {
+    font-size: 9px;
+  }
+  .footer-brand {
+    color: #e6edd8;
+  }
+  .saved-card .pack-warning {
+    display: block;
+    color: #78502e;
+    font-size: 11px;
+  }
+}

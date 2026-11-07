@@ -1,0 +1,1927 @@
+{
+  "release_id": "mcs-cbe101aec7584839",
+  "release_format": 2,
+  "release_created_at": "2026-11-07T15:10:03.411823+00:00",
+  "rainfall_pending": true,
+  "places": [
+    {
+      "place": {
+        "id": "dhaka",
+        "name": {
+          "bn": "ঢাকা",
+          "en": "Dhaka"
+        },
+        "division": "Dhaka Division",
+        "coordinates": {
+          "latitude": 23.8103,
+          "longitude": 90.4125
+        },
+        "aliases": [
+          "Dacca",
+          "ঢাকা"
+        ],
+        "tags": [
+          "urban",
+          "heat",
+          "river"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "বাংলাদেশের রাজধানীর আশপাশের নদী, ছাদ আর সবুজ দেখো। একই জায়গার দুটি ছবিতে কী কী লক্ষ্য করতে পারো?",
+          "en": "Follow the river, rooftops, and green spaces around Bangladesh’s capital. What can you notice in two views of the same place?"
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/dhaka.json",
+      "source_file": "data/raw/power/dhaka.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/dhaka.json",
+      "source_request": {
+        "id": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+        "dataset": "nasa-power",
+        "place_id": "dhaka",
+        "sha256": "d44d265ad2f726327f7ffc2c0c7dbd0446c724196a36360a3dba0b4ed4ee5cb6",
+        "requested_coordinates": {
+          "latitude": 23.8103,
+          "longitude": 90.4125
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4125&latitude=23.8103&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-dhaka-a9370283a369e2bd-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.49040410210345,
+          "recent_value": 25.47469253686653,
+          "difference": -0.015711565236919967,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-dhaka-0d444a984012",
+          "explanation": {
+            "bn": "দেখানো নির্ভুলতার মাত্রায় দুই দশকের গড় কাছাকাছি। এটি প্রতিটি দিন বা পুরো জলবায়ু ব্যবস্থা বোঝায় না।",
+            "en": "The two decade averages are similar at the precision shown. This does not describe every day or the whole climate system."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-dhaka-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:02.959184+00:00",
+        "evidence": "Airport/runway and waterway geometry align; historical haze and small masked patches do not prevent shape comparison. Do not interpret greenness or density quantitatively.",
+        "before_sha256": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+        "after_sha256": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/dhaka/before-06f95d647e5a.webp",
+          "thumbnail_url": "/media/imagery/dhaka/before-06f95d647e5a-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "sha256": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+          "width": 667,
+          "height": 667,
+          "bytes": 67938,
+          "valid_pixel_fraction": 0.9954752758553257,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "ঢাকা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Dhaka, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/dhaka/after-8facb46b72b9.webp",
+          "thumbnail_url": "/media/imagery/dhaka/after-8facb46b72b9-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "sha256": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+          "width": 667,
+          "height": 667,
+          "bytes": 79088,
+          "valid_pixel_fraction": 0.9969812694851974,
+          "scene_cloud_percent": 0.04,
+          "alt": {
+            "bn": "ঢাকা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Dhaka, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "long-record",
+        "unit-reading",
+        "clouds",
+        "school-action",
+        "image-dhaka"
+      ],
+      "action_ids": [
+        "river-story",
+        "water",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "chattogram",
+        "name": {
+          "bn": "চট্টগ্রাম",
+          "en": "Chattogram"
+        },
+        "division": "Chattogram Division",
+        "coordinates": {
+          "latitude": 22.3569,
+          "longitude": 91.7832
+        },
+        "aliases": [
+          "Chittagong",
+          "চট্টগ্রাম"
+        ],
+        "tags": [
+          "urban",
+          "coastal",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "উপকূলের এই শহরের পাহাড়, জলপথ আর পাড়াগুলো দেখো। উপগ্রহের ছবি তার ভূদৃশ্য বোঝার একটি জানালা।",
+          "en": "Explore the shapes of a coastal city, its hills, waterways, and neighborhoods. Satellite images open a window into its landscape."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/chattogram.json",
+      "source_file": "data/raw/power/chattogram.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/chattogram.json",
+      "source_request": {
+        "id": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+        "dataset": "nasa-power",
+        "place_id": "chattogram",
+        "sha256": "7763425084d2a1d4d4964607d122a95e95c491266508f160bb8e9a68f272cd59",
+        "requested_coordinates": {
+          "latitude": 22.3569,
+          "longitude": 91.7832
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.7832&latitude=22.3569&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-chattogram-07478e089dea083a-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.518729904933004,
+          "recent_value": 25.57588094917284,
+          "difference": 0.057151044239837745,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-chattogram-5372a11ec7b8",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, চট্টগ্রাম-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 25.6°C, যা ২০০১–২০১০ সালের তুলনায় 0.1°C বেশি।",
+            "en": "In this dataset, average temperature around Chattogram was 25.6°C in 2016–2025, 0.1°C higher than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-chattogram-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:02.978325+00:00",
+        "evidence": "Coast, river and city footprint are visible in both views; historical atmospheric haze is stronger. Approve qualitative shape reading with an explicit color/haze caveat.",
+        "before_sha256": "add49a3b30c19f473509d67fa33398c6698aeb70fe9d1f62b246b597343f036d",
+        "after_sha256": "9490846ba7a82475d62df163db1d3bb4011805548921f534ae3496c2cc18eb92",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/chattogram/before-add49a3b30c1.webp",
+          "thumbnail_url": "/media/imagery/chattogram/before-add49a3b30c1-thumb.webp",
+          "date": "1990-01-16",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+          "sha256": "add49a3b30c19f473509d67fa33398c6698aeb70fe9d1f62b246b597343f036d",
+          "width": 667,
+          "height": 667,
+          "bytes": 28560,
+          "valid_pixel_fraction": 0.9965564444164724,
+          "scene_cloud_percent": 5.0,
+          "alt": {
+            "bn": "চট্টগ্রাম-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Chattogram, acquired 1990-01-16."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/chattogram/after-9490846ba7a8.webp",
+          "thumbnail_url": "/media/imagery/chattogram/after-9490846ba7a8-thumb.webp",
+          "date": "2025-01-16",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+          "sha256": "9490846ba7a82475d62df163db1d3bb4011805548921f534ae3496c2cc18eb92",
+          "width": 667,
+          "height": 667,
+          "bytes": 48996,
+          "valid_pixel_fraction": 0.995099901323701,
+          "scene_cloud_percent": 0.09,
+          "alt": {
+            "bn": "চট্টগ্রাম-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Chattogram, acquired 2025-01-16."
+          }
+        }
+      },
+      "quiz_ids": [
+        "anomaly",
+        "shared-values",
+        "image-date",
+        "school-action",
+        "image-chattogram"
+      ],
+      "action_ids": [
+        "river-story",
+        "water",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "khulna",
+        "name": {
+          "bn": "খুলনা",
+          "en": "Khulna"
+        },
+        "division": "Khulna Division",
+        "coordinates": {
+          "latitude": 22.8456,
+          "longitude": 89.5403
+        },
+        "aliases": [
+          "খুলনা"
+        ],
+        "tags": [
+          "urban",
+          "river",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "খুলনার শহর আর জলপথগুলো মন দিয়ে দেখো। অর্থ খোঁজার আগে ছবির দৃশ্যমান ধরনগুলো তুলনা করো।",
+          "en": "Look closely at the city and waterways around Khulna. Compare visible patterns before deciding what they might mean."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/khulna.json",
+      "source_file": "data/raw/power/khulna.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/khulna.json",
+      "source_request": {
+        "id": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+        "dataset": "nasa-power",
+        "place_id": "khulna",
+        "sha256": "54eba6738c3c542b3e7bc8261db63ba7169296a8c7352e54b53b15e16326e152",
+        "requested_coordinates": {
+          "latitude": 22.8456,
+          "longitude": 89.5403
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.5403&latitude=22.8456&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-khulna-da268a914cb2fd77-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.920214304962947,
+          "recent_value": 25.725987948199716,
+          "difference": -0.19422635676323097,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-khulna-182d9d73b539",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, খুলনা-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 25.7°C, যা ২০০১–২০১০ সালের তুলনায় 0.2°C কম।",
+            "en": "In this dataset, average temperature around Khulna was 25.7°C in 2016–2025, 0.2°C lower than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-khulna-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.005917+00:00",
+        "evidence": "Shared waterways and city area align; no claim about Sundarbans or coastline from the city-center crop. Colors are not a vegetation classification.",
+        "before_sha256": "560c347e39f0220e3a0f17f2f20704c03e1b5f1d27f23026b502f66b9804889d",
+        "after_sha256": "e3b3375edf97f2709f6c50c675c1b1002c6d81cf37589e75d447564a3e1cd91b",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/khulna/before-560c347e39f0.webp",
+          "thumbnail_url": "/media/imagery/khulna/before-560c347e39f0-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "sha256": "560c347e39f0220e3a0f17f2f20704c03e1b5f1d27f23026b502f66b9804889d",
+          "width": 667,
+          "height": 667,
+          "bytes": 65086,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "খুলনা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Khulna, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/khulna/after-e3b3375edf97.webp",
+          "thumbnail_url": "/media/imagery/khulna/after-e3b3375edf97-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "sha256": "e3b3375edf97f2709f6c50c675c1b1002c6d81cf37589e75d447564a3e1cd91b",
+          "width": 667,
+          "height": 667,
+          "bytes": 56262,
+          "valid_pixel_fraction": 0.9969318189480971,
+          "scene_cloud_percent": 0.04,
+          "alt": {
+            "bn": "খুলনা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Khulna, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "anomaly",
+        "baseline",
+        "clouds",
+        "heat-shade",
+        "image-khulna"
+      ],
+      "action_ids": [
+        "river-story",
+        "water",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "rajshahi",
+        "name": {
+          "bn": "রাজশাহী",
+          "en": "Rajshahi"
+        },
+        "division": "Rajshahi Division",
+        "coordinates": {
+          "latitude": 24.3745,
+          "longitude": 88.6042
+        },
+        "aliases": [
+          "রাজশাহী"
+        ],
+        "tags": [
+          "river",
+          "agriculture",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "রাজশাহীর আশপাশে পদ্মার তীরের ভূদৃশ্য আবিষ্কার করো। নদী, মাঠ আর বসতি—প্রতিটিরই অনুসন্ধানের গল্প আছে।",
+          "en": "Discover the Padma-side landscape around Rajshahi. Rivers, fields, and settlements each have stories to investigate."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/rajshahi.json",
+      "source_file": "data/raw/power/rajshahi.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/rajshahi.json",
+      "source_request": {
+        "id": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+        "dataset": "nasa-power",
+        "place_id": "rajshahi",
+        "sha256": "98e4856880162161003eaf0890320b31c0cc1648f2098b1c0ec5bc17ae472fe1",
+        "requested_coordinates": {
+          "latitude": 24.3745,
+          "longitude": 88.6042
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=88.6042&latitude=24.3745&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-rajshahi-af9b970ee32b01c4-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.71306805898645,
+          "recent_value": 25.59057743094543,
+          "difference": -0.12249062804102095,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-rajshahi-0ae2deba60d3",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, রাজশাহী-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 25.6°C, যা ২০০১–২০১০ সালের তুলনায় 0.1°C কম।",
+            "en": "In this dataset, average temperature around Rajshahi was 25.6°C in 2016–2025, 0.1°C lower than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-rajshahi-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.016772+00:00",
+        "evidence": "Padma channel and town-side shapes remain readable despite several historical masked patches. The 98.5 percent valid fraction passes; masked patches are explicitly disclosed.",
+        "before_sha256": "099ff577fbd52c7e148befd5841685abb1d3b5b8faf4b5111d49fb51a6b478eb",
+        "after_sha256": "a00a27684c8a56b68bd2afc3ea6026331e7dba2aab55498bcda5776c7caf6669",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/rajshahi/before-099ff577fbd5.webp",
+          "thumbnail_url": "/media/imagery/rajshahi/before-099ff577fbd5-thumb.webp",
+          "date": "1990-01-30",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_138043_19900130_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138043_19900130_20200916_02_T1_SR",
+          "sha256": "099ff577fbd52c7e148befd5841685abb1d3b5b8faf4b5111d49fb51a6b478eb",
+          "width": 667,
+          "height": 667,
+          "bytes": 63002,
+          "valid_pixel_fraction": 0.985216537158707,
+          "scene_cloud_percent": 2.0,
+          "alt": {
+            "bn": "রাজশাহী-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-30।",
+            "en": "True-color Landsat view of the approximately 20 km area around Rajshahi, acquired 1990-01-30."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/rajshahi/after-a00a27684c8a.webp",
+          "thumbnail_url": "/media/imagery/rajshahi/after-a00a27684c8a-thumb.webp",
+          "date": "2025-01-14",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_138043_20250114_20250122_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138043_20250114_20250122_02_T1_SR",
+          "sha256": "a00a27684c8a56b68bd2afc3ea6026331e7dba2aab55498bcda5776c7caf6669",
+          "width": 667,
+          "height": 667,
+          "bytes": 55388,
+          "valid_pixel_fraction": 0.9965586921681588,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "রাজশাহী-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-14।",
+            "en": "True-color Landsat view of the approximately 20 km area around Rajshahi, acquired 2025-01-14."
+          }
+        }
+      },
+      "quiz_ids": [
+        "anomaly",
+        "unit-reading",
+        "image-resolution",
+        "save-offline",
+        "image-rajshahi"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "sylhet",
+        "name": {
+          "bn": "সিলেট",
+          "en": "Sylhet"
+        },
+        "division": "Sylhet Division",
+        "coordinates": {
+          "latitude": 24.8949,
+          "longitude": 91.8687
+        },
+        "aliases": [
+          "সিলেট"
+        ],
+        "tags": [
+          "wetland",
+          "river",
+          "urban"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "সিলেটের নদী আর শহরের ভূদৃশ্য দেখো। উপগ্রহের ছবিতে পানি, গাছপালা আর নির্মিত এলাকা কীভাবে দেখা যায় লক্ষ্য করো।",
+          "en": "Explore the river-and-city landscape around Sylhet. Notice how water, vegetation, and built areas appear in satellite views."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/sylhet.json",
+      "source_file": "data/raw/power/sylhet.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/sylhet.json",
+      "source_request": {
+        "id": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+        "dataset": "nasa-power",
+        "place_id": "sylhet",
+        "sha256": "5a095b2360691a6e5d7a476f53ec5d2d43d01690e97eaff93cfbe9a4f99f70bb",
+        "requested_coordinates": {
+          "latitude": 24.8949,
+          "longitude": 91.8687
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.8687&latitude=24.8949&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-sylhet-eb2b38b4f432b3fb-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 24.418673179130174,
+          "recent_value": 24.53398720712628,
+          "difference": 0.11531402799610646,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-sylhet-656afe9150da",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, সিলেট-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 24.5°C, যা ২০০১–২০১০ সালের তুলনায় 0.1°C বেশি।",
+            "en": "In this dataset, average temperature around Sylhet was 24.5°C in 2016–2025, 0.1°C higher than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-sylhet-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.032275+00:00",
+        "evidence": "City/river landmarks and surrounding field shapes align. Different vegetation colors are not treated as land-cover or climate conclusions.",
+        "before_sha256": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a",
+        "after_sha256": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/sylhet/before-a6aded736cde.webp",
+          "thumbnail_url": "/media/imagery/sylhet/before-a6aded736cde-thumb.webp",
+          "date": "1990-01-16",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_136043_19900116_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136043_19900116_20200916_02_T1_SR",
+          "sha256": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a",
+          "width": 667,
+          "height": 667,
+          "bytes": 58404,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 1.0,
+          "alt": {
+            "bn": "সিলেট-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Sylhet, acquired 1990-01-16."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/sylhet/after-8c9e726c02e7.webp",
+          "thumbnail_url": "/media/imagery/sylhet/after-8c9e726c02e7-thumb.webp",
+          "date": "2025-01-16",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_136043_20250116_20250127_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136043_20250116_20250127_02_T1_SR",
+          "sha256": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+          "width": 667,
+          "height": 667,
+          "bytes": 86014,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.71,
+          "alt": {
+            "bn": "সিলেট-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Sylhet, acquired 2025-01-16."
+          }
+        }
+      },
+      "quiz_ids": [
+        "rain-snow",
+        "shared-values",
+        "same-season",
+        "river-safety",
+        "image-sylhet"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "barishal",
+        "name": {
+          "bn": "বরিশাল",
+          "en": "Barishal"
+        },
+        "division": "Barishal Division",
+        "coordinates": {
+          "latitude": 22.701,
+          "longitude": 90.3535
+        },
+        "aliases": [
+          "Barisal",
+          "বরিশাল"
+        ],
+        "tags": [
+          "river",
+          "wetland",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "জলপথ বরিশালের আশপাশের ভূদৃশ্যকে যুক্ত করেছে। ছবি আর জলবায়ুর তথ্য মিলিয়ে নিজের এলাকা নিয়ে প্রশ্ন করো।",
+          "en": "Waterways connect the landscape around Barishal. Use images and climate records together to ask better questions about your area."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/barishal.json",
+      "source_file": "data/raw/power/barishal.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/barishal.json",
+      "source_request": {
+        "id": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+        "dataset": "nasa-power",
+        "place_id": "barishal",
+        "sha256": "c318bf5d64876d258d966c9f710f551122b7660d5687a88aea8a90fd1e83f856",
+        "requested_coordinates": {
+          "latitude": 22.701,
+          "longitude": 90.3535
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.3535&latitude=22.701&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-barishal-e14c160c170912c5-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.704383771240362,
+          "recent_value": 25.68175049779175,
+          "difference": -0.0226332734486121,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-barishal-f764a70215e1",
+          "explanation": {
+            "bn": "দেখানো নির্ভুলতার মাত্রায় দুই দশকের গড় কাছাকাছি। এটি প্রতিটি দিন বা পুরো জলবায়ু ব্যবস্থা বোঝায় না।",
+            "en": "The two decade averages are similar at the precision shown. This does not describe every day or the whole climate system."
+          }
+        },
+        "shared_series_with": [
+          "bhola"
+        ]
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-barishal-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.044771+00:00",
+        "evidence": "River bends and built shapes are visible in both complete crops. Comparison is qualitative; water-level and seasonal factors remain possible.",
+        "before_sha256": "10dcbfdbe2fb7a842a3c4daf9986013846dab5c8ca3e6b8cd532b65b8971bca0",
+        "after_sha256": "76d59112e5c7b82ff1531b7b70f714657e97db19a552f5729aa7ce3467f021d1",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/barishal/before-10dcbfdbe2fb.webp",
+          "thumbnail_url": "/media/imagery/barishal/before-10dcbfdbe2fb-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "sha256": "10dcbfdbe2fb7a842a3c4daf9986013846dab5c8ca3e6b8cd532b65b8971bca0",
+          "width": 667,
+          "height": 667,
+          "bytes": 73070,
+          "valid_pixel_fraction": 0.9963541467646986,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "বরিশাল-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Barishal, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/barishal/after-76d59112e5c7.webp",
+          "thumbnail_url": "/media/imagery/barishal/after-76d59112e5c7-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "sha256": "76d59112e5c7b82ff1531b7b70f714657e97db19a552f5729aa7ce3467f021d1",
+          "width": 667,
+          "height": 667,
+          "bytes": 64656,
+          "valid_pixel_fraction": 0.99644630458384,
+          "scene_cloud_percent": 0.04,
+          "alt": {
+            "bn": "বরিশাল-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Barishal, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "rain-snow",
+        "baseline",
+        "causation",
+        "heat-shade",
+        "image-barishal"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "rangpur",
+        "name": {
+          "bn": "রংপুর",
+          "en": "Rangpur"
+        },
+        "division": "Rangpur Division",
+        "coordinates": {
+          "latitude": 25.7439,
+          "longitude": 89.2752
+        },
+        "aliases": [
+          "রংপুর"
+        ],
+        "tags": [
+          "agriculture",
+          "urban",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "রংপুরের মাঠ, বসতি আর সবুজ অংশগুলো খুঁজে দেখো। এখানকার পুরোনো ছবিটি ১৯৯৫ সালের, ১৯৯০ সালের নয়।",
+          "en": "Look for fields, settlements, and green patches around Rangpur. The historical image here is from 1995, not 1990."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/rangpur.json",
+      "source_file": "data/raw/power/rangpur.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/rangpur.json",
+      "source_request": {
+        "id": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+        "dataset": "nasa-power",
+        "place_id": "rangpur",
+        "sha256": "54e4c81a38ec70d339ba4b11ab87df44b64d34c0ae0d30b4acc907df1f746bd0",
+        "requested_coordinates": {
+          "latitude": 25.7439,
+          "longitude": 89.2752
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.2752&latitude=25.7439&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-rangpur-200485e9f40d1858-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.3183691743394,
+          "recent_value": 25.334882012126656,
+          "difference": 0.016512837787256984,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-rangpur-f0f239e8d39a",
+          "explanation": {
+            "bn": "দেখানো নির্ভুলতার মাত্রায় দুই দশকের গড় কাছাকাছি। এটি প্রতিটি দিন বা পুরো জলবায়ু ব্যবস্থা বোঝায় না।",
+            "en": "The two decade averages are similar at the precision shown. This does not describe every day or the whole climate system."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-rangpur-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.066151+00:00",
+        "evidence": "The historical date is correctly 1995, not 1990. Settlements and field patterns are visible with no major occluding cloud; colors cannot establish vegetation change.",
+        "before_sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+        "after_sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/rangpur/before-7ba33ddaaed4.webp",
+          "thumbnail_url": "/media/imagery/rangpur/before-7ba33ddaaed4-thumb.webp",
+          "date": "1995-01-28",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138042_19950128_20200912_02_T1_SR",
+          "sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+          "width": 667,
+          "height": 667,
+          "bytes": 52712,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1995-01-28।",
+            "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 1995-01-28."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/rangpur/after-c995b7ae9a75.webp",
+          "thumbnail_url": "/media/imagery/rangpur/after-c995b7ae9a75-thumb.webp",
+          "date": "2025-01-14",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138042_20250114_20250122_02_T1_SR",
+          "sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+          "width": 667,
+          "height": 667,
+          "bytes": 58346,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.72,
+          "alt": {
+            "bn": "রংপুর-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-14।",
+            "en": "True-color Landsat view of the approximately 20 km area around Rangpur, acquired 2025-01-14."
+          }
+        }
+      },
+      "quiz_ids": [
+        "long-record",
+        "water-rate",
+        "vegetation-season",
+        "save-offline",
+        "image-rangpur"
+      ],
+      "action_ids": [
+        "shade",
+        "field-calendar",
+        "school-shade",
+        "journal"
+      ]
+    },
+    {
+      "place": {
+        "id": "mymensingh",
+        "name": {
+          "bn": "ময়মনসিংহ",
+          "en": "Mymensingh"
+        },
+        "division": "Mymensingh Division",
+        "coordinates": {
+          "latitude": 24.7471,
+          "longitude": 90.4203
+        },
+        "aliases": [
+          "ময়মনসিংহ",
+          "ময়মনসিংহ"
+        ],
+        "tags": [
+          "river",
+          "agriculture",
+          "urban"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "ময়মনসিংহের শহর আর নদীর অবস্থান দেখো। সময়ের ব্যবধানে একই এলাকা তুলনা করে পর্যবেক্ষণ আর ব্যাখ্যার পার্থক্য শেখো।",
+          "en": "Explore Mymensingh’s city-and-river setting. Compare the same area across time and distinguish observation from explanation."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/mymensingh.json",
+      "source_file": "data/raw/power/mymensingh.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/mymensingh.json",
+      "source_request": {
+        "id": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+        "dataset": "nasa-power",
+        "place_id": "mymensingh",
+        "sha256": "f52206195bdf6fe58d4d20a4beae03c65d18b8b331c24674a30e20c6a5de7d02",
+        "requested_coordinates": {
+          "latitude": 24.7471,
+          "longitude": 90.4203
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.4203&latitude=24.7471&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-mymensingh-41cb53f8ba872d25-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.267075671831723,
+          "recent_value": 25.271274571449958,
+          "difference": 0.004198899618234719,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-mymensingh-a0ee64dc45da",
+          "explanation": {
+            "bn": "দেখানো নির্ভুলতার মাত্রায় দুই দশকের গড় কাছাকাছি। এটি প্রতিটি দিন বা পুরো জলবায়ু ব্যবস্থা বোঝায় না।",
+            "en": "The two decade averages are similar at the precision shown. This does not describe every day or the whole climate system."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-mymensingh-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.085328+00:00",
+        "evidence": "City and river setting can be compared on the shared native grid; sensor/season differences remain explicit. No river-change causal assertion.",
+        "before_sha256": "071754f76a8aaca98a9ee815a699fb5717e165a89d210978d6b3c5e357ba92f6",
+        "after_sha256": "47ed2cd5005a076f1a3b2fdfe66285acbb5b7f6334d44047168c54554332c1ca",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/mymensingh/before-071754f76a8a.webp",
+          "thumbnail_url": "/media/imagery/mymensingh/before-071754f76a8a-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+          "sha256": "071754f76a8aaca98a9ee815a699fb5717e165a89d210978d6b3c5e357ba92f6",
+          "width": 667,
+          "height": 667,
+          "bytes": 69306,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 3.0,
+          "alt": {
+            "bn": "ময়মনসিংহ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Mymensingh, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/mymensingh/after-47ed2cd5005a.webp",
+          "thumbnail_url": "/media/imagery/mymensingh/after-47ed2cd5005a-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+          "sha256": "47ed2cd5005a076f1a3b2fdfe66285acbb5b7f6334d44047168c54554332c1ca",
+          "width": 667,
+          "height": 667,
+          "bytes": 56676,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "ময়মনসিংহ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Mymensingh, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "anomaly",
+        "water-rate",
+        "causation",
+        "school-action",
+        "image-mymensingh"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "coxs_bazar",
+        "name": {
+          "bn": "কক্সবাজার",
+          "en": "Cox’s Bazar"
+        },
+        "division": "Chattogram Division",
+        "coordinates": {
+          "latitude": 21.4272,
+          "longitude": 92.0058
+        },
+        "aliases": [
+          "Cox's Bazar",
+          "Coxs Bazar",
+          "কক্সবাজার"
+        ],
+        "tags": [
+          "coastal",
+          "urban",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "উপকূলের ভূদৃশ্যে পানি, পাহাড় আর বসতি একসঙ্গে আছে। একই ঋতুর ছবি এই এলাকা তুলনা করতে সাহায্য করে।",
+          "en": "A coastal landscape brings water, hills, and settlements together. Similar-season images help you compare this area more fairly."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/coxs_bazar.json",
+      "source_file": "data/raw/power/coxs_bazar.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/coxs_bazar.json",
+      "source_request": {
+        "id": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+        "dataset": "nasa-power",
+        "place_id": "coxs_bazar",
+        "sha256": "ec9943bebdbdddfef7581f75a44f7bd276781259639c1039ae4d46daf3f107da",
+        "requested_coordinates": {
+          "latitude": 21.4272,
+          "longitude": 92.0058
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=92.0058&latitude=21.4272&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-coxs_bazar-392941e5ca7c54c1-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 26.158220824912043,
+          "recent_value": 26.37980687177184,
+          "difference": 0.2215860468597981,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-coxs_bazar-9843f0a0b404",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, কক্সবাজার-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 26.4°C, যা ২০০১–২০১০ সালের তুলনায় 0.2°C বেশি।",
+            "en": "In this dataset, average temperature around Cox’s Bazar was 26.4°C in 2016–2025, 0.2°C higher than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-coxs_bazar-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.111322+00:00",
+        "evidence": "Coast, inlet and town-side features align. Both acquisition dates are January 16; shoreline/tide differences require context and are not quantified.",
+        "before_sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+        "after_sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/coxs_bazar/before-256f7c3328f5.webp",
+          "thumbnail_url": "/media/imagery/coxs_bazar/before-256f7c3328f5-thumb.webp",
+          "date": "1990-01-16",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+          "sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+          "width": 667,
+          "height": 667,
+          "bytes": 36490,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 5.0,
+          "alt": {
+            "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 1990-01-16."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/coxs_bazar/after-35db107eeccd.webp",
+          "thumbnail_url": "/media/imagery/coxs_bazar/after-35db107eeccd-thumb.webp",
+          "date": "2025-01-16",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+          "sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+          "width": 667,
+          "height": 667,
+          "bytes": 53656,
+          "valid_pixel_fraction": 0.9970014992503748,
+          "scene_cloud_percent": 0.09,
+          "alt": {
+            "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+            "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 2025-01-16."
+          }
+        }
+      },
+      "quiz_ids": [
+        "equal-decade",
+        "global-local",
+        "image-resolution",
+        "save-offline",
+        "image-coxs_bazar"
+      ],
+      "action_ids": [
+        "river-story",
+        "water",
+        "school-shade",
+        "shade"
+      ]
+    },
+    {
+      "place": {
+        "id": "satkhira",
+        "name": {
+          "bn": "সাতক্ষীরা",
+          "en": "Satkhira"
+        },
+        "division": "Khulna Division",
+        "coordinates": {
+          "latitude": 22.7185,
+          "longitude": 89.0705
+        },
+        "aliases": [
+          "সাতক্ষীরা"
+        ],
+        "tags": [
+          "agriculture",
+          "urban",
+          "heat"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "এই দৃশ্যটি সাতক্ষীরা শহরকে কেন্দ্র করে। বসতি আর আশপাশের জমি দেখো; ছবিতে উপকূল বা সুন্দরবন আছে ধরে নিও না।",
+          "en": "This view is centered on Satkhira town. Look at its settlements and surrounding land; do not assume the crop shows the coastline or Sundarbans."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/satkhira.json",
+      "source_file": "data/raw/power/satkhira.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/satkhira.json",
+      "source_request": {
+        "id": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+        "dataset": "nasa-power",
+        "place_id": "satkhira",
+        "sha256": "7409190a8cdb4c5d44a69712ce0fb71a41c8da40bcd59d7df343011135ff7fd6",
+        "requested_coordinates": {
+          "latitude": 22.7185,
+          "longitude": 89.0705
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=89.0705&latitude=22.7185&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-satkhira-9671072aa2e28323-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 26.00509466277416,
+          "recent_value": 25.931687521521074,
+          "difference": -0.07340714125308523,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-satkhira-d5376cb4ca0c",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, সাতক্ষীরা-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 25.9°C, যা ২০০১–২০১০ সালের তুলনায় 0.1°C কম।",
+            "en": "In this dataset, average temperature around Satkhira was 25.9°C in 2016–2025, 0.1°C lower than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-satkhira-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.131231+00:00",
+        "evidence": "Town, fields and water bodies are visible. This city-center crop is not labeled mangroves or coastline. Avoid interpreting greener appearance as vegetation gain.",
+        "before_sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+        "after_sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/satkhira/before-e627bee47395.webp",
+          "thumbnail_url": "/media/imagery/satkhira/before-e627bee47395-thumb.webp",
+          "date": "1990-01-30",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138044_19900130_20200916_02_T1_SR",
+          "sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+          "width": 667,
+          "height": 667,
+          "bytes": 45808,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-30।",
+            "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 1990-01-30."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/satkhira/after-2a0807809853.webp",
+          "thumbnail_url": "/media/imagery/satkhira/after-2a0807809853-thumb.webp",
+          "date": "2025-02-15",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138044_20250215_20250226_02_T1_SR",
+          "sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+          "width": 667,
+          "height": 667,
+          "bytes": 47932,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.01,
+          "alt": {
+            "bn": "সাতক্ষীরা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-15।",
+            "en": "True-color Landsat view of the approximately 20 km area around Satkhira, acquired 2025-02-15."
+          }
+        }
+      },
+      "quiz_ids": [
+        "weather-climate",
+        "source-check",
+        "image-resolution",
+        "school-action",
+        "image-satkhira"
+      ],
+      "action_ids": [
+        "shade",
+        "field-calendar",
+        "school-shade",
+        "journal"
+      ]
+    },
+    {
+      "place": {
+        "id": "bhola",
+        "name": {
+          "bn": "ভোলা",
+          "en": "Bhola"
+        },
+        "division": "Barishal Division",
+        "coordinates": {
+          "latitude": 22.6859,
+          "longitude": 90.6482
+        },
+        "aliases": [
+          "ভোলা"
+        ],
+        "tags": [
+          "river",
+          "coastal",
+          "agriculture"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "ভোলার দ্বীপের ভূদৃশ্য অনুসন্ধান করো। মোটা গ্রিডের জলবায়ুর তথ্য বরিশালের মতো হলেও এর উপগ্রহের গল্প আলাদা।",
+          "en": "Investigate the island landscape around Bhola. Its satellite story is distinct even when a coarse climate dataset returns the same values as Barishal."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/bhola.json",
+      "source_file": "data/raw/power/bhola.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/bhola.json",
+      "source_request": {
+        "id": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+        "dataset": "nasa-power",
+        "place_id": "bhola",
+        "sha256": "17449929bd75462186ce7449c991dec4dd4078a381ff055dd45d1a66d3827aff",
+        "requested_coordinates": {
+          "latitude": 22.6859,
+          "longitude": 90.6482
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=90.6482&latitude=22.6859&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-bhola-e14c160c170912c5-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 25.704383771240362,
+          "recent_value": 25.68175049779175,
+          "difference": -0.0226332734486121,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-bhola-f764a70215e1",
+          "explanation": {
+            "bn": "দেখানো নির্ভুলতার মাত্রায় দুই দশকের গড় কাছাকাছি। এটি প্রতিটি দিন বা পুরো জলবায়ু ব্যবস্থা বোঝায় না।",
+            "en": "The two decade averages are similar at the precision shown. This does not describe every day or the whole climate system."
+          }
+        },
+        "shared_series_with": [
+          "barishal"
+        ]
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-bhola-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.148595+00:00",
+        "evidence": "Island-side land/water shapes are visible, distinct from Barishal imagery. Tidal/sediment effects remain possible; no climate attribution.",
+        "before_sha256": "4c44036a04a5145efa17cf7b7aed0d475f3fc341dfd0a819685bbfc91a719775",
+        "after_sha256": "7819fe0cba0cb11ef0126f11cdbd878c8865fa17c99406f1e19442eefc32af05",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/bhola/before-4c44036a04a5.webp",
+          "thumbnail_url": "/media/imagery/bhola/before-4c44036a04a5-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+          "sha256": "4c44036a04a5145efa17cf7b7aed0d475f3fc341dfd0a819685bbfc91a719775",
+          "width": 667,
+          "height": 667,
+          "bytes": 47700,
+          "valid_pixel_fraction": 0.9950459552832279,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "ভোলা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Bhola, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/bhola/after-7819fe0cba0c.webp",
+          "thumbnail_url": "/media/imagery/bhola/after-7819fe0cba0c-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+          "sha256": "7819fe0cba0cb11ef0126f11cdbd878c8865fa17c99406f1e19442eefc32af05",
+          "width": 667,
+          "height": 667,
+          "bytes": 51996,
+          "valid_pixel_fraction": 0.9964350658254081,
+          "scene_cloud_percent": 0.04,
+          "alt": {
+            "bn": "ভোলা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Bhola, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "anomaly",
+        "water-rate",
+        "image-resolution",
+        "heat-shade",
+        "image-bhola"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "save-energy",
+        "journal"
+      ]
+    },
+    {
+      "place": {
+        "id": "sunamganj",
+        "name": {
+          "bn": "সুনামগঞ্জ",
+          "en": "Sunamganj"
+        },
+        "division": "Sylhet Division",
+        "coordinates": {
+          "latitude": 25.0658,
+          "longitude": 91.395
+        },
+        "aliases": [
+          "Sunamgonj",
+          "সুনামগঞ্জ"
+        ],
+        "tags": [
+          "wetland",
+          "river",
+          "agriculture"
+        ],
+        "featured": true,
+        "feature_type": "city",
+        "country": "BD",
+        "description": {
+          "bn": "সুনামগঞ্জের পানি আর জমির ধরন দেখো। ঋতু বদলালে পানির বিস্তারও বদলাতে পারে, তাই ছবির সঙ্গে তারিখগুলো দেখো।",
+          "en": "Explore Sunamganj’s water-and-land patterns. Water coverage can vary with the season, so inspect the dates alongside the images."
+        },
+        "preview_image_url": null
+      },
+      "story_file": "data/processed/releases/mcs-cbe101aec7584839/stories/sunamganj.json",
+      "source_file": "data/raw/power/sunamganj.json",
+      "pinned_source_file": "data/processed/releases/mcs-cbe101aec7584839/inputs/power/sunamganj.json",
+      "source_request": {
+        "id": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+        "dataset": "nasa-power",
+        "place_id": "sunamganj",
+        "sha256": "8ca93ca616b158f19a1b4da2aa40dbba57766c15be36c35408ae5fb0f0b718ae",
+        "requested_coordinates": {
+          "latitude": 25.0658,
+          "longitude": 91.395
+        },
+        "version": "v2.10.0",
+        "retrieved_at": "2026-11-07T14:31:39.175402+00:00",
+        "source_url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M&community=AG&longitude=91.395&latitude=25.0658&start=1981&end=2025&format=JSON"
+      },
+      "power_variables": {
+        "PRECTOTCORR": {
+          "unit": "mm/day",
+          "numeric_values": 585
+        },
+        "RH2M": {
+          "unit": "%",
+          "numeric_values": 585
+        },
+        "T2M": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MAX": {
+          "unit": "C",
+          "numeric_values": 585
+        },
+        "T2M_MIN": {
+          "unit": "C",
+          "numeric_values": 585
+        }
+      },
+      "temperature": {
+        "series_id": "power-t2m-sunamganj-fe4ed3964be1d2a4-cbe101ae",
+        "publication_state": "comparison_approved",
+        "comparison": {
+          "baseline_period": "2001–2010",
+          "recent_period": "2016–2025",
+          "baseline_value": 24.77253457594131,
+          "recent_value": 24.835153020435662,
+          "difference": 0.06261844449435117,
+          "unit": "°C",
+          "publication_state": "comparison_approved",
+          "method": "complete-decade-means",
+          "review_id": "temperature-sunamganj-f906272d293c",
+          "explanation": {
+            "bn": "এই তথ্য অনুযায়ী, সুনামগঞ্জ-এর আশপাশে ২০১৬–২০২৫ সালে গড় তাপমাত্রা 24.8°C, যা ২০০১–২০১০ সালের তুলনায় 0.1°C বেশি।",
+            "en": "In this dataset, average temperature around Sunamganj was 24.8°C in 2016–2025, 0.1°C higher than in 2001–2010."
+          }
+        },
+        "shared_series_with": []
+      },
+      "temperature_annual_count": 45,
+      "temperature_monthly_count": 540,
+      "rainfall_series_id": "imerg-pending-sunamganj-cbe101ae",
+      "rainfall_state": "unavailable",
+      "rainfall_annual_count": 0,
+      "rainfall_monthly_count": 0,
+      "global_annual_count": 146,
+      "global_period": [
+        1880,
+        2025
+      ],
+      "imagery_status": "approved",
+      "imagery_review": {
+        "reviewer": "Codex visual review",
+        "reviewed_at": "2026-11-07T15:10:03.163477+00:00",
+        "evidence": "River and surrounding land/field patterns are visible on both crops. Seasonal water and atmospheric differences are disclosed; no causal land-change claim.",
+        "before_sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+        "after_sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+        "processing_version": "landsat-rgb-v1"
+      },
+      "images": {
+        "before": {
+          "url": "/media/imagery/sunamganj/before-21ef2657f578.webp",
+          "thumbnail_url": "/media/imagery/sunamganj/before-21ef2657f578-thumb.webp",
+          "date": "1990-01-07",
+          "sensor": "Landsat 5 TM",
+          "product_id": "LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+          "sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+          "width": 667,
+          "height": 667,
+          "bytes": 60232,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 3.0,
+          "alt": {
+            "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+            "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 1990-01-07."
+          }
+        },
+        "after": {
+          "url": "/media/imagery/sunamganj/after-2c1c0a607c12.webp",
+          "thumbnail_url": "/media/imagery/sunamganj/after-2c1c0a607c12-thumb.webp",
+          "date": "2025-02-08",
+          "sensor": "Landsat 8 OLI",
+          "product_id": "LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+          "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+          "sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+          "width": 667,
+          "height": 667,
+          "bytes": 58052,
+          "valid_pixel_fraction": 0.9970037470020612,
+          "scene_cloud_percent": 0.0,
+          "alt": {
+            "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+            "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 2025-02-08."
+          }
+        }
+      },
+      "quiz_ids": [
+        "observation",
+        "global-local",
+        "clouds",
+        "river-safety",
+        "image-sunamganj"
+      ],
+      "action_ids": [
+        "river-story",
+        "field-calendar",
+        "save-energy",
+        "journal"
+      ]
+    }
+  ]
+}

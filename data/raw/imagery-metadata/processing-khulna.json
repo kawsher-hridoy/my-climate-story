@@ -1,0 +1,61 @@
+{
+  "place_id": "khulna",
+  "retrieved_at": "2026-11-07T14:34:02.393814+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    134880,
+    2520600,
+    154890,
+    2540610
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/khulna/before-560c347e39f0.webp",
+    "thumbnail_url": "/media/imagery/khulna/before-560c347e39f0-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137044_19900107_20200916_02_T1_SR",
+    "sha256": "560c347e39f0220e3a0f17f2f20704c03e1b5f1d27f23026b502f66b9804889d",
+    "width": 667,
+    "height": 667,
+    "bytes": 65086,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "খুলনা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Khulna, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/khulna/after-e3b3375edf97.webp",
+    "thumbnail_url": "/media/imagery/khulna/after-e3b3375edf97-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137044_20250208_20250214_02_T1_SR",
+    "sha256": "e3b3375edf97f2709f6c50c675c1b1002c6d81cf37589e75d447564a3e1cd91b",
+    "width": 667,
+    "height": 667,
+    "bytes": 56262,
+    "valid_pixel_fraction": 0.9969318189480971,
+    "scene_cloud_percent": 0.04,
+    "alt": {
+      "bn": "খুলনা-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Khulna, acquired 2025-02-08."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "coxs_bazar",
+  "status": "approved",
+  "before": {
+    "url": "/media/imagery/coxs_bazar/before-256f7c3328f5.webp",
+    "thumbnail_url": "/media/imagery/coxs_bazar/before-256f7c3328f5-thumb.webp",
+    "date": "1990-01-16",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+    "width": 667,
+    "height": 667,
+    "bytes": 36490,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 5.0,
+    "alt": {
+      "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 1990-01-16."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/coxs_bazar/after-35db107eeccd.webp",
+    "thumbnail_url": "/media/imagery/coxs_bazar/after-35db107eeccd-thumb.webp",
+    "date": "2025-01-16",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+    "width": 667,
+    "height": 667,
+    "bytes": 53656,
+    "valid_pixel_fraction": 0.9970014992503748,
+    "scene_cloud_percent": 0.09,
+    "alt": {
+      "bn": "কক্সবাজার-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Cox’s Bazar, acquired 2025-01-16."
+    }
+  },
+  "bounds": [
+    91.90838399135096,
+    21.336399045981818,
+    92.10266982173225,
+    21.51831186617293
+  ],
+  "crs": "EPSG:32646",
+  "resolution_m": 30,
+  "attribution": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story.",
+  "processing_version": "landsat-rgb-v1",
+  "caption": {
+    "bn": "একই এলাকার জমি, পানি আর নির্মিত অংশের আকৃতি তুলনা করো। সেন্সর, ঋতু আর বায়ুমণ্ডলের কুয়াশায় রং বদলাতে পারে; ফ্যাকাশে অংশে পিক্সেল বাদ দেওয়া হয়েছে। এই দৃশ্য একটিমাত্র কারণ প্রমাণ করে না।",
+    "en": "Compare land, water, and built shapes in the same area. Colors also vary with sensors, season, and atmospheric haze; pale patches are masked pixels. These views do not establish a single cause."
+  },
+  "review": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.111322+00:00",
+    "evidence": "Coast, inlet and town-side features align. Both acquisition dates are January 16; shoreline/tide differences require context and are not quantified.",
+    "before_sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+    "after_sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "error": null
+}

@@ -1,0 +1,132 @@
+{
+  "health": {
+    "status": "ready",
+    "release_id": "mcs-cbe101aec7584839"
+  },
+  "release": "mcs-cbe101aec7584839",
+  "places": [
+    {
+      "id": "dhaka",
+      "series_id": "power-t2m-dhaka-a9370283a369e2bd-cbe101ae",
+      "coordinates": {
+        "latitude": 23.8103,
+        "longitude": 90.4125
+      },
+      "review": "temperature-dhaka-0d444a984012",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "chattogram",
+      "series_id": "power-t2m-chattogram-07478e089dea083a-cbe101ae",
+      "coordinates": {
+        "latitude": 22.3569,
+        "longitude": 91.7832
+      },
+      "review": "temperature-chattogram-5372a11ec7b8",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "khulna",
+      "series_id": "power-t2m-khulna-da268a914cb2fd77-cbe101ae",
+      "coordinates": {
+        "latitude": 22.8456,
+        "longitude": 89.5403
+      },
+      "review": "temperature-khulna-182d9d73b539",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "rajshahi",
+      "series_id": "power-t2m-rajshahi-af9b970ee32b01c4-cbe101ae",
+      "coordinates": {
+        "latitude": 24.3745,
+        "longitude": 88.6042
+      },
+      "review": "temperature-rajshahi-0ae2deba60d3",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "sylhet",
+      "series_id": "power-t2m-sylhet-eb2b38b4f432b3fb-cbe101ae",
+      "coordinates": {
+        "latitude": 24.8949,
+        "longitude": 91.8687
+      },
+      "review": "temperature-sylhet-656afe9150da",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "barishal",
+      "series_id": "power-t2m-barishal-e14c160c170912c5-cbe101ae",
+      "coordinates": {
+        "latitude": 22.701,
+        "longitude": 90.3535
+      },
+      "review": "temperature-barishal-f764a70215e1",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "rangpur",
+      "series_id": "power-t2m-rangpur-200485e9f40d1858-cbe101ae",
+      "coordinates": {
+        "latitude": 25.7439,
+        "longitude": 89.2752
+      },
+      "review": "temperature-rangpur-f0f239e8d39a",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "mymensingh",
+      "series_id": "power-t2m-mymensingh-41cb53f8ba872d25-cbe101ae",
+      "coordinates": {
+        "latitude": 24.7471,
+        "longitude": 90.4203
+      },
+      "review": "temperature-mymensingh-a0ee64dc45da",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "coxs_bazar",
+      "series_id": "power-t2m-coxs_bazar-392941e5ca7c54c1-cbe101ae",
+      "coordinates": {
+        "latitude": 21.4272,
+        "longitude": 92.0058
+      },
+      "review": "temperature-coxs_bazar-9843f0a0b404",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "satkhira",
+      "series_id": "power-t2m-satkhira-9671072aa2e28323-cbe101ae",
+      "coordinates": {
+        "latitude": 22.7185,
+        "longitude": 89.0705
+      },
+      "review": "temperature-satkhira-d5376cb4ca0c",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "bhola",
+      "series_id": "power-t2m-bhola-e14c160c170912c5-cbe101ae",
+      "coordinates": {
+        "latitude": 22.6859,
+        "longitude": 90.6482
+      },
+      "review": "temperature-bhola-f764a70215e1",
+      "images": "hash and MIME verified"
+    },
+    {
+      "id": "sunamganj",
+      "series_id": "power-t2m-sunamganj-fe4ed3964be1d2a4-cbe101ae",
+      "coordinates": {
+        "latitude": 25.0658,
+        "longitude": 91.395
+      },
+      "review": "temperature-sunamganj-f906272d293c",
+      "images": "hash and MIME verified"
+    }
+  ],
+  "standalone_series_match": 24,
+  "images_verified": 24,
+  "rainfall_pending": true
+}

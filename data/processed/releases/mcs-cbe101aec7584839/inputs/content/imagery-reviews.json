@@ -1,0 +1,98 @@
+{
+  "dhaka": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:02.959184+00:00",
+    "evidence": "Airport/runway and waterway geometry align; historical haze and small masked patches do not prevent shape comparison. Do not interpret greenness or density quantitatively.",
+    "before_sha256": "06f95d647e5a0b4598a1b57d4525c6cb7fd1d190866b2a9d441b1e0cc47ce1ba",
+    "after_sha256": "8facb46b72b9dc5454de446911ab18b5ba3a98544187701f4aa341624731766d",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "chattogram": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:02.978325+00:00",
+    "evidence": "Coast, river and city footprint are visible in both views; historical atmospheric haze is stronger. Approve qualitative shape reading with an explicit color/haze caveat.",
+    "before_sha256": "add49a3b30c19f473509d67fa33398c6698aeb70fe9d1f62b246b597343f036d",
+    "after_sha256": "9490846ba7a82475d62df163db1d3bb4011805548921f534ae3496c2cc18eb92",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "khulna": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.005917+00:00",
+    "evidence": "Shared waterways and city area align; no claim about Sundarbans or coastline from the city-center crop. Colors are not a vegetation classification.",
+    "before_sha256": "560c347e39f0220e3a0f17f2f20704c03e1b5f1d27f23026b502f66b9804889d",
+    "after_sha256": "e3b3375edf97f2709f6c50c675c1b1002c6d81cf37589e75d447564a3e1cd91b",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "rajshahi": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.016772+00:00",
+    "evidence": "Padma channel and town-side shapes remain readable despite several historical masked patches. The 98.5 percent valid fraction passes; masked patches are explicitly disclosed.",
+    "before_sha256": "099ff577fbd52c7e148befd5841685abb1d3b5b8faf4b5111d49fb51a6b478eb",
+    "after_sha256": "a00a27684c8a56b68bd2afc3ea6026331e7dba2aab55498bcda5776c7caf6669",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "sylhet": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.032275+00:00",
+    "evidence": "City/river landmarks and surrounding field shapes align. Different vegetation colors are not treated as land-cover or climate conclusions.",
+    "before_sha256": "a6aded736cdef694a099141c4b195074c7b49a125aa1ef48163b638649ece63a",
+    "after_sha256": "8c9e726c02e746208fa879626ba0be4b0667e8c451c0152fb0102f220039689f",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "barishal": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.044771+00:00",
+    "evidence": "River bends and built shapes are visible in both complete crops. Comparison is qualitative; water-level and seasonal factors remain possible.",
+    "before_sha256": "10dcbfdbe2fb7a842a3c4daf9986013846dab5c8ca3e6b8cd532b65b8971bca0",
+    "after_sha256": "76d59112e5c7b82ff1531b7b70f714657e97db19a552f5729aa7ce3467f021d1",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "rangpur": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.066151+00:00",
+    "evidence": "The historical date is correctly 1995, not 1990. Settlements and field patterns are visible with no major occluding cloud; colors cannot establish vegetation change.",
+    "before_sha256": "7ba33ddaaed4ed9b029a4e99dfe64b2e39dcf929acb158d9c599d8837931bfc1",
+    "after_sha256": "c995b7ae9a75673ebe4fa9348f953b37fae7c1dde9f8cfb7bf5b40d9c480455b",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "mymensingh": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.085328+00:00",
+    "evidence": "City and river setting can be compared on the shared native grid; sensor/season differences remain explicit. No river-change causal assertion.",
+    "before_sha256": "071754f76a8aaca98a9ee815a699fb5717e165a89d210978d6b3c5e357ba92f6",
+    "after_sha256": "47ed2cd5005a076f1a3b2fdfe66285acbb5b7f6334d44047168c54554332c1ca",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "coxs_bazar": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.111322+00:00",
+    "evidence": "Coast, inlet and town-side features align. Both acquisition dates are January 16; shoreline/tide differences require context and are not quantified.",
+    "before_sha256": "256f7c3328f5bfce5e5585fc23d6f1598277d96ede26a69d54ce8fce9a927b4c",
+    "after_sha256": "35db107eeccdeb4951b1414ddad07c3a8eff0ca88d56d0fa2878b85f7b252e4a",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "satkhira": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.131231+00:00",
+    "evidence": "Town, fields and water bodies are visible. This city-center crop is not labeled mangroves or coastline. Avoid interpreting greener appearance as vegetation gain.",
+    "before_sha256": "e627bee47395a48b83713a6181b2514d7ba6035866a87edd3de8f3dc63c7c2e9",
+    "after_sha256": "2a080780985387d9f561e7b6533ce56bebe50bb73b65a54fb1aa801d51d49a43",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "bhola": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.148595+00:00",
+    "evidence": "Island-side land/water shapes are visible, distinct from Barishal imagery. Tidal/sediment effects remain possible; no climate attribution.",
+    "before_sha256": "4c44036a04a5145efa17cf7b7aed0d475f3fc341dfd0a819685bbfc91a719775",
+    "after_sha256": "7819fe0cba0cb11ef0126f11cdbd878c8865fa17c99406f1e19442eefc32af05",
+    "processing_version": "landsat-rgb-v1"
+  },
+  "sunamganj": {
+    "reviewer": "Codex visual review",
+    "reviewed_at": "2026-11-07T15:10:03.163477+00:00",
+    "evidence": "River and surrounding land/field patterns are visible on both crops. Seasonal water and atmospheric differences are disclosed; no causal land-change claim.",
+    "before_sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+    "after_sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+    "processing_version": "landsat-rgb-v1"
+  }
+}

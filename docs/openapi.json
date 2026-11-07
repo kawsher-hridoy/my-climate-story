@@ -1,0 +1,1579 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "My Climate Story API",
+    "description": "Prepared NASA climate records, reviewed imagery, and bilingual student activities.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/config": {
+      "get": {
+        "summary": "Config",
+        "operationId": "config_api_v1_config_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/places/featured": {
+      "get": {
+        "summary": "Featured",
+        "operationId": "featured_api_v1_places_featured_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Place"
+                  },
+                  "type": "array",
+                  "title": "Response Featured Api V1 Places Featured Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/places/search": {
+      "get": {
+        "summary": "Search",
+        "operationId": "search_api_v1_places_search_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "title": "Q"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(bn|en)$",
+              "default": "bn",
+              "title": "Locale"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 10,
+              "minimum": 1,
+              "default": 10,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PlaceResults"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/places/{identifier}": {
+      "get": {
+        "summary": "Place",
+        "operationId": "place_api_v1_places__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Place"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/stories/{identifier}": {
+      "get": {
+        "summary": "Story",
+        "operationId": "story_api_v1_stories__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "release",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Release"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(bn|en)$",
+              "default": "bn",
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StoryManifest"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/explorations": {
+      "post": {
+        "summary": "Explore",
+        "operationId": "explore_api_v1_explorations_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExplorationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExplorationResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiError"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/jobs/{identifier}": {
+      "get": {
+        "summary": "Job",
+        "operationId": "job_api_v1_jobs__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JobStatus"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/series/{identifier}": {
+      "get": {
+        "summary": "Series",
+        "operationId": "series_api_v1_series__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "release",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Release"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClimateComponent"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/imagery/pairs/{identifier}": {
+      "get": {
+        "summary": "Image Pair",
+        "operationId": "image_pair_api_v1_imagery_pairs__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "release",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Release"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImageryPair"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sources/{identifier}": {
+      "get": {
+        "summary": "Source",
+        "operationId": "source_api_v1_sources__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SourceMetadata"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/releases/{identifier}": {
+      "get": {
+        "summary": "Release",
+        "operationId": "release_api_v1_releases__identifier__get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/exports/{identifier}.csv": {
+      "get": {
+        "summary": "Export",
+        "operationId": "export_api_v1_exports__identifier__csv_get",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identifier"
+            }
+          },
+          {
+            "name": "release",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Release"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health/live": {
+      "get": {
+        "summary": "Live",
+        "operationId": "live_api_v1_health_live_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/health/ready": {
+      "get": {
+        "summary": "Ready",
+        "operationId": "ready_api_v1_health_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionCard": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tags"
+          },
+          "audience": {
+            "type": "string",
+            "enum": [
+              "student",
+              "family",
+              "school"
+            ],
+            "title": "Audience"
+          },
+          "title": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "tags",
+          "audience",
+          "title",
+          "description",
+          "source_url"
+        ],
+        "title": "ActionCard"
+      },
+      "AnnualObservation": {
+        "properties": {
+          "year": {
+            "type": "integer",
+            "title": "Year"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "complete": {
+            "type": "boolean",
+            "title": "Complete",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "value"
+        ],
+        "title": "AnnualObservation"
+      },
+      "ApiError": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ApiError"
+      },
+      "ClimateComponent": {
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "publication_state": {
+            "$ref": "#/components/schemas/PublicationState"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SourceMetadata"
+          },
+          "annual": {
+            "items": {
+              "$ref": "#/components/schemas/AnnualObservation"
+            },
+            "type": "array",
+            "title": "Annual",
+            "default": []
+          },
+          "monthly": {
+            "items": {
+              "$ref": "#/components/schemas/MonthlyObservation"
+            },
+            "type": "array",
+            "title": "Monthly",
+            "default": []
+          },
+          "comparison": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Comparison"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "warning": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Localized"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "quality_flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Quality Flags",
+            "default": []
+          },
+          "shared_series_with": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Shared Series With",
+            "default": []
+          },
+          "requested_coordinates": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Coordinates"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "native_cell_center": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Coordinates"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "native_cell_bounds": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Native Cell Bounds"
+          }
+        },
+        "type": "object",
+        "required": [
+          "series_id",
+          "publication_state",
+          "source"
+        ],
+        "title": "ClimateComponent"
+      },
+      "Comparison": {
+        "properties": {
+          "baseline_period": {
+            "type": "string",
+            "title": "Baseline Period"
+          },
+          "recent_period": {
+            "type": "string",
+            "title": "Recent Period"
+          },
+          "baseline_value": {
+            "type": "number",
+            "title": "Baseline Value"
+          },
+          "recent_value": {
+            "type": "number",
+            "title": "Recent Value"
+          },
+          "difference": {
+            "type": "number",
+            "title": "Difference"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "publication_state": {
+            "$ref": "#/components/schemas/PublicationState"
+          },
+          "method": {
+            "type": "string",
+            "const": "complete-decade-means",
+            "title": "Method",
+            "default": "complete-decade-means"
+          },
+          "review_id": {
+            "type": "string",
+            "title": "Review Id"
+          },
+          "explanation": {
+            "$ref": "#/components/schemas/Localized"
+          }
+        },
+        "type": "object",
+        "required": [
+          "baseline_period",
+          "recent_period",
+          "baseline_value",
+          "recent_value",
+          "difference",
+          "unit",
+          "publication_state",
+          "review_id",
+          "explanation"
+        ],
+        "title": "Comparison"
+      },
+      "Coordinates": {
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Latitude"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude"
+          }
+        },
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "title": "Coordinates"
+      },
+      "ExplorationRequest": {
+        "properties": {
+          "place_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Place Id"
+          },
+          "coordinates": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Coordinates"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ExplorationRequest"
+      },
+      "ExplorationResponse": {
+        "properties": {
+          "story": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StoryManifest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "job": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JobStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "ExplorationResponse"
+      },
+      "GlobalContext": {
+        "properties": {
+          "source": {
+            "$ref": "#/components/schemas/SourceMetadata"
+          },
+          "baseline": {
+            "type": "string",
+            "title": "Baseline"
+          },
+          "annual": {
+            "items": {
+              "$ref": "#/components/schemas/AnnualObservation"
+            },
+            "type": "array",
+            "title": "Annual"
+          }
+        },
+        "type": "object",
+        "required": [
+          "source",
+          "baseline",
+          "annual"
+        ],
+        "title": "GlobalContext"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ImageryAsset": {
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "thumbnail_url": {
+            "type": "string",
+            "title": "Thumbnail Url"
+          },
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "sensor": {
+            "type": "string",
+            "title": "Sensor"
+          },
+          "product_id": {
+            "type": "string",
+            "title": "Product Id"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "width": {
+            "type": "integer",
+            "title": "Width"
+          },
+          "height": {
+            "type": "integer",
+            "title": "Height"
+          },
+          "bytes": {
+            "type": "integer",
+            "title": "Bytes"
+          },
+          "valid_pixel_fraction": {
+            "type": "number",
+            "title": "Valid Pixel Fraction"
+          },
+          "scene_cloud_percent": {
+            "type": "number",
+            "title": "Scene Cloud Percent"
+          },
+          "alt": {
+            "$ref": "#/components/schemas/Localized"
+          }
+        },
+        "type": "object",
+        "required": [
+          "url",
+          "thumbnail_url",
+          "date",
+          "sensor",
+          "product_id",
+          "source_url",
+          "sha256",
+          "width",
+          "height",
+          "bytes",
+          "valid_pixel_fraction",
+          "scene_cloud_percent",
+          "alt"
+        ],
+        "title": "ImageryAsset"
+      },
+      "ImageryPair": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "needs_review",
+              "approved",
+              "unavailable"
+            ],
+            "title": "Status"
+          },
+          "before": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageryAsset"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "after": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ImageryAsset"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bounds": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Bounds",
+            "default": []
+          },
+          "crs": {
+            "type": "string",
+            "title": "Crs",
+            "default": ""
+          },
+          "resolution_m": {
+            "type": "integer",
+            "title": "Resolution M",
+            "default": 30
+          },
+          "attribution": {
+            "type": "string",
+            "title": "Attribution",
+            "default": "USGS/NASA Landsat. Hosted by Microsoft Planetary Computer; processed by My Climate Story."
+          },
+          "processing_version": {
+            "type": "string",
+            "title": "Processing Version",
+            "default": "landsat-rgb-v1"
+          },
+          "caption": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "review": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Review"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "caption"
+        ],
+        "title": "ImageryPair"
+      },
+      "JobStatus": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "story_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Story Id"
+          },
+          "story_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Story Url"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "retry_after": {
+            "type": "integer",
+            "title": "Retry After",
+            "default": 5
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "message"
+        ],
+        "title": "JobStatus"
+      },
+      "Localized": {
+        "properties": {
+          "bn": {
+            "type": "string",
+            "title": "Bn"
+          },
+          "en": {
+            "type": "string",
+            "title": "En"
+          }
+        },
+        "type": "object",
+        "required": [
+          "bn",
+          "en"
+        ],
+        "title": "Localized"
+      },
+      "MonthlyObservation": {
+        "properties": {
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "date",
+          "value"
+        ],
+        "title": "MonthlyObservation"
+      },
+      "Place": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "division": {
+            "type": "string",
+            "title": "Division"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/Coordinates"
+          },
+          "aliases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Aliases",
+            "default": []
+          },
+          "tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tags",
+            "default": []
+          },
+          "featured": {
+            "type": "boolean",
+            "title": "Featured",
+            "default": true
+          },
+          "feature_type": {
+            "type": "string",
+            "title": "Feature Type",
+            "default": "city"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country",
+            "default": "BD"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "preview_image_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preview Image Url"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "division",
+          "coordinates",
+          "description"
+        ],
+        "title": "Place"
+      },
+      "PlaceResults": {
+        "properties": {
+          "results": {
+            "items": {
+              "$ref": "#/components/schemas/Place"
+            },
+            "type": "array",
+            "title": "Results"
+          },
+          "coverage_note": {
+            "$ref": "#/components/schemas/Localized"
+          }
+        },
+        "type": "object",
+        "required": [
+          "results",
+          "coverage_note"
+        ],
+        "title": "PlaceResults"
+      },
+      "PublicationState": {
+        "type": "string",
+        "enum": [
+          "unavailable",
+          "provisional",
+          "descriptive_only",
+          "comparison_approved"
+        ],
+        "title": "PublicationState"
+      },
+      "QuizQuestion": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "question": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "options": {
+            "items": {
+              "$ref": "#/components/schemas/Localized"
+            },
+            "type": "array",
+            "title": "Options"
+          },
+          "correct_index": {
+            "type": "integer",
+            "title": "Correct Index"
+          },
+          "explanation": {
+            "$ref": "#/components/schemas/Localized"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "image_question": {
+            "type": "boolean",
+            "title": "Image Question",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "question",
+          "options",
+          "correct_index",
+          "explanation",
+          "source_url"
+        ],
+        "title": "QuizQuestion"
+      },
+      "ReleaseRef": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "created_at": {
+            "type": "string",
+            "title": "Created At"
+          },
+          "processing_version": {
+            "type": "string",
+            "title": "Processing Version"
+          },
+          "content_version": {
+            "type": "string",
+            "title": "Content Version"
+          },
+          "rainfall_pending": {
+            "type": "boolean",
+            "title": "Rainfall Pending"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "created_at",
+          "processing_version",
+          "content_version",
+          "rainfall_pending"
+        ],
+        "title": "ReleaseRef"
+      },
+      "SourceMetadata": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "citation": {
+            "type": "string",
+            "title": "Citation"
+          },
+          "spatial_resolution": {
+            "type": "string",
+            "title": "Spatial Resolution"
+          },
+          "start": {
+            "type": "string",
+            "title": "Start"
+          },
+          "end": {
+            "type": "string",
+            "title": "End"
+          },
+          "retrieved_at": {
+            "type": "string",
+            "title": "Retrieved At"
+          },
+          "license": {
+            "type": "string",
+            "title": "License"
+          },
+          "notes": {
+            "$ref": "#/components/schemas/Localized"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "version",
+          "unit",
+          "source_url",
+          "citation",
+          "spatial_resolution",
+          "start",
+          "end",
+          "retrieved_at",
+          "license",
+          "notes"
+        ],
+        "title": "SourceMetadata"
+      },
+      "StoryManifest": {
+        "properties": {
+          "schema_version": {
+            "type": "integer",
+            "const": 1,
+            "title": "Schema Version",
+            "default": 1
+          },
+          "place": {
+            "$ref": "#/components/schemas/Place"
+          },
+          "release": {
+            "$ref": "#/components/schemas/ReleaseRef"
+          },
+          "temperature": {
+            "$ref": "#/components/schemas/ClimateComponent"
+          },
+          "rainfall": {
+            "$ref": "#/components/schemas/ClimateComponent"
+          },
+          "global_context": {
+            "$ref": "#/components/schemas/GlobalContext"
+          },
+          "imagery": {
+            "$ref": "#/components/schemas/ImageryPair"
+          },
+          "quiz": {
+            "items": {
+              "$ref": "#/components/schemas/QuizQuestion"
+            },
+            "type": "array",
+            "title": "Quiz"
+          },
+          "actions": {
+            "items": {
+              "$ref": "#/components/schemas/ActionCard"
+            },
+            "type": "array",
+            "title": "Actions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "place",
+          "release",
+          "temperature",
+          "rainfall",
+          "global_context",
+          "imagery",
+          "quiz",
+          "actions"
+        ],
+        "title": "StoryManifest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

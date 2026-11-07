@@ -1,0 +1,53 @@
+[project]
+name = "my-climate-story"
+version = "0.1.0"
+description = "Bangla-first NASA climate stories for students"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "pydantic-settings>=2.8,<3",
+  "sqlalchemy>=2.0,<3",
+  "psycopg[binary]>=3.2,<4",
+  "alembic>=1.15,<2",
+  "procrastinate>=3.0,<4",
+  "httpx>=0.28,<1",
+  "numpy>=2.2,<3",
+  "pandas>=2.2,<4",
+  "rasterio>=1.4,<2",
+  "pyproj>=3.7,<4",
+  "pillow>=11,<13",
+  "shapely>=2.0,<3",
+  "earthaccess>=0.14,<1",
+  "xarray>=2025.1",
+  "h5netcdf>=1.5,<2",
+  "h5py>=3.13,<4",
+  "pydap>=3.5,<4",
+  "boto3>=1.37,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.26,<2", "ruff>=0.11,<1"]
+
+[project.scripts]
+climate = "climate.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["services/api/climate", "pipelines"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["services/api", "."]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

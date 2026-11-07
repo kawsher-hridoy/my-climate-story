@@ -1,0 +1,61 @@
+{
+  "place_id": "chattogram",
+  "retrieved_at": "2026-11-07T14:53:50.235068+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    364710,
+    2462850,
+    384720,
+    2482860
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/chattogram/before-add49a3b30c1.webp",
+    "thumbnail_url": "/media/imagery/chattogram/before-add49a3b30c1-thumb.webp",
+    "date": "1990-01-16",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_136045_19900116_20200916_02_T1_SR",
+    "sha256": "add49a3b30c19f473509d67fa33398c6698aeb70fe9d1f62b246b597343f036d",
+    "width": 667,
+    "height": 667,
+    "bytes": 28560,
+    "valid_pixel_fraction": 0.9965564444164724,
+    "scene_cloud_percent": 5.0,
+    "alt": {
+      "bn": "চট্টগ্রাম-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Chattogram, acquired 1990-01-16."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/chattogram/after-9490846ba7a8.webp",
+    "thumbnail_url": "/media/imagery/chattogram/after-9490846ba7a8-thumb.webp",
+    "date": "2025-01-16",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_136045_20250116_20250127_02_T1_SR",
+    "sha256": "9490846ba7a82475d62df163db1d3bb4011805548921f534ae3496c2cc18eb92",
+    "width": 667,
+    "height": 667,
+    "bytes": 48996,
+    "valid_pixel_fraction": 0.995099901323701,
+    "scene_cloud_percent": 0.09,
+    "alt": {
+      "bn": "চট্টগ্রাম-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-16।",
+      "en": "True-color Landsat view of the approximately 20 km area around Chattogram, acquired 2025-01-16."
+    }
+  }
+}

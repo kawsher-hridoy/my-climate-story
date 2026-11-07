@@ -1,0 +1,9 @@
+# Preserve original/pinned scientific bytes across platforms and Git settings.
+* text=auto eol=lf
+data/raw/** -text -whitespace
+data/processed/** -text -whitespace
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.png binary
+*.webp binary

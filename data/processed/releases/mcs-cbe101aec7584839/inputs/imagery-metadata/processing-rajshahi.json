@@ -1,0 +1,61 @@
+{
+  "place_id": "rajshahi",
+  "retrieved_at": "2026-11-07T14:54:50.660292+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    652680,
+    2686650,
+    672690,
+    2706660
+  ],
+  "crs": "EPSG:32645",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/rajshahi/before-099ff577fbd5.webp",
+    "thumbnail_url": "/media/imagery/rajshahi/before-099ff577fbd5-thumb.webp",
+    "date": "1990-01-30",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_138043_19900130_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_138043_19900130_20200916_02_T1_SR",
+    "sha256": "099ff577fbd52c7e148befd5841685abb1d3b5b8faf4b5111d49fb51a6b478eb",
+    "width": 667,
+    "height": 667,
+    "bytes": 63002,
+    "valid_pixel_fraction": 0.985216537158707,
+    "scene_cloud_percent": 2.0,
+    "alt": {
+      "bn": "রাজশাহী-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-30।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rajshahi, acquired 1990-01-30."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/rajshahi/after-a00a27684c8a.webp",
+    "thumbnail_url": "/media/imagery/rajshahi/after-a00a27684c8a-thumb.webp",
+    "date": "2025-01-14",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_138043_20250114_20250122_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_138043_20250114_20250122_02_T1_SR",
+    "sha256": "a00a27684c8a56b68bd2afc3ea6026331e7dba2aab55498bcda5776c7caf6669",
+    "width": 667,
+    "height": 667,
+    "bytes": 55388,
+    "valid_pixel_fraction": 0.9965586921681588,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "রাজশাহী-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-01-14।",
+      "en": "True-color Landsat view of the approximately 20 km area around Rajshahi, acquired 2025-01-14."
+    }
+  }
+}

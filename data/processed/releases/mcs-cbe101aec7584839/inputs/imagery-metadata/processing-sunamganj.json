@@ -1,0 +1,61 @@
+{
+  "place_id": "sunamganj",
+  "retrieved_at": "2026-11-07T14:38:34.618603+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    328110,
+    2763210,
+    348120,
+    2783220
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/sunamganj/before-21ef2657f578.webp",
+    "thumbnail_url": "/media/imagery/sunamganj/before-21ef2657f578-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "sha256": "21ef2657f5787025fcc2d09caf92bbd55ac2aecb97086db46066cf5b0f3d4af7",
+    "width": 667,
+    "height": 667,
+    "bytes": 60232,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 3.0,
+    "alt": {
+      "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/sunamganj/after-2c1c0a607c12.webp",
+    "thumbnail_url": "/media/imagery/sunamganj/after-2c1c0a607c12-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "sha256": "2c1c0a607c1215ebc7fcd7a3be3e841cc12beb2c1929ac453631a2943a4d871f",
+    "width": 667,
+    "height": 667,
+    "bytes": 58052,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "সুনামগঞ্জ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Sunamganj, acquired 2025-02-08."
+    }
+  }
+}

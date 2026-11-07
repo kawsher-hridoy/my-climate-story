@@ -1,0 +1,61 @@
+{
+  "place_id": "mymensingh",
+  "retrieved_at": "2026-11-07T14:56:52.327963+00:00",
+  "display_transform": {
+    "reflectance_scale": 2.75e-05,
+    "reflectance_offset": -0.2,
+    "display_min": 0.0,
+    "display_max": 0.3,
+    "gamma": 1.5,
+    "note": "Fixed shared transform for every image. Display colors do not classify land cover."
+  },
+  "bounds_projected": [
+    229080,
+    2729400,
+    249090,
+    2749410
+  ],
+  "crs": "EPSG:32646",
+  "pixel_size_m": 30,
+  "shape": [
+    667,
+    667
+  ],
+  "qa_policy": "fill,dilated cloud,cloud,shadow,snow; L8/9 cirrus; RGB saturation; TM dropped pixels; water retained",
+  "before": {
+    "url": "/media/imagery/mymensingh/before-071754f76a8a.webp",
+    "thumbnail_url": "/media/imagery/mymensingh/before-071754f76a8a-thumb.webp",
+    "date": "1990-01-07",
+    "sensor": "Landsat 5 TM",
+    "product_id": "LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LT05_L2SP_137043_19900107_20200916_02_T1_SR",
+    "sha256": "071754f76a8aaca98a9ee815a699fb5717e165a89d210978d6b3c5e357ba92f6",
+    "width": 667,
+    "height": 667,
+    "bytes": 69306,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 3.0,
+    "alt": {
+      "bn": "ময়মনসিংহ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 1990-01-07।",
+      "en": "True-color Landsat view of the approximately 20 km area around Mymensingh, acquired 1990-01-07."
+    }
+  },
+  "after": {
+    "url": "/media/imagery/mymensingh/after-47ed2cd5005a.webp",
+    "thumbnail_url": "/media/imagery/mymensingh/after-47ed2cd5005a-thumb.webp",
+    "date": "2025-02-08",
+    "sensor": "Landsat 8 OLI",
+    "product_id": "LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "source_url": "https://landsatlook.usgs.gov/stac-server/collections/landsat-c2l2-sr/items/LC08_L2SP_137043_20250208_20250214_02_T1_SR",
+    "sha256": "47ed2cd5005a076f1a3b2fdfe66285acbb5b7f6334d44047168c54554332c1ca",
+    "width": 667,
+    "height": 667,
+    "bytes": 56676,
+    "valid_pixel_fraction": 0.9970037470020612,
+    "scene_cloud_percent": 0.0,
+    "alt": {
+      "bn": "ময়মনসিংহ-এর আশপাশের প্রায় ২০ কিমি এলাকার সত্য রঙের ল্যান্ডস্যাট ছবি, তারিখ 2025-02-08।",
+      "en": "True-color Landsat view of the approximately 20 km area around Mymensingh, acquired 2025-02-08."
+    }
+  }
+}

@@ -1,75 +1,140 @@
-# My Climate Story · আমার জলবায়ুর গল্প
+<div align="center">
 
-**Learn about climate through a place you know.**
+<img src="apps/web/public/favicon.svg" alt="My Climate Story leaf icon" width="64" height="64">
 
-A Bangla-first, bilingual educational web app for students in grades 6–10. Explore a familiar place, compare real Landsat images, read NASA temperature records, test your understanding, and choose a practical action.
+# My Climate Story
 
-Originally built for the [2026 NASA International Space Apps Challenge](https://www.spaceappschallenge.org/2026/), the project brings together a React PWA, a FastAPI backend, reproducible scientific pipelines, and an offline-first learning experience.
+**আমার জলবায়ুর গল্প**
 
-[**Live application**](https://climate-story.hridoy.xyz) · [বাংলা](https://climate-story.hridoy.xyz/bn/) · [English](https://climate-story.hridoy.xyz/en/) · [Documentation](docs/README.md)
+### Climate learning starts with a place you know.
+
+A Bangla-first educational PWA that turns NASA Earth data into familiar stories for students in grades 6–10. Explore a place, compare its landscape, read the climate record, and keep learning offline.
+
+[**Open the live app**](https://climate-story.hridoy.xyz) · [বাংলা](https://climate-story.hridoy.xyz/bn/) · [English](https://climate-story.hridoy.xyz/en/) · [Read the docs](docs/README.md)
 
 [![CI](https://github.com/kawsher-hridoy/my-climate-story/actions/workflows/ci.yml/badge.svg)](https://github.com/kawsher-hridoy/my-climate-story/actions/workflows/ci.yml)
+![React 19](https://img.shields.io/badge/React-19-173f35?logo=react&logoColor=white)
+![Bangla and English](https://img.shields.io/badge/Languages-Bangla%20%2B%20English-173f35)
 
-## Features
+Built for the [2026 NASA International Space Apps Challenge](https://www.spaceappschallenge.org/2026/).
 
-- **Place-based stories:** twelve curated Bangladesh locations, plus worldwide name and coordinate exploration.
-- **Real satellite comparisons:** 24 reviewed Landsat images with acquisition dates, source metadata, and an accessible before/after viewer.
-- **Climate records:** 1981–2025 regional temperature history, monthly/annual views, tables, CSV export, and reviewed descriptive decade comparisons.
-- **Global context:** a separate GISTEMP anomaly chart against the 1951–1980 baseline.
-- **Bilingual learning:** Bangla and English stories, a 30-question reusable bank, image questions, and student/family/school actions.
-- **Offline use:** saved stories retain both languages, charts, quizzes, sources, and owned images. Progress stays on the device.
-- **Classroom support:** printable stories and a teacher activity guide, without requiring student accounts.
+</div>
 
-**Rainfall measurements are pending.** The NASA IMERG importer and pending-state UI are implemented, but verified measurements are not included in this release. POWER precipitation is not substituted into the rainfall chapter. Global temperature requests remain provisional and do not receive automatically approved change claims.
+[![English homepage with the illustrated landscape, place-based introduction, and project coverage](docs/assets/screenshots/home-desktop.png)](https://climate-story.hridoy.xyz/en/)
 
-## Architecture
+<p align="center"><sub>Real application screenshots, captured from the local production PWA build.</sub></p>
+
+[Overview](#overview) · [Screenshots](#screenshots) · [Engineering](#engineering) · [Quick start](#quick-start) · [Data & scope](#data--scope) · [Documentation](#documentation)
+
+## Overview
+
+Climate education is easier to connect with when it starts close to home. My Climate Story brings together familiar Bangladesh locations, real satellite observations, readable records, bilingual activities, and a classroom-friendly narrative—not just a statistical dashboard.
+
+| Curated places | Temperature history | Reviewed Landsat images | Languages |
+|:---:|:---:|:---:|:---:|
+| **12** across Bangladesh | **45 years** · 1981–2025 | **24** images · 12 pairs | **বাংলা + English** |
+
+**The learning journey:** choose a place → look across time → read the record → play a quiz → choose an action → save the story.
+
+| Experience | What students can do |
+|---|---|
+| **Explore a familiar place** | Open a curated story, search available names, or select coordinates worldwide. |
+| **Look across time** | Use a keyboard-accessible slider or side-by-side view of reviewed Landsat images with real acquisition dates. |
+| **Read the evidence** | Switch between annual/monthly temperature views, inspect tables, download CSV, and explore separate global context. |
+| **Learn by doing** | Play five-question bilingual activities and choose relevant student, family, or school actions. |
+| **Keep the story** | Save both languages, records, sources, quizzes, and owned imagery; reopen them without a connection. |
+| **Bring it to class** | Print a story and use the teacher guide without creating student accounts. |
+
+**Current limits:** verified IMERG rainfall measurements are pending. Newly retrieved global temperature is provisional; arbitrary global points do not automatically receive approved image pairs or change comparisons. See [data and scope](#data--scope).
+
+## Screenshots
+
+These captures show the implemented interface using reviewed curated data. Click the images to view them at full size.
+
+| Then & now | Reading the record |
+|---|---|
+| [![Dhaka's reviewed historical and recent Landsat views displayed side by side, with dates and interpretation notes](docs/assets/screenshots/landsat-comparison.png)](docs/assets/screenshots/landsat-comparison.png) | [![NASA POWER temperature chart with annual/monthly controls, CSV export, descriptive decade averages, and source caveats](docs/assets/screenshots/temperature-records.png)](docs/assets/screenshots/temperature-records.png) |
+| Real images of the same area, with acquisition dates and sensor, haze, and masking caveats. | Prepared observations, accessible controls, and descriptive comparisons grounded in the source data. |
+
+<details>
+<summary><strong>See Bangla on mobile and saved stories working offline</strong></summary>
+
+### Bangla at mobile width
+
+The Dhaka story at a 390 px viewport, with the Bangla interface and self-hosted Bengali font.
+
+<p align="center">
+  <a href="docs/assets/screenshots/bangla-mobile.png"><img src="docs/assets/screenshots/bangla-mobile.png" alt="Bangla Dhaka story at mobile width, showing the place introduction, saved-offline state, and chapter navigation" width="320"></a>
+</p>
+
+### Offline is part of the experience
+
+Dhaka and Barishal saved through the app, then opened on the Saved page with the browser network disconnected. Both packs retained their languages and checksum-verified images; a release-pinned story also reopened after an offline reload.
+
+[![Saved Dhaka and Barishal packs with the application's offline banner, bilingual pack details, and disabled online-update controls](docs/assets/screenshots/offline-saved-stories.png)](docs/assets/screenshots/offline-saved-stories.png)
+
+</details>
+
+## Engineering
+
+The student experience is simple; the data and persistence boundaries are deliberately explicit.
+
+| Design decision | Why it matters |
+|---|---|
+| **Prepared, immutable releases** | Curated stories load versioned JSON and owned images, rather than retrieving decades of NASA data on every visit. Validation checks source agreement before publication. |
+| **Durable background retrieval** | Exploration jobs and queue entries commit together. Leases, bounded recovery, and generation fencing prevent stranded work and stale-worker publication. |
+| **Integrity-aware offline packs** | Bilingual manifests live in IndexedDB; saved media has a persistent cache, checksum checks, migration/repair, and reference-aware deletion. |
+| **Reviewed scientific interpretation** | Calendar-aware calculations and source-bound reviews keep local temperature, global anomalies, and qualitative imagery distinct. Narration is deterministic, not a runtime AI-generated claim. |
+| **One-origin deployment** | Caddy serves the frontend and proxies API/media on one EC2 host. API/database ports stay private, and student progress stays on the device. |
 
 ```mermaid
 flowchart LR
     Browser[React PWA] --> Gateway[Caddy]
     Gateway --> API[FastAPI]
-    API --> Releases[Immutable stories and imagery]
+    API --> Releases[Reviewed releases and imagery]
     API --> DB[(PostgreSQL / PostGIS)]
     DB --> Worker[Procrastinate worker]
     Worker --> POWER[NASA POWER]
-    Worker --> Results[Verified provisional results]
-    Browser --> Offline[IndexedDB and Cache Storage]
+    Worker --> Bundles[Verified provisional bundles]
+    Bundles --> API
+    Browser --> Local[IndexedDB and Cache Storage]
 ```
 
-| Layer | Technology |
+| Layer | Stack |
 |---|---|
-| Frontend | React, TypeScript, Vite, React Router, TanStack Query, i18next |
-| Maps and charts | Leaflet, Chart.js |
-| Offline storage | Dexie, IndexedDB, Workbox |
-| API and persistence | FastAPI, Pydantic, SQLAlchemy, Alembic, PostgreSQL 17/PostGIS |
-| Background work | Procrastinate, with transactional dispatch and bounded recovery |
-| Scientific processing | Python, NumPy/pandas, rasterio, xarray, source- and checksum-bound reviews |
-| Hosting | Docker Compose and Caddy; the complete app runs on one AWS EC2 instance |
+| **Frontend** | React 19 · TypeScript · Vite · React Router · TanStack Query · i18next |
+| **Maps, charts, offline** | Leaflet · Chart.js · Dexie · Workbox |
+| **API, persistence, jobs** | FastAPI · Pydantic · SQLAlchemy · Alembic · PostgreSQL 17/PostGIS · Procrastinate |
+| **Scientific processing** | Python · NumPy/pandas · rasterio · xarray · checksum-bound review records |
+| **Deployment** | Docker Compose · Caddy · AWS EC2 |
 
-Curated pages read prepared, versioned data rather than fetching decades of NASA measurements on every page load. New global requests use a durable queue. Narration is deterministic and reviewed; there is no runtime language-model dependency.
+The complete live application runs on one EC2 instance. Its small-instance configuration is a pilot, not a sustained classroom-load guarantee. See [architecture](docs/architecture.md), [offline storage](docs/offline.md), and [EC2 deployment](docs/aws-deployment.md) for details.
 
-## Run locally
+## Quick start
 
 Requires Docker Engine and Docker Compose. From the repository root:
 
 ```bash
+git clone https://github.com/kawsher-hridoy/my-climate-story.git
+cd my-climate-story
 cp -n .env.example .env
 docker compose --env-file .env -f infra/compose.yml up -d --build --wait
 ```
 
-Open [Bangla](http://localhost:8088/bn/) or [English](http://localhost:8088/en/). The shipped reviewed snapshot supplies the data and images; student use does not require Earthdata credentials.
+Open **[localhost:8088/bn/](http://localhost:8088/bn/)** or **[localhost:8088/en/](http://localhost:8088/en/)**. The reviewed snapshot ships with the repository; student use does not require Earthdata credentials.
 
-To stop the local stack without deleting containers or data:
+Stop the local stack without deleting containers or data:
 
 ```bash
 docker compose --env-file .env -f infra/compose.yml stop
 ```
 
-The default credentials are for local development only. Follow the [deployment guide](docs/deployment.md) before exposing a server.
+The example credentials are for local development only. Follow the [deployment guide](docs/deployment.md) before exposing a server.
 
-### Native development
+<details>
+<summary><strong>Native development</strong> · Python 3.12 and Node 24</summary>
 
-Use Python 3.12 with `uv` and Node 24; Node 22.12+ is also supported locally.
+Use the locked `uv` and npm environments. Node 22.12+ is also supported locally.
 
 ```bash
 cp -n .env.example .env
@@ -79,9 +144,15 @@ uv run python scripts/bootstrap_data.py
 make db
 ```
 
-Run `make api`, `make worker`, and `make web` in separate terminals. The UI is at `http://localhost:5173` and the API at `http://localhost:8000`. Production builds install the service worker used for offline testing.
+Start `make api`, `make worker`, and `make web` in separate terminals. Vite serves the UI at `localhost:5173` and proxies the API at `localhost:8000`. Offline browser checks require the production build and its service worker.
 
-## Quality checks
+See the [developer guide](docs/developer-guide.md) for configuration, CLI commands, and change workflows.
+
+</details>
+
+### Quality checks
+
+[GitHub Actions](.github/workflows/ci.yml) defines separate Python/data/documentation, frontend, and disposable PostGIS integration jobs.
 
 ```bash
 uv run ruff check services pipelines scripts tests
@@ -93,30 +164,33 @@ npm run typecheck
 npm run build
 ```
 
-[GitHub Actions](.github/workflows/ci.yml) runs Python/data checks, frontend checks, and a separate disposable PostgreSQL/PostGIS integration job. The integration fixture drops its test schema: **never point it at a production database**. See [testing](docs/testing.md) for coverage and browser acceptance scenarios.
+The integration fixture drops its test schema: **use only a disposable PostGIS database named `climate_jobs_test`, never production**. Real-browser acceptance covers language switching, imagery, mobile layout, and offline saving/reopening. See [testing](docs/testing.md) for coverage and limits.
 
-## Repository guide
+## Data & scope
 
-| Path | Purpose |
+| Source | Use and interpretation |
 |---|---|
-| `apps/web/` | Student interface, maps, charts, localization, and offline packs |
-| `services/api/climate/` | Public API, catalog, jobs, recovery, and operator CLI |
-| `pipelines/` | Acquisition, scientific calculations, imagery processing, release validation |
-| `content/` | Bilingual educational content and canonical scientific review records |
-| `data/` | Original source evidence, reviewed images, and versioned data snapshots |
-| `infra/` | Container, proxy, and deployment configuration |
-| `scripts/` | Bootstrap, backup, packaging, and documentation tools |
-| `tests/` | Scientific, release-integrity, API, deployment, and recovery regressions |
-| `docs/` | Product, engineering, data, classroom, and operations guides |
+| **NASA POWER / MERRA-2** | Regional temperature, 1981–2025. Annual means weight each month by calendar days; complete-decade comparisons are descriptive, not causal attribution or significance tests. |
+| **USGS/NASA Landsat** | Twelve reviewed historical/recent pairs. RGB differences are qualitative and can reflect sensors, season, haze, water levels, or human activity. |
+| **NASA GISTEMP** | Separate global land–ocean anomalies against 1951–1980—not local absolute temperature. |
+| **NASA IMERG** | Importer and pending-state chapter are implemented; verified measurements are not included. POWER precipitation is not substituted. |
+| **GeoNames, OSM, GIBS, Natural Earth** | Place selection and map context. Standard street/satellite tiles are not packaged for offline use. |
 
-Start with the [application handbook](docs/complete-documentation.md), [architecture](docs/architecture.md), or the [source-to-feature map](docs/data-usage.md). The [data register](docs/generated/place-data-register.md) traces each curated story to its coordinates, source hashes, series, images, and review records.
+Regional gridded data is not a thermometer at a particular home. Monthly records do not establish hot-day counts, heatwaves, forecasts, or a single cause for visible landscape differences.
 
-## Scientific scope and attribution
+The original [project brief](My_Climate_Story_NASA_Space_Apps.pdf), supplied `climate_data.zip`, raw measurements, canonical reviews, and published releases are intentionally retained for reproducibility and pinned-story compatibility. The [per-location register](docs/generated/place-data-register.md) traces every curated story to its coordinates, sources, series, images, and reviews.
 
-POWER represents regional gridded conditions, not a thermometer at a specific home. Comparisons describe complete-decade dataset averages; they do not establish causal attribution, statistical significance, hot-day counts, or forecasts. Landsat comparisons are qualitative and disclose sensor, season, haze, and masking limits.
+## Documentation
 
-The original [project brief](My_Climate_Story_NASA_Space_Apps.pdf), supplied `climate_data.zip`, reviewed source files, and published releases are retained for reproducibility and pinned-story compatibility. See [scientific methodology](docs/scientific-methodology.md) and [sources and licenses](docs/sources-and-licenses.md).
+| Looking for… | Start here |
+|---|---|
+| Product and classroom use | [Requirements](docs/requirements.md) · [Student guide](docs/user-guide.md) · [Teacher guide](docs/teacher-guide.md) |
+| Implementation and interfaces | [Architecture](docs/architecture.md) · [API](docs/api.md) · [Developer guide](docs/developer-guide.md) |
+| Data and interpretation | [Source-to-feature map](docs/data-usage.md) · [Methodology](docs/scientific-methodology.md) · [Sources and licenses](docs/sources-and-licenses.md) |
+| Running and maintaining the app | [Deployment](docs/deployment.md) · [Operations](docs/operations.md) · [Security and privacy](docs/security-and-privacy.md) |
 
-This is an independent educational project; NASA/USGS citations do not imply endorsement.
+See the [full documentation index](docs/README.md), [contribution guide](CONTRIBUTING.md), [security policy](SECURITY.md), and [changelog](CHANGELOG.md).
 
-Created by [@kawsher-hridoy](https://github.com/kawsher-hridoy). See [contributing](CONTRIBUTING.md) and the [security policy](SECURITY.md) before submitting changes or reporting a vulnerability.
+---
+
+Created by [@kawsher-hridoy](https://github.com/kawsher-hridoy). An independent educational project; NASA/USGS datasets and citations do not imply endorsement.

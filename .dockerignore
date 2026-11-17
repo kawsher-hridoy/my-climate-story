@@ -1,4 +1,10 @@
 .git
+AGENTS.md
+plan.md
+*.pem
+*.key
+*.dump
+infra/compose.small.yml
 .env
 .env.*
 !.env.example

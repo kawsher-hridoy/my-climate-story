@@ -15,13 +15,15 @@
 | Saving fails | Wait for the production offline shell, check connection/quota, and retry; incomplete packs are not committed |
 | Offline street map is unavailable | Expected: standard OSM tiles are not packaged; use the saved story/overview |
 | Docker cannot bind localhost:8088 | Inspect existing listeners and choose an explicit alternative port mapping |
+| HTTP works but HTTPS fails | Verify DNS, public 80/443, the web service's `SITE_ADDRESS`, and explicit `--env-file .env` usage |
+| Database password changed but authentication fails | An initialized PostgreSQL role keeps its stored password; align credentials deliberately and preserve the volume |
 | Database migration fails | Inspect the error, verify PostGIS permissions and correct database; migrations are separate from raw source files |
 
 ## Useful commands
 
 ```bash
-docker compose -f infra/compose.yml ps
-docker compose -f infra/compose.yml logs --tail=50 api worker
+docker compose --env-file .env -f infra/compose.yml ps
+docker compose --env-file .env -f infra/compose.yml logs --tail=50 api worker
 uv run climate validate
 uv run climate openapi
 npm run typecheck

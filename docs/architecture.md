@@ -1,6 +1,6 @@
 # Application architecture
 
-This describes the implemented application, including the reliability update of 2026-11-08. Start with the [complete handbook](complete-documentation.md) for the entire system and [data usage](data-usage.md) for the source-to-screen mapping.
+This describes the application components, scientific-data authority and operational boundaries. Start with the [complete handbook](complete-documentation.md) for the entire system and [data usage](data-usage.md) for the source-to-screen mapping.
 
 The browser displays prepared, versioned educational material. A Python service validates requests and runs scientific acquisition through durable jobs. Curated pages do not download raw NASA data when a student opens them.
 
@@ -160,13 +160,13 @@ The generated [database schema](generated/database-schema.md) lists actual colum
 
 ## Deployment and scaling boundaries
 
-Compose runs `web`, `api`, `worker` and `db`. API/worker share host `data`; PostgreSQL/Caddy use named volumes. Native development uses a separate database on localhost:55432. Production exposes Caddy at localhost:8088; API/database ports remain private.
+Compose runs `web`, `api`, `worker` and `db`. API/worker share host `data`; PostgreSQL/Caddy use named volumes. Native development uses a separate database on localhost:55432. Local production binds Caddy at localhost:8088; the AWS overlay adds public 80/443 for HTTPS. API/database ports remain private.
 
 Caddy is fixed at `172.30.249.2`, API at `.3` on the proxy subnet. Uvicorn trusts Caddy and loopback. API also joins the database network; the worker joins the database network. One API process owns the in-memory client limiter; worker concurrency is one.
 
 Multiple API processes require a shared limiter. Multi-host workers/releases require shared artifact storage and publication locking before adding replicas. The current filesystem/file locks assume one deployment host.
 
-A Cloudflare quick tunnel can expose Caddy for phone testing. It uses the app's relative-origin URLs and is temporary. Packs are origin-scoped: a changed tunnel hostname creates a separate browser store.
+The complete public deployment is https://climate-story.hridoy.xyz on one EC2 instance. See [AWS deployment](aws-deployment.md) for the operator-managed small-instance overlay and pilot limits. Packs are origin-scoped: changing hostname creates a separate browser store.
 
 ## Caching and failures
 

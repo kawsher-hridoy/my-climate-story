@@ -1,6 +1,22 @@
 .env
 .env.*
 !.env.example
+# Local instructions, planning notes, and superseded execution artifacts.
+AGENTS.md
+/plan.md
+/docs/code-review.md
+/docs/review-fixes.md
+/docs/verification.md
+/docs/release-notes.md
+/docs/evidence/
+/.claude/
+/.codex/
+/.pi/
+# Host-owned overrides and private operational material.
+/infra/compose.small.yml
+*.pem
+*.key
+*.dump
 .venv/
 __pycache__/
 .pytest_cache/

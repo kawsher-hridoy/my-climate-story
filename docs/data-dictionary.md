@@ -168,7 +168,7 @@ Database name: `my-climate-story-v1`, Dexie schema version 1.
 
 Pack `mediaStatus` is `complete` or `incomplete`; old records migrate and get storage version 1. Repair restores the pack's pinned story, while Update selects the latest story. One pack per place is retained; replacing/updating a pack checks shared media references. The current limit is 20 packs/100 MB of counted content.
 
-Cache names: `climate-pack-media-v1` for explicit packs; `climate-media-v2` for ordinary media; `climate-api-v1` for eligible API reads; Workbox's scoped precache for the app shell. Storage is device/browser/origin local. Clearing browser data or changing the tunnel origin creates a new storage context.
+Cache names: `climate-pack-media-v1` for explicit packs; `climate-media-v2` for ordinary media; `climate-api-v1` for eligible API reads; Workbox's scoped precache for the app shell. Storage is device/browser/origin local. Clearing browser data or changing the website origin creates a new storage context.
 
 ## SQL schema
 

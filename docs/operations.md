@@ -2,9 +2,11 @@
 
 ## Routine checks
 
+These commands inspect the local Compose project from the repository root. On EC2, use the merged configuration/helper in the [AWS guide](aws-deployment.md), including the host-owned small-instance overlay. Do not confuse local and remote operations.
+
 ```bash
-docker compose -f infra/compose.yml ps
-docker compose -f infra/compose.yml logs --tail=50 api worker
+docker compose --env-file .env -f infra/compose.yml ps
+docker compose --env-file .env -f infra/compose.yml logs --tail=50 api worker
 curl -f http://localhost:8088/api/v1/health/ready
 ```
 
@@ -22,7 +24,7 @@ The durable Procrastinate queue survives API restarts. Inspect terminal messages
 
 The API reconciles work every 30 seconds and on exploration submissions; the worker also reconciles at startup. Orphans and dead workers are requeued within a three-dispatch, one-hour bound. Expired or exhausted requests become failed and release capacity. Inspect `queue_job_id`, `generation`, `dispatch_attempts`, `lease_until`, and the terminal message when investigating recovery. Do not manually set a partial result to completed: completion requires a verified artifact directory and hash.
 
-Restart an unhealthy worker with `docker compose -f infra/compose.yml restart worker`. Keep the API and approved curated stories available while resolving an upstream issue. Review stale pending/running jobs and queue logs before attempting administrative recovery.
+Restart an unhealthy worker with `docker compose --env-file .env -f infra/compose.yml restart worker`. Keep the API and approved curated stories available while resolving an upstream issue. Review stale pending/running jobs and queue logs before attempting administrative recovery.
 
 ## Backups
 

@@ -6,7 +6,7 @@ data:
 	uv run climate ingest
 	uv run climate build
 db:
-	docker compose -f infra/compose.dev.yml up -d --wait
+	docker compose --env-file .env -f infra/compose.dev.yml up -d --wait
 	uv run climate migrate
 	uv run climate queue-schema
 	uv run climate seed

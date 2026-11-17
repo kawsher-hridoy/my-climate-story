@@ -1,21 +1,22 @@
 # Developer and maintenance guide
 
-Use the [complete handbook](complete-documentation.md), [architecture](architecture.md) and [data usage](data-usage.md) before changing source/feature behavior. The accepted scope retains rainfall pending and deterministic reviewed narration.
+Use the [complete handbook](complete-documentation.md), [architecture](architecture.md) and [data usage](data-usage.md) before changing source/feature behavior. The current release keeps rainfall measurements pending and uses deterministic reviewed narration.
 
 ## Native development
 
 Prerequisites: Python 3.12, `uv`, Node 22.12+ with npm, Docker/Compose. Production uses Node 24. Dependencies are locked in `uv.lock` and `package-lock.json`.
 
 ```bash
-uv sync --extra dev
+cp -n .env.example .env
+uv sync --locked --extra dev
 npm ci
 uv run python scripts/bootstrap_data.py
 make db
 ```
 
-Bootstrap preserves an existing active release. `make db` starts the separate development PostGIS database at localhost:55432, migrates, initializes the queue and seeds. In three separate terminals run `make api`, `make worker` and `make web`. Frontend is localhost:5173 and API localhost:8000; Vite proxies `/api` and `/media`. `CLIMATE_API_PROXY` selects an isolated API for preview testing. Production remains localhost:8088 through Caddy.
+Bootstrap preserves an existing active release. `make db` starts the separate development PostGIS database at localhost:55432, migrates, initializes the queue and seeds. In three separate terminals run `make api`, `make worker` and `make web`. Frontend is localhost:5173 and API localhost:8000; Vite proxies `/api` and `/media`. `CLIMATE_API_PROXY` selects an isolated API for preview testing. The local production build uses localhost:8088 through Caddy; public hosting is documented in the [EC2 guide](aws-deployment.md).
 
-Use `.env.example` for configuration. Leave `DATABASE_URL` blank for component construction or provide a compatible native/test URL. Compose sets its own database host/port and production environment. Never print full settings or commit credentials.
+Use a local copy of `.env.example` for configuration; do not copy a production credentials file to a development machine. The native database uses the localhost-only credentials in `infra/compose.dev.yml`. Leave `DATABASE_URL` blank for component construction or provide a compatible native/test URL. Production Compose sets its own database host/port and environment. Never print full settings or commit credentials.
 
 ## Repository map
 
@@ -108,19 +109,20 @@ npm test
 npm run typecheck
 npm run build
 uv run climate validate
+uv run python scripts/check_docs.py
 ```
 
-Recovery changes also need disposable PostgreSQL integration. Data changes need actual release validation and regenerated bootstrap/registers. Offline changes need a production service worker, online save → disconnect → first Saved → pinned story, cold reload, language/media retention and repair checks. Vite development is not an offline production build.
+[CI](../.github/workflows/ci.yml) runs the Python/data, frontend and disposable PostGIS checks separately. Recovery changes also need disposable PostgreSQL integration. Data changes need actual release validation and regenerated bootstrap/registers. Offline changes need a production service worker, online save → disconnect → first Saved → pinned story, cold reload, language/media retention and repair checks. Vite development is not an offline production build.
 
 Distribution commands:
 
 ```bash
 uv run python scripts/pack_data.py
 uv run python scripts/generate_documentation.py
-docker compose -f infra/compose.yml build
-docker compose -f infra/compose.yml up -d --no-build --wait
+docker compose --env-file .env -f infra/compose.yml build
+docker compose --env-file .env -f infra/compose.yml up -d --no-build --wait
 ```
 
-Retain the previous image/release/database backup until acceptance. Update data usage/dictionary, architecture, relevant specialist guides and verification. Generated registers describe the pinned snapshot rather than claiming present-day upstream coverage.
+Retain the previous image/release/database backup until acceptance. Update data usage/dictionary, architecture, relevant specialist guides and test coverage. Generated registers describe the pinned snapshot rather than claiming present-day upstream coverage.
 
 See [deployment](deployment.md), [operations](operations.md) and [troubleshooting](troubleshooting.md).

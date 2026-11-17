@@ -12,7 +12,6 @@ This describes the implemented data movement and boundaries. It is operational d
 | Selected coordinate/name for exploration | Backend job payload, NASA POWER request, completed source/result bundle | Operational provenance until operator retention/cleanup |
 | Client address for rate limiting | API process derives an ephemeral fingerprint for the current date/bucket | In-memory request-window limiter; not a student profile |
 | Online map requests | OSM or NASA GIBS tile provider | Provider receives normal network/tile requests; map use has attribution |
-| Public tunnel traffic | Cloudflare when a quick tunnel is running | Temporary access path; provider handling is separate from device-local app progress |
 
 Geolocation is opt-in through the browser. A new exploration sends its selected location to the backend and POWER. Coordinates are needed for acquisition and remain in source/job evidence even though ordinary API access logging is disabled. The app does not provide private per-user ownership of result URLs.
 
@@ -30,11 +29,11 @@ Raw source files, backend environment and pinned release `inputs/` have no publi
 
 Database, Earthdata and optional storage credentials belong to backend environment/private `.env`. Compose passes database components rather than interpolating passwords into a URI. Never dump the complete settings/environment, place secrets in `VITE_*` variables, include `.env` in bootstrap artifacts, or put temporary signed Landsat URLs in public source metadata.
 
-Scientific source/review manifests should remain public and reproducible; credentials are unrelated to student access. Earthdata is needed only for operator IMERG measurements. The currently accepted delivery has no configured Earthdata acquisition and no remote S3 publication.
+Scientific source/review manifests should remain public and reproducible; credentials are unrelated to student access. Earthdata is needed only for operator IMERG measurements. Verified IMERG measurements are not included in the current release. Optional object-store publication is an operator workflow, not a requirement for the single-host deployment.
 
 ## Retention and deletion
 
-Students can remove packs on Saved or clear browser data. Progress is not uploaded; changing devices/origins does not carry it over. A temporary tunnel's new hostname has a fresh storage context.
+Students can remove packs on Saved or clear browser data. Progress is not uploaded; changing devices/origins does not carry it over. A different website hostname has a fresh storage context.
 
 There is no public API to delete a global job/result. Operators should define an appropriate retention policy for exact request coordinates and operational jobs before a larger pilot. Back up/delete database rows and matching result directories deliberately; do not remove the only active approved release or shared assets without reference checks.
 

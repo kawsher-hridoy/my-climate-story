@@ -1,6 +1,6 @@
-# My Climate Story: complete application handbook
+# My Climate Story: application handbook
 
-Documentation baseline: 2026-11-08, implemented reliability update, active release `mcs-cbe101aec7584839`, story schema 1, release format 2, database migration `002`.
+Release reference: `mcs-cbe101aec7584839`, story schema 1, release format 2, database migration `002`. The complete application is hosted at https://climate-story.hridoy.xyz.
 
 This is the starting document for understanding, running, maintaining and extending the entire app. It links to the detailed specifications rather than duplicating every source field. For the question **“which data is used where?”**, read [data usage](data-usage.md), [field dictionary](data-dictionary.md) and the [actual per-location data register](generated/place-data-register.md).
 
@@ -8,7 +8,7 @@ This is the starting document for understanding, running, maintaining and extend
 
 My Climate Story teaches Bangladesh students climate concepts through a familiar place, bilingual stories, real satellite comparisons, temperature records, global context, quizzes and actions. It is based on the retained `My_Climate_Story_NASA_Space_Apps.pdf`.
 
-Implemented: twelve curated Bangladesh places, global point/name selection, Bangla/English, actual reviewed Landsat pairs, local temperature history, scoped descriptive comparison, quizzes/actions, classroom printing, local progress and offline packs. The user accepted **rainfall marked pending** until Earthdata measurements are acquired. Global temperature is provisional; reviewed global imagery/comparisons are not automatically generated.
+Implemented: twelve curated Bangladesh places, global point/name selection, Bangla/English, actual reviewed Landsat pairs, local temperature history, scoped descriptive comparison, quizzes/actions, classroom printing, local progress and offline packs. **Rainfall measurements remain pending** until verified IMERG data is acquired. Global temperature is provisional; reviewed global imagery/comparisons are not automatically generated.
 
 The [requirements](requirements.md) map every PDF area to the delivery. Accounts/classes, uploads, forecasts, daily extremes, community contributions and messaging are future scope. No runtime AI service produces scientific claims.
 
@@ -38,7 +38,7 @@ flowchart LR
 | Source processing/release identity | `pipelines/` | [Data pipeline](data-pipeline.md), [methodology](scientific-methodology.md) |
 | Bilingual authored content/reviews | `content/`, `apps/web/src/lib/i18n.ts` | [Content](content-and-localization.md) |
 | Containers/proxy/configuration | `infra/`, `.env.example`, `scripts/start-api.sh` | [Deployment](deployment.md), [operations](operations.md) |
-| Tests/evidence | `tests/`, `apps/web/src/tests/`, `output/`, `data/manifests/` | [Testing](testing.md), [verification](verification.md), [review fixes](review-fixes.md) |
+| Tests and quality checks | `tests/`, `apps/web/src/tests/`, `.github/workflows/ci.yml`, `data/manifests/` | [Testing](testing.md) |
 
 The expanded [architecture guide](architecture.md) has request sequences, operator publication flow, component responsibilities, storage authority, network boundaries and scaling assumptions.
 
@@ -108,7 +108,8 @@ Offline local queries run while disconnected; charts, language switching, quiz/a
 The production path requires Docker/Compose and the supplied bootstrap artifact:
 
 ```bash
-docker compose -f infra/compose.yml up -d --build --wait
+cp -n .env.example .env
+docker compose --env-file .env -f infra/compose.yml up -d --build --wait
 ```
 
 Open http://localhost:8088. Startup restores/preserves prepared artifacts, migrates SQL, initializes the queue, seeds the active release, validates it and imports the gazetteer if absent.
@@ -116,7 +117,8 @@ Open http://localhost:8088. Startup restores/preserves prepared artifacts, migra
 For native development use Python 3.12 and Node 22.12+ (Node 24 is used by the production frontend image):
 
 ```bash
-uv sync --extra dev
+cp -n .env.example .env
+uv sync --locked --extra dev
 npm ci
 uv run python scripts/bootstrap_data.py
 make db
@@ -148,7 +150,7 @@ uv run python scripts/generate_documentation.py
 
 Caddy is the one public origin; `/api` and `/media` reach FastAPI, other routes serve the SPA. SQL/API ports remain private. The dedicated proxy network pins Caddy/API to distinct addresses and limits trusted forwarded headers. Runtime data and SQL/Caddy volumes persist across application replacement.
 
-The running app is local; an explicitly started Cloudflare quick tunnel provides temporary phone access. Permanent hosting/domain/HTTPS setup is documented but not claimed deployed. The quick-tunnel URL is not hardcoded into the app or this handbook.
+The public deployment at https://climate-story.hridoy.xyz runs the frontend, API, worker and PostgreSQL/PostGIS on one AWS EC2 instance. The [EC2 guide](aws-deployment.md) describes HTTPS, persistent storage and the small-instance pilot constraints. Local Compose is a separate environment and binds only to localhost by default.
 
 Back up PostgreSQL and matching data artifacts, keep the previous release/image, and restore-test separately. Rollbacks must keep image/release format compatibility. [Operations](operations.md) covers health, source refresh, worker recovery, backups and rollback; [troubleshooting](troubleshooting.md) covers common errors.
 
@@ -158,11 +160,11 @@ Student accounts are absent; quiz/action progress stays on the device. Global ex
 
 The project is independent; source citations do not imply NASA endorsement. Scientific sources, GeoNames/OSM/Natural Earth, fonts/icons and educational citations are listed in [sources and licenses](sources-and-licenses.md). Original vector decoration is not satellite evidence.
 
-## 13. Verification and accepted limitations
+## 13. Testing and scientific limits
 
-Verified implementation: 67 Python tests including disposable PostgreSQL/PostGIS integration, 17 frontend tests, typecheck/lint/builds, zero reported npm audit vulnerabilities, actual release recomputation, all twelve API stories/series, 24 image hashes/MIME, a live global job, offline navigation/migration/media and mobile Bangla/quiz behavior.
+[Continuous integration](../.github/workflows/ci.yml) runs lint, Python/data checks, frontend tests/typechecking/builds, local documentation-link checks and a separate disposable PostgreSQL/PostGIS integration job. The [test guide](testing.md) describes coverage, database safety and browser acceptance; `data/manifests/validation.json` records the reviewed snapshot validation. Browser checks remain necessary for real offline, accessibility and mobile behavior.
 
-See [verification](verification.md) and [fix report](review-fixes.md) for evidence and practical limits. Authenticated IMERG measurements are pending by explicit user decision; no rainfall values are fabricated. Daily extremes, forecasts, quantified land-cover changes and automatic global review are not part of the delivered scientific scope.
+Verified IMERG measurements are not included in the current release. No rainfall values are fabricated or replaced with POWER precipitation. Daily extremes, forecasts, quantified land-cover changes and automatic global review are outside the current scientific scope.
 
 ## 14. Maintaining the documentation
 

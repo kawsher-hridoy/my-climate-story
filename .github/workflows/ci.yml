@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python, data, and documentation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      APP_ENV: test
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.18"
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv sync --locked --extra dev --python 3.12
+      - name: Lint
+        run: uv run ruff check services pipelines scripts tests
+      - name: Python tests
+        run: uv run pytest -q
+      - name: Validate the reviewed data release
+        run: uv run climate validate
+      - name: Check documentation links
+        run: uv run python scripts/check_docs.py
+
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Frontend tests
+        run: npm test
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Production build
+        run: npm run build
+
+  postgres:
+    name: Disposable PostGIS integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgis/postgis:17-3.5
+        env:
+          POSTGRES_USER: climate_test
+          POSTGRES_PASSWORD: ci_disposable_only
+          POSTGRES_DB: climate_jobs_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U climate_test -d climate_jobs_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      APP_ENV: test
+      # This job owns its database. The fixture drops its public schema.
+      TEST_DATABASE_URL: postgresql+psycopg://climate_test:ci_disposable_only@127.0.0.1:5432/climate_jobs_test
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.9.18"
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv sync --locked --extra dev --python 3.12
+      - name: Queue and migration integration tests
+        run: uv run pytest -q tests/test_exploration_postgres.py

@@ -1,22 +1,25 @@
 # Deployment
 
-For AWS, follow the dedicated [EC2 deployment guide](aws-deployment.md) and combine `infra/compose.yml` with `infra/compose.aws.yml` on the AWS host. The default local deployment below continues to bind Caddy only to localhost.
+The complete public application is hosted at https://climate-story.hridoy.xyz on one AWS EC2 instance. Follow the [EC2 guide](aws-deployment.md) for the merged server configuration and host-owned small-instance overlay. The local deployment below is separate and binds Caddy only to localhost.
 
 ## Local production build
 
 ```bash
-docker compose -f infra/compose.yml up -d --build --wait
+cp -n .env.example .env
+docker compose --env-file .env -f infra/compose.yml up -d --build --wait
 ```
 
 Open http://localhost:8088. The default Compose ports bind only to localhost. The database is internal to the production network. Caddy serves the compiled PWA and proxies `/api` and `/media` to FastAPI.
 
 The API startup restores/preserves prepared data, applies migrations, initializes the durable queue, seeds the catalog and indexes the downloaded gazetteer if absent. The worker starts after API readiness. Persistent volumes retain database and Caddy state; the host `data` directory retains source/releases/assets.
 
-The frontend build uses host networking on Linux because the task environment's Docker bridge could not reach npm reliably. Runtime services still use the isolated Compose network. Set `BUILD_NETWORK=default` when host build networking is unavailable, such as some Docker Desktop installations.
+The Linux frontend build defaults to host networking; runtime services use isolated Compose networks. Set `BUILD_NETWORK=default` when host build networking is unavailable, such as some Docker Desktop installations.
 
 ### Database credentials and proxy identity
 
 Compose passes `POSTGRES_HOST`, `POSTGRES_PORT`, `POSTGRES_USER`, `POSTGRES_PASSWORD` and `POSTGRES_DB` as separate backend settings. SQLAlchemy and libpq connection strings are constructed with their respective quoting APIs, so passwords containing `@`, `/`, spaces or other reserved characters remain intact. In native development an explicitly supplied `DATABASE_URL` takes precedence; leave it blank to use the component settings.
+
+Pass `--env-file .env` to Compose so the project root credentials/hostname file is used even though the Compose files are under `infra/`. If a database was already initialized using a different password, changing its environment does not change the stored PostgreSQL role password; align that role deliberately before switching API/worker credentials. Preserve its data volume.
 
 Caddy reaches the API through a dedicated proxy network. Its default address is `172.30.249.2` on `172.30.249.0/29`; the API has the distinct fixed address `172.30.249.3`. Pinning both prevents startup-order address collisions. Uvicorn trusts only Caddy's address and loopback for forwarded client identity. Other containers and external callers cannot supply trusted client headers directly. If the subnet conflicts with a local network, change `PROXY_SUBNET`, `PROXY_IP` and `PROXY_API_IP` together before deployment. API/database ports remain private.
 
@@ -47,4 +50,4 @@ Rebuild application images after code changes. Build a new validated data releas
 
 Never prune the only approved data release before a replacement passes validation. Back up PostgreSQL and the matching artifacts. Test restoration separately before replacing a live database.
 
-This repository supplies a working local production deployment. A public domain/server was not configured in the task session, so no public deployment is claimed.
+Local shutdown and restart commands apply only to the local Compose project. Public-server operations must run on the EC2 host with its environment and overlays. Use `stop` for routine local shutdown; do not delete volumes or releases.

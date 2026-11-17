@@ -9,7 +9,18 @@ npm run typecheck
 npm run build
 uv run ruff check services pipelines scripts tests
 uv run climate validate
+uv run python scripts/check_docs.py
 ```
+
+## Continuous integration
+
+The [GitHub Actions workflow](../.github/workflows/ci.yml) defines three isolated jobs:
+
+- **Python, data and documentation:** locked Python 3.12 dependencies, Ruff, the normal test suite, actual reviewed-release validation and local Markdown-link checks.
+- **Frontend:** Node 24, `npm ci`, Vitest, TypeScript and the production/PWA build.
+- **PostGIS integration:** a job-owned PostgreSQL 17/PostGIS service named `climate_jobs_test` for the five opt-in queue/migration tests. The fixture may drop its public schema.
+
+CI does not deploy the application or use production credentials. Browser acceptance remains a separate check; jsdom/unit tests do not prove actual service-worker, layout or accessibility behavior.
 
 ## Automated checks
 
@@ -18,6 +29,8 @@ Python tests independently check supplied source counts and annual aggregation, 
 API tests use an isolated database and mocked queue submission. They exercise bilingual search, literal wildcard handling, invalid coordinates/extras, immediate curated stories, duplicate jobs, unavailable workers, request limits, immutable release reads and CSV units.
 
 Frontend tests verify localization key parity, numeric formatting, range/side-by-side behavior, refusal to display unapproved imagery, and answer-index/rationale behavior. Offline tests cover disconnected SPA navigation, persistent media storage, legacy migration, incomplete packs, repair, failed commits and shared asset deletion.
+
+Documentation regressions cover relative/image/reference links, fenced examples, missing targets, repository-boundary checks and exclusion of ignored local artifacts. `scripts/check_docs.py` validates tracked or trackable Markdown targets without network access; it does not verify external websites or fragment identifiers.
 
 Recovery tests cover interrupted submissions, abrupt worker exit, stale generations and partial artifact writes. Five opt-in integration tests use real PostgreSQL/PostGIS and Procrastinate for transaction visibility/rollback, concurrent capacity, dead-worker recovery and both migration paths. Run them only against a disposable database named exactly `climate_jobs_test`:
 

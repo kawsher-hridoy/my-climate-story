@@ -36,7 +36,7 @@ No independent image auto-contrast is used to manufacture differences. Homepage 
 
 ## Acceptance and evidence
 
-All 24 images passed ≥95% valid coverage; the lowest inspected fraction was approximately 98.5%. Six contact sheets under `output/imagery-review/` were visually inspected. Review records in `content/imagery-reviews.json` bind the specific checksums to a named reviewer and location-specific evidence.
+All 24 images passed ≥95% valid coverage; the lowest inspected fraction was approximately 98.5%. Review records in `content/imagery-reviews.json` bind specific checksums to the recorded reviewer and location-specific visual evidence. The release pins those records alongside source metadata and processing inputs; owned image bytes remain available for independent inspection.
 
 Historical haze is stronger in some crops, particularly Chattogram. It is explicitly disclosed. Visible shapes remain suitable for qualitative comparison; colors are not treated as a quantitative vegetation classification.
 

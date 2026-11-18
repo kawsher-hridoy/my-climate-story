@@ -10,7 +10,7 @@
 
 A Bangla-first educational PWA that turns NASA Earth data into familiar stories for students in grades 6–10. Explore a place, compare its landscape, read the climate record, and keep learning offline.
 
-[**Open the live app**](https://climate-story.hridoy.xyz) · [বাংলা](https://climate-story.hridoy.xyz/bn/) · [English](https://climate-story.hridoy.xyz/en/) · [Read the docs](docs/README.md)
+[**Open the live app**](https://climate-story.hridoy.xyz) · [**Watch project video**](https://www.youtube.com/watch?v=RKUiUpAazwo) · [বাংলা](https://climate-story.hridoy.xyz/bn/) · [English](https://climate-story.hridoy.xyz/en/) · [Read the docs](docs/README.md)
 
 [![CI](https://github.com/kawsher-hridoy/my-climate-story/actions/workflows/ci.yml/badge.svg)](https://github.com/kawsher-hridoy/my-climate-story/actions/workflows/ci.yml)
 ![React 19](https://img.shields.io/badge/React-19-173f35?logo=react&logoColor=white)
@@ -24,7 +24,7 @@ Built for the [2026 NASA International Space Apps Challenge](https://www.spaceap
 
 <p align="center"><sub>Real application screenshots, captured from the local production PWA build.</sub></p>
 
-[Overview](#overview) · [Screenshots](#screenshots) · [Engineering](#engineering) · [Quick start](#quick-start) · [Data & scope](#data--scope) · [Documentation](#documentation)
+[Overview](#overview) · [Project video](#project-video) · [Screenshots](#screenshots) · [Engineering](#engineering) · [Quick start](#quick-start) · [Data & scope](#data--scope) · [Documentation](#documentation)
 
 ## Overview
 
@@ -46,6 +46,18 @@ Climate education is easier to connect with when it starts close to home. My Cli
 | **Bring it to class** | Print a story and use the teacher guide without creating student accounts. |
 
 **Current limits:** verified IMERG rainfall measurements are pending. Newly retrieved global temperature is provisional; arbitrary global points do not automatically receive approved image pairs or change comparisons. See [data and scope](#data--scope).
+
+## Project video
+
+Watch the project presentation, published as **Be An Earth System Trend Detective! — Team: Delta Detectives**.
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=RKUiUpAazwo">
+    <img src="https://i.ytimg.com/vi/RKUiUpAazwo/hqdefault.jpg" alt="Watch Be An Earth System Trend Detective! — Team: Delta Detectives on YouTube" width="480">
+  </a>
+  <br>
+  <a href="https://www.youtube.com/watch?v=RKUiUpAazwo"><strong>Watch the project video on YouTube ↗</strong></a>
+</p>
 
 ## Screenshots
 
